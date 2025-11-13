@@ -1,10 +1,6 @@
 {
   "env": {
-<<<<<<< HEAD
     "ANTHROPIC_AUTH_TOKEN": "YOUR_ANTHROPIC_TOKEN_PLACEHOLDER",
-=======
-    "ANTHROPIC_AUTH_TOKEN": "",
->>>>>>> 7bd9355 (chore(configuration): update settings and add new files)
     "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
     "API_TIMEOUT_MS": "3000000",
     "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
