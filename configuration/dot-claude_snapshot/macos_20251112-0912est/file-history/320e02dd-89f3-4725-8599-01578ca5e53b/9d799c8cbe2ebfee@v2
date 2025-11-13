@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #2C2C2C;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-box {
+  width: 600pt;
+  height: 320pt;
+  background: #3A3A3A;
+  border: 3pt dashed #277884;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.placeholder-text {
+  font-size: 24pt;
+  color: #277884;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+.placeholder-note {
+  font-size: 14pt;
+  color: #AAAAAA;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="placeholder-box">
+  <p class="placeholder-text">Espacio para Obra de Arte</p>
+  <p class="placeholder-note">Insertar ejemplo de obra de Wifredo Lam</p>
+</div>
+</body>
+</html>

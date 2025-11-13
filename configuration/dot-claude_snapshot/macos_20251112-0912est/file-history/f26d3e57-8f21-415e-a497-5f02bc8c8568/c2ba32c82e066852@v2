@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #FE4447;
+}
+.content {
+  flex: 1;
+  padding: 30pt 45pt 36pt 45pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 30pt;
+  font-weight: bold;
+  margin: 0 0 12pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 13pt;
+  font-weight: bold;
+  margin-bottom: 12pt;
+}
+.schedule {
+  display: flex;
+  gap: 30pt;
+  margin-top: 15pt;
+}
+.day {
+  flex: 1;
+}
+.day-header {
+  background: #5EA8A7;
+  color: #FFFFFF;
+  padding: 8pt;
+  margin-bottom: 10pt;
+  border-radius: 4pt;
+}
+.day h3 {
+  color: #FFFFFF;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0;
+}
+.session {
+  background: #FFFFFF;
+  padding: 10pt;
+  margin-bottom: 8pt;
+  border-radius: 4pt;
+  border-left: 4pt solid #5EA8A7;
+}
+.time {
+  color: #5EA8A7;
+  font-size: 11pt;
+  font-weight: bold;
+  margin: 0 0 4pt 0;
+}
+.session-name {
+  color: #2E4053;
+  font-size: 12pt;
+  margin: 0;
+}
+p {
+  color: #2E4053;
+  font-size: 12pt;
+  margin: 0 0 12pt 0;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>Weekend Architecture: The 3+1 Design</h1>
+  <p class="label">INTENSE BUT SUSTAINABLE</p>
+
+  <p>Three 90-minute roundtables on Saturday, one capstone on Sunday. Built-in breaks for energy and informal dialogue.</p>
+
+  <div class="schedule">
+    <div class="day">
+      <div class="day-header">
+        <h3>Saturday, April 18</h3>
+      </div>
+      <div class="session">
+        <p class="time">10:00–11:30</p>
+        <p class="session-name">RT1: Feeling vs. Faking</p>
+      </div>
+      <div class="session">
+        <p class="time">2:00–3:30</p>
+        <p class="session-name">RT2: Beyond the Muse</p>
+      </div>
+      <div class="session">
+        <p class="time">4:00–5:30</p>
+        <p class="session-name">RT3: After the Job?</p>
+      </div>
+    </div>
+    <div class="day">
+      <div class="day-header">
+        <h3>Sunday, April 19</h3>
+      </div>
+      <div class="session">
+        <p class="time">11:00–12:30</p>
+        <p class="session-name">RT4: Friendly—or Not?</p>
+      </div>
+      <div class="session">
+        <p class="time">12:30–1:00</p>
+        <p class="session-name">Synthesis</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+[DEBUG] Detected change to /Users/jonc/.claude/settings.json
+[DEBUG] Detected change to /Users/jonc/.claude/settings.json
+[DEBUG] Detected change to /Users/jonc/.claude/settings.json
+[DEBUG] Checking for native installer update to version 2.0.32
+[DEBUG] Version 2.0.32 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.32
+[DEBUG] Checking for native installer update to version 2.0.32
+[DEBUG] Version 2.0.32 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.32
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "context7": HTTP transport closed/disconnected, attempting automatic reconnection
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] FileHistory: Making snapshot for message bfe64efb-cca5-4b3e-ab30-e4068219cc59
+[DEBUG] FileHistory: Added snapshot for bfe64efb-cca5-4b3e-ab30-e4068219cc59, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/exit</command-name>
+            <command-message>exit</command-message>
+            <...
+[DEBUG] UserCommandMessage rendering: "exit" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] MCP server "context7": Initializing HTTP transport to https://mcp.context7.com/mcp
+[DEBUG] MCP server "context7": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "context7": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "context7": MTLS options: default
+[DEBUG] MCP server "context7": HTTP transport options: {"url":"https://mcp.context7.com/mcp","headers":{"User-Agent":"claude-code/2.0.31","CONTEXT7_API_KEY":"ctx7sk-d72d4fa3-7d0f-4fdd-9d3d-56674507a334"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "context7": HTTP transport created successfully
+[DEBUG] MCP server "context7": Client created, setting up request handler
+[DEBUG] MCP server "context7": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "context7": Testing basic HTTP connectivity to https://mcp.context7.com/mcp
+[DEBUG] MCP server "context7": Parsed URL: host=mcp.context7.com, port=default, protocol=https:
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] Checking for native installer update to version 2.0.33
+[DEBUG] Version 2.0.33 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.33
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": Successfully connected to http server in 248ms
+[DEBUG] MCP server "context7": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Context7","version":"1.0.13"}}
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 2,
+  "rejected_count": 0
+}
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.31332.1762310879072
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 62366 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.31332.1762310879072 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically

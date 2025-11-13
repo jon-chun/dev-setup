@@ -1,0 +1,117 @@
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+
+async function createPresentation() {
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = 'The Helix Center';
+  pptx.title = 'The Human Algorithm: Helix Center AI Weekend';
+
+  // Slide 1: Title
+  await html2pptx('slide01.html', pptx);
+
+  // Slide 2: Helix DNA
+  await html2pptx('slide02.html', pptx);
+
+  // Slide 3: Why Now
+  await html2pptx('slide03.html', pptx);
+
+  // Slide 4: The Human Algorithm Framework
+  await html2pptx('slide04.html', pptx);
+
+  // Slide 5: Weekend Architecture
+  await html2pptx('slide05.html', pptx);
+
+  // Slide 6: Roundtable Engine
+  await html2pptx('slide06.html', pptx);
+
+  // Slide 7: Execution Excellence
+  await html2pptx('slide07.html', pptx);
+
+  // Slide 8: RT1 - Feeling vs. Faking
+  await html2pptx('slide08.html', pptx);
+
+  // Slide 9: RT2 - Beyond the Muse
+  await html2pptx('slide09.html', pptx);
+
+  // Slide 10: RT3 - After the Job
+  await html2pptx('slide10.html', pptx);
+
+  // Slide 11: RT4 - Friendly or Not
+  await html2pptx('slide11.html', pptx);
+
+  // Slide 12: Hard Gates
+  await html2pptx('slide12.html', pptx);
+
+  // Slide 13: Helix Panelist Metric with chart
+  const { slide: slide13, placeholders: p13 } = await html2pptx('slide13.html', pptx);
+  if (p13.length > 0) {
+    slide13.addChart(pptx.charts.BAR, [{
+      name: "Hp Score Weights",
+      labels: ["Proximity", "Dialogue", "Distinction", "Interdisciplinary", "Thematic", "Public Profile", "Diversity"],
+      values: [30, 20, 18, 14, 10, 5, 3]
+    }], {
+      ...p13[0],
+      barDir: 'bar',
+      showTitle: false,
+      showLegend: false,
+      showCatAxisTitle: false,
+      showValAxisTitle: true,
+      valAxisTitle: 'Weight (%)',
+      valAxisMaxVal: 35,
+      valAxisMinVal: 0,
+      chartColors: ["5EA8A7"]
+    });
+  }
+
+  // Slide 14: Risk Mitigation
+  await html2pptx('slide14.html', pptx);
+
+  // Slide 15: Speaker Outreach
+  await html2pptx('slide15.html', pptx);
+
+  // Slide 16: Audience Segments
+  await html2pptx('slide16.html', pptx);
+
+  // Slide 17: Prep Materials
+  await html2pptx('slide17.html', pptx);
+
+  // Slide 18: Day-of Operations
+  await html2pptx('slide18.html', pptx);
+
+  // Slide 19: Post-Event Assets
+  await html2pptx('slide19.html', pptx);
+
+  // Slide 20: Educational Strategy
+  await html2pptx('slide20.html', pptx);
+
+  // Slide 21: KPIs
+  await html2pptx('slide21.html', pptx);
+
+  // Slide 22: Budget with chart
+  const { slide: slide22, placeholders: p22 } = await html2pptx('slide22.html', pptx);
+  if (p22.length > 0) {
+    slide22.addChart(pptx.charts.PIE, [{
+      name: "Budget Allocation",
+      labels: ["Production & Venue", "Speaker Travel", "Post-Production", "Marketing", "Staff/Admin"],
+      values: [35, 25, 20, 10, 10]
+    }], {
+      ...p22[0],
+      showPercent: true,
+      showLegend: true,
+      legendPos: 'r',
+      chartColors: ["5EA8A7", "FE4447", "1C2833", "AAB7B8", "277884"]
+    });
+  }
+
+  // Slide 23: Timeline with placeholder
+  await html2pptx('slide23.html', pptx);
+
+  // Slide 24: Closing Vision
+  await html2pptx('slide24.html', pptx);
+
+  await pptx.writeFile({ fileName: 'Helix_AI_Weekend_Presentation.pptx' });
+  console.log('Presentation created successfully!');
+}
+
+createPresentation().catch(console.error);

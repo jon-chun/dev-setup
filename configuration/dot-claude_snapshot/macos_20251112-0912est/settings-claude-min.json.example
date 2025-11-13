@@ -1,0 +1,8 @@
+{
+  "model": "claude-sonnet-4-5-20250929",
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": true,
+    "document-skills@anthropic-agent-skills": true
+  },
+  "alwaysThinkingEnabled": false
+}

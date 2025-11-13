@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #2C2C2C;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.content {
+  padding: 40pt;
+  width: 100%;
+}
+h1 {
+  color: #F4F6F6;
+  font-size: 32pt;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+.subtitle {
+  color: #C0392B;
+  font-size: 18pt;
+  margin: 0 0 25pt 0;
+  font-weight: bold;
+}
+.main-content {
+  display: flex;
+  gap: 30pt;
+}
+.column {
+  flex: 1;
+}
+h3 {
+  color: #4A90E2;
+  font-size: 16pt;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #F4F6F6;
+  font-size: 13pt;
+  line-height: 1.7;
+}
+.stats-box {
+  background: #C0392B;
+  color: #F4F6F6;
+  padding: 20pt;
+  border-radius: 8pt;
+  text-align: center;
+  margin-top: 20pt;
+}
+.stats-box .number {
+  font-size: 42pt;
+  font-weight: bold;
+  margin: 0;
+}
+.stats-box .label {
+  font-size: 14pt;
+  margin: 5pt 0 0 0;
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>Terrorismo de Estado</h1>
+  <p class="subtitle">La Guerra Sucia (1976-1983)</p>
+  <div class="main-content">
+    <div class="column">
+      <h3>Sistema de represión</h3>
+      <ul>
+        <li>Centros clandestinos de detención (ESMA y otros)</li>
+        <li>Secuestros nocturnos sistemáticos</li>
+        <li>Tortura y desapariciones de cuerpos</li>
+        <li>Víctimas: militantes, estudiantes, sindicalistas, periodistas</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Resistencia y memoria</h3>
+      <ul>
+        <li>Madres de Plaza de Mayo (desde 1977)</li>
+        <li>Abuelas: búsqueda de nietos apropiados</li>
+        <li>Exigencia: "Aparición con vida"</li>
+      </ul>
+      <div class="stats-box">
+        <p class="number">30.000</p>
+        <p class="label">desaparecidos/as</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

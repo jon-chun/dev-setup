@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #5EA8A7;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 26pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 70pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.chart-column {
+  flex: 0 0 320pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.chart-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+.text-column {
+  flex: 1;
+}
+h2 {
+  font-size: 18pt;
+  color: #277884;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+.quote-box {
+  background: #FFF3CD;
+  padding: 15pt;
+  border-left: 5pt solid #FE4447;
+  border-radius: 4pt;
+  margin: 15pt 0;
+  font-style: italic;
+}
+.quote-box p {
+  margin: 0;
+  color: #277884;
+  font-size: 15pt;
+  font-weight: bold;
+}
+.curator-info {
+  font-size: 11pt;
+  color: #666666;
+  margin-top: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Consecuencias: Reconocimiento Tardío</h1>
+</div>
+<div class="content">
+  <div class="chart-column">
+    <p class="chart-note"><b>Gráfico sugerido:</b><br>Línea mostrando el aumento de exposiciones de Lam desde 2015 (Pompidou, Tate, Reina Sofía) hasta 2025 (MoMA), con picos en interés global</p>
+  </div>
+  <div class="text-column">
+    <h2>Cambio en la Percepción</h2>
+    <div class="quote-box">
+      <p>"Famoso y desconocido"</p>
+    </div>
+    <p>Lam era marginalizado en la historia del arte occidental pese a ser pionero del modernismo. Su complejidad no encajaba en categorías tradicionales.</p>
+    <h2>Expansión del Legado</h2>
+    <p>La exposición (curadores: Beverly Adams y Christophe Cherix) expande su legado: poder, poesía, política y modernismo.</p>
+  </div>
+</div>
+</body>
+</html>

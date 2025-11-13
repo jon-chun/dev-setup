@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #5EA8A7;
+}
+.content {
+  flex: 1;
+  padding: 30pt 45pt 36pt 45pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 32pt;
+  font-weight: bold;
+  margin: 0 0 18pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15pt;
+}
+p {
+  color: #2E4053;
+  font-size: 13pt;
+  margin: 0 0 12pt 0;
+  line-height: 1.5;
+}
+.two-col {
+  display: flex;
+  gap: 25pt;
+  margin-top: 12pt;
+}
+.col {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 16pt;
+  border-radius: 6pt;
+}
+.col h3 {
+  color: #5EA8A7;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0 0 12pt 0;
+}
+ul {
+  color: #2E4053;
+  font-size: 12pt;
+  margin: 0;
+  padding-left: 20pt;
+  line-height: 1.6;
+}
+.highlight {
+  background: #FE4447;
+  color: #FFFFFF;
+  padding: 8pt;
+  border-radius: 4pt;
+  margin-top: 10pt;
+}
+.highlight p {
+  color: #FFFFFF;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>Risk Mitigation</h1>
+  <p class="label">BACKUP CASTING & HUMANITIES ANCHOR</p>
+
+  <p>Every primary invite has a <b>pre-vetted alternate</b>, ensuring robustness against cancellations.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <h3>Backup Casting</h3>
+      <ul>
+        <li>Tier-matched alternates with similar Hp scores</li>
+        <li>Alternates on soft hold for quick activation</li>
+        <li>48-hour replacement window</li>
+        <li>Prevents scrambling for mediocre replacements</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Humanities Guarantee</h3>
+      <ul>
+        <li>RT1 & RT4 include guaranteed humanities seat</li>
+        <li>Anchors weekend in Helix's arts/humanities roots</li>
+        <li>Ensures cross-disciplinary balance</li>
+        <li>Not just STEM and policy</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p>Zero-tolerance for panel degradation</p>
+  </div>
+</div>
+</body>
+</html>

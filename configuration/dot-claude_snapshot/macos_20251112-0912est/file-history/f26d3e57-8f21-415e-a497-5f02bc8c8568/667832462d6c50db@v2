@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #FE4447;
+}
+.content {
+  flex: 1;
+  padding: 35pt 45pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 30pt;
+  font-weight: bold;
+  margin: 0 0 18pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15pt;
+}
+p {
+  color: #2E4053;
+  font-size: 13pt;
+  margin: 0 0 15pt 0;
+  line-height: 1.5;
+}
+.phases {
+  display: flex;
+  gap: 12pt;
+  margin-top: 20pt;
+}
+.phase {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 15pt;
+  border-radius: 4pt;
+  border-top: 4pt solid #5EA8A7;
+}
+.phase h3 {
+  color: #5EA8A7;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 0 0 10pt 0;
+}
+.phase p {
+  font-size: 11pt;
+  margin: 0;
+  line-height: 1.4;
+}
+ul {
+  color: #2E4053;
+  font-size: 12pt;
+  margin: 10pt 0;
+  padding-left: 20pt;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>Speaker Outreach Pipeline</h1>
+  <p class="label">ANCHORS FIRST, THEN COMPOSITION</p>
+
+  <p>A <b>four-phase outreach pipeline</b> maximizes acceptance rates and panel clarity:</p>
+
+  <div class="phases">
+    <div class="phase">
+      <h3>Phase 1</h3>
+      <p>Anchor Recruitment: 2–3 must-have anchors per RT. Personal outreach from Helix leadership.</p>
+    </div>
+    <div class="phase">
+      <h3>Phase 2</h3>
+      <p>Panel Composition: Build around anchors. Invitations say "You'll be in dialogue with X and Y."</p>
+    </div>
+    <div class="phase">
+      <h3>Phase 3</h3>
+      <p>Adjustments & Diversity: Use backup casting. Ensure disciplinary and demographic diversity.</p>
+    </div>
+    <div class="phase">
+      <h3>Phase 4</h3>
+      <p>Pre-Panel Prep: Calls 2 weeks before. Briefing packets with overview and co-panelist profiles.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

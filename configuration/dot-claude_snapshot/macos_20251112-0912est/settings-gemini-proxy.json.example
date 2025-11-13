@@ -1,0 +1,13 @@
+{
+    "env": {
+        "ANTHROPIC_AUTH_TOKEN": "dummy-token", 
+        "ANTHROPIC_BASE_URL": "http://localhost:8082",
+        "API_TIMEOUT_MS": "3000000",
+        "ANTHROPIC_MODEL": "sonnet",
+        "ANTHROPIC_SMALL_FAST_MODEL": "haiku",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "haiku",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "sonnet",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "sonnet"
+    },
+    "alwaysThinkingEnabled": true
+}

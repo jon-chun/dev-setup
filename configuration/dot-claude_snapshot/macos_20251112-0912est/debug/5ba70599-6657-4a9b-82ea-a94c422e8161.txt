@@ -1,0 +1,491 @@
+[DEBUG] Watching for changes in setting files /Users/jonc/.claude/settings.json...
+[DEBUG] [LSP MANAGER] initializeLspServerManager() called
+[DEBUG] [LSP MANAGER] Created manager instance, state=pending
+[DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+[DEBUG] [LSP SERVER MANAGER] initialize() called
+[DEBUG] [LSP SERVER MANAGER] Calling getAllLspServers()
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Found 2 plugins (2 enabled, 0 disabled)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/jonc/.claude/skills, project=/Users/jonc/code/helix-center-ai-weekend-2026/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] getPluginSkills: Processing 2 enabled plugins
+[DEBUG] Checking plugin example-skills: skillsPath=none, skillsPaths=10 paths
+[DEBUG] Attempting to load skills from plugin example-skills skillsPaths: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator for plugin example-skills
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 2 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines for plugin example-skills
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines
+[DEBUG] Checking plugin document-skills: skillsPath=none, skillsPaths=4 paths
+[DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx for plugin document-skills
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx for plugin document-skills
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx for plugin document-skills
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf for plugin document-skills
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf
+[DEBUG] Total plugin skills loaded: 14
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 14 plugin skills
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+[DEBUG] Acquired lock on running version: /Users/jonc/.local/share/claude/versions/2.0.36
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/jonc/.zshrc
+[DEBUG] Snapshots directory: /Users/jonc/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/jonc/.claude/shell-snapshots/snapshot-zsh-1762643322710-mdjoet.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/jonc/.claude/todos/5ba70599-6657-4a9b-82ea-a94c422e8161-agent-5ba70599-6657-4a9b-82ea-a94c422e8161.json.tmp.21749.1762643322711
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/jonc/.claude/todos/5ba70599-6657-4a9b-82ea-a94c422e8161-agent-5ba70599-6657-4a9b-82ea-a94c422e8161.json.tmp.21749.1762643322711 to /Users/jonc/.claude/todos/5ba70599-6657-4a9b-82ea-a94c422e8161-agent-5ba70599-6657-4a9b-82ea-a94c422e8161.json
+[DEBUG] File /Users/jonc/.claude/todos/5ba70599-6657-4a9b-82ea-a94c422e8161-agent-5ba70599-6657-4a9b-82ea-a94c422e8161.json written atomically
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322745
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65171 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322745 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322779
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65066 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322779 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322782
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65066 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322782 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322783
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65066 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322783 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Found 2 enabled plugins
+[DEBUG] Schema version mismatch (current: 0, expected: 1), syncing installed_plugins.json
+[DEBUG] Loaded 2 installed plugins from /Users/jonc/.claude/plugins/installed_plugins.json (schema version 1)
+[DEBUG] Plugin example-skills@anthropic-agent-skills already in installed_plugins.json, skipping
+[DEBUG] Plugin document-skills@anthropic-agent-skills already in installed_plugins.json, skipping
+[DEBUG] Saved 2 installed plugins to /Users/jonc/.claude/plugins/installed_plugins.json (schema version 1)
+[DEBUG] Updated installed_plugins.json to schema version 1 (0 plugins added, 2 skipped)
+[DEBUG] Found 2 installed plugins
+[DEBUG] Loaded plugins - Enabled: 2, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Found 0 missing plugins (not installed):
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Protecting locked version from cleanup: 2.0.35
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322823
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65334 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322823 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322826
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65334 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322826 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322840
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65334 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322840 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322842
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65334 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322842 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643322844
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65439 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643322844 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.36
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/jonc/.local/share/claude/versions/2.0.36)
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGoXXkuRizSEPJ2rYM"}
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGoXn1R6jeg3CbFrd7"}
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGoypCkrcHM7B2tibz"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGoypCkrcHM7B2tibz"}
+    at generate (/$bunfs/root/claude:382:26298)
+    at makeRequest (/$bunfs/root/claude:661:5356)
+    at processTicksAndRejections (native:7:39)
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGozZQFL4KMHNRGwtQ"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CUwGGozZQFL4KMHNRGwtQ"}
+    at generate (/$bunfs/root/claude:382:26298)
+    at makeRequest (/$bunfs/root/claude:661:5356)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skill prompt: showing "example-skills:skill-creator" (userFacingName="skill-creator")
+[DEBUG] Skill prompt: showing "example-skills:mcp-builder" (userFacingName="mcp-builder")
+[DEBUG] Skill prompt: showing "example-skills:canvas-design" (userFacingName="canvas-design")
+[DEBUG] Skill prompt: showing "example-skills:algorithmic-art" (userFacingName="algorithmic-art")
+[DEBUG] Skill prompt: showing "example-skills:internal-comms" (userFacingName="internal-comms")
+[DEBUG] Skill prompt: showing "example-skills:webapp-testing" (userFacingName="webapp-testing")
+[DEBUG] Skill prompt: showing "example-skills:artifacts-builder" (userFacingName="artifacts-builder")
+[DEBUG] Skill prompt: showing "example-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+[DEBUG] Skill prompt: showing "example-skills:theme-factory" (userFacingName="theme-factory")
+[DEBUG] Skill prompt: showing "example-skills:brand-guidelines" (userFacingName="brand-guidelines")
+[DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+[DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+[DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+[DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+[DEBUG] Skills and commands included in Skill tool: skill-creator, mcp-builder, canvas-design, algorithmic-art, internal-comms, webapp-testing, artifacts-builder, slack-gif-creator, theme-factory, brand-guidelines, xlsx, docx, pptx, pdf
+[DEBUG] Skill prompt: showing "example-skills:skill-creator" (userFacingName="skill-creator")
+[DEBUG] Skill prompt: showing "example-skills:mcp-builder" (userFacingName="mcp-builder")
+[DEBUG] Skill prompt: showing "example-skills:canvas-design" (userFacingName="canvas-design")
+[DEBUG] Skill prompt: showing "example-skills:algorithmic-art" (userFacingName="algorithmic-art")
+[DEBUG] Skill prompt: showing "example-skills:internal-comms" (userFacingName="internal-comms")
+[DEBUG] Skill prompt: showing "example-skills:webapp-testing" (userFacingName="webapp-testing")
+[DEBUG] Skill prompt: showing "example-skills:artifacts-builder" (userFacingName="artifacts-builder")
+[DEBUG] Skill prompt: showing "example-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+[DEBUG] Skill prompt: showing "example-skills:theme-factory" (userFacingName="theme-factory")
+[DEBUG] Skill prompt: showing "example-skills:brand-guidelines" (userFacingName="brand-guidelines")
+[DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+[DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+[DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+[DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Shell snapshot created successfully (262843 bytes)
+[DEBUG] Stream started - received first chunk
+[INFO] SSH not configured for GitHub, using HTTPS for wshobson/agents
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Added marketplace source: claude-code-workflows
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Found 2 plugins (2 enabled, 0 disabled)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] FileHistory: Added snapshot for 843a6b85-de53-47e2-b6a8-e8d4145f5a58, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "marketplace add wshobson/agents")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Checking for native installer update to version 2.0.36
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Writing to temp file: /Users/jonc/.claude/settings.json.tmp.21749.1762643445106
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 779 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude/settings.json.tmp.21749.1762643445106 to /Users/jonc/.claude/settings.json
+[DEBUG] File /Users/jonc/.claude/settings.json written atomically
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Loading plugin code-documentation from source: "./plugins/code-documentation"
+[DEBUG] Plugin code-documentation has no entry.skills defined
+[DEBUG] Found 3 plugins (3 enabled, 0 disabled)
+[DEBUG] Loaded 3 agents from plugin code-documentation default directory
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/docs-architect.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/tutorial-engineer.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/code-reviewer.md
+[DEBUG] Total plugin agents loaded: 6
+[DEBUG] Loaded 2 commands from plugin code-documentation default directory
+[DEBUG] Plugin code-documentation has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Total plugin commands loaded: 4
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] FileHistory: Making snapshot for message a7622941-5f93-4d21-b93e-61948a91296e
+[DEBUG] FileHistory: Added snapshot for a7622941-5f93-4d21-b93e-61948a91296e, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Checking for native installer update to version 2.0.36
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Writing to temp file: /Users/jonc/.claude/settings.json.tmp.21749.1762643551362
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 830 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude/settings.json.tmp.21749.1762643551362 to /Users/jonc/.claude/settings.json
+[DEBUG] File /Users/jonc/.claude/settings.json written atomically
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Loading plugin code-documentation from source: "./plugins/code-documentation"
+[DEBUG] Plugin code-documentation has no entry.skills defined
+[DEBUG] Loading plugin shell-scripting from source: "./plugins/shell-scripting"
+[DEBUG] Processing 3 skill paths for plugin shell-scripting
+[DEBUG] Checking skill path: ./skills/bash-defensive-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/shellcheck-configuration/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/bats-testing-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md (exists: true)
+[DEBUG] Found 3 valid skill paths for plugin shell-scripting, setting skillsPaths
+[DEBUG] Found 4 plugins (4 enabled, 0 disabled)
+[DEBUG] Loaded 3 agents from plugin code-documentation default directory
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/docs-architect.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/tutorial-engineer.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin shell-scripting default directory
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/bash-pro.md
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/posix-shell-pro.md
+[DEBUG] Total plugin agents loaded: 10
+[DEBUG] Loaded 2 commands from plugin code-documentation default directory
+[DEBUG] Plugin code-documentation has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Total plugin commands loaded: 4
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] FileHistory: Making snapshot for message 36932da8-7b19-45b6-ae7d-3544ef8505ed
+[DEBUG] FileHistory: Added snapshot for 36932da8-7b19-45b6-ae7d-3544ef8505ed, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Checking for native installer update to version 2.0.36
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Writing to temp file: /Users/jonc/.claude/settings.json.tmp.21749.1762643570544
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 884 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude/settings.json.tmp.21749.1762643570544 to /Users/jonc/.claude/settings.json
+[DEBUG] File /Users/jonc/.claude/settings.json written atomically
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Loading plugin code-documentation from source: "./plugins/code-documentation"
+[DEBUG] Plugin code-documentation has no entry.skills defined
+[DEBUG] Loading plugin shell-scripting from source: "./plugins/shell-scripting"
+[DEBUG] Processing 3 skill paths for plugin shell-scripting
+[DEBUG] Checking skill path: ./skills/bash-defensive-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/shellcheck-configuration/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/bats-testing-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md (exists: true)
+[DEBUG] Found 3 valid skill paths for plugin shell-scripting, setting skillsPaths
+[DEBUG] Loading plugin python-development from source: "./plugins/python-development"
+[DEBUG] Processing 5 skill paths for plugin python-development
+[DEBUG] Checking skill path: ./skills/async-python-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-testing-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-packaging -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging (exists: true)
+[DEBUG] Checking skill path: ./skills/python-performance-optimization -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization (exists: true)
+[DEBUG] Checking skill path: ./skills/uv-package-manager -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager (exists: true)
+[DEBUG] Found 5 valid skill paths for plugin python-development, setting skillsPaths
+[DEBUG] Found 5 plugins (5 enabled, 0 disabled)
+[DEBUG] Loaded 3 agents from plugin code-documentation default directory
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/docs-architect.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/tutorial-engineer.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin shell-scripting default directory
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/bash-pro.md
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/posix-shell-pro.md
+[DEBUG] Loaded 3 agents from plugin python-development default directory
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/python-pro.md
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/django-pro.md
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/fastapi-pro.md
+[DEBUG] Total plugin agents loaded: 16
+[DEBUG] Loaded 2 commands from plugin code-documentation default directory
+[DEBUG] Plugin code-documentation has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Loaded 1 commands from plugin python-development default directory
+[DEBUG] Plugin python-development has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md
+[DEBUG] Total plugin commands loaded: 6
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] FileHistory: Making snapshot for message 3e98fe87-ca02-4c6f-b562-c550befccc4e
+[DEBUG] FileHistory: Added snapshot for 3e98fe87-ca02-4c6f-b562-c550befccc4e, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/plugin</command-name>
+            <command-message>plugin</command-message>
+         ...
+[DEBUG] UserCommandMessage rendering: "plugin" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Checking for native installer update to version 2.0.36
+[ERROR] Error: Error: Lock file is already being held
+    at <anonymous> (/$bunfs/root/claude:82:11838)
+    at O (/$bunfs/root/claude:81:5167)
+    at <anonymous> (node:fs:243:13)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/jonc/.claude/shell-snapshots/snapshot-zsh-1762643322710-mdjoet.sh
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] FileHistory: Making snapshot for message d3f7d5d7-548e-4fcf-b917-cd51bc10d8dd
+[DEBUG] FileHistory: Added snapshot for d3f7d5d7-548e-4fcf-b917-cd51bc10d8dd, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/exit</command-name>
+            <command-message>exit</command-message>
+            <...
+[DEBUG] UserCommandMessage rendering: "exit" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Checking for native installer update to version 2.0.36
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 8,
+  "rejected_count": 0
+}
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.21749.1762643579044
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 65887 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.21749.1762643579044 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically

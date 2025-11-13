@@ -1,0 +1,558 @@
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+const sharp = require('sharp');
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+const { FaBalanceScale, FaGavel, FaFileContract, FaUserTie, FaExclamationTriangle, FaHandshake, FaGlobeAmericas } = require('react-icons/fa');
+
+async function rasterizeIconPng(IconComponent, color, size, filename) {
+  const svgString = ReactDOMServer.renderToStaticMarkup(
+    React.createElement(IconComponent, { color: `#${color}`, size: size })
+  );
+  await sharp(Buffer.from(svgString)).png().toFile(filename);
+  return filename;
+}
+
+async function createGradientBg(filename, color1, color2) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810">
+    <defs>
+      <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#${color1}"/>
+        <stop offset="100%" style="stop-color:#${color2}"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#g)"/>
+  </svg>`;
+  await sharp(Buffer.from(svg)).png().toFile(filename);
+  return filename;
+}
+
+async function createFlagPattern(filename) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810">
+    <rect width="100%" height="100%" fill="#292929"/>
+    <g opacity="0.08">
+      <rect x="0" y="0" width="720" height="810" fill="#E33737"/>
+      <rect x="720" y="0" width="720" height="810" fill="#FFFFFF"/>
+    </g>
+  </svg>`;
+  await sharp(Buffer.from(svg)).png().toFile(filename);
+  return filename;
+}
+
+async function createPresentation() {
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = 'Josué Chávez Cardoza';
+  pptx.title = 'Ruptura Diplomática Perú-México: Caso Betssy Chávez';
+
+  // Create assets
+  await createFlagPattern('flag-bg.png');
+  await createGradientBg('grad1.png', '292929', '1a1a1a');
+  await rasterizeIconPng(FaBalanceScale, 'E33737', '200', 'icon-scale.png');
+  await rasterizeIconPng(FaGavel, 'E33737', '200', 'icon-gavel.png');
+  await rasterizeIconPng(FaFileContract, 'E33737', '200', 'icon-doc.png');
+  await rasterizeIconPng(FaUserTie, 'CCCBCB', '200', 'icon-user.png');
+  await rasterizeIconPng(FaExclamationTriangle, 'E33737', '200', 'icon-warn.png');
+  await rasterizeIconPng(FaHandshake, 'CCCBCB', '200', 'icon-hand.png');
+  await rasterizeIconPng(FaGlobeAmericas, 'E33737', '200', 'icon-globe.png');
+
+  // Slide 1: Portada
+  const html1 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #292929; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background-image: url('flag-bg.png'); background-size: cover; }
+.container { width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40pt 60pt; }
+.title { font-size: 42pt; font-weight: bold; color: #FFFFFF; text-align: center; margin: 0 0 18pt 0; line-height: 1.2; }
+.details { font-size: 13pt; color: #CCCBCB; text-align: center; margin: 4pt 0; }
+.line { width: 200pt; height: 3pt; background: #E33737; margin: 18pt 0; }
+</style></head><body>
+<div class="container">
+  <div class="line"></div>
+  <h1 class="title">Encargada de negocios de México en Perú abandonó el país tras asilo diplomático a Betssy Chávez</h1>
+  <div class="line"></div>
+  <p class="details">2025-11-10</p>
+  <p class="details">Josué Chávez Cardoza • La República</p>
+</div>
+</body></html>`;
+
+  // Slide 2: Vocabulario 1
+  const html2 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.header { position: absolute; top: 0; left: 0; right: 0; height: 60pt; background: #292929; display: flex; align-items: center; padding: 0 30pt; }
+.header h2 { color: #FFFFFF; font-size: 28pt; font-weight: bold; margin: 0; }
+.content { position: absolute; top: 80pt; left: 30pt; right: 30pt; bottom: 30pt; display: flex; gap: 30pt; }
+.vocab { flex: 2; }
+.icon-box { flex: 1; display: flex; align-items: center; justify-content: center; }
+.vocab p { margin: 12pt 0; font-size: 11pt; line-height: 1.4; }
+.vocab p strong { color: #E33737; font-size: 12pt; }
+</style></head><body>
+<div class="header"><h2>Vocabulario Especializado</h2></div>
+<div class="content">
+  <div class="vocab">
+    <p><strong>Asilo diplomático:</strong> Protección otorgada por un país a un ciudadano de otro para evitar persecución política, a menudo en embajadas.</p>
+    <p><strong>Encargada de negocios:</strong> Representante diplomática interina que dirige una embajada en ausencia de un embajador pleno.</p>
+    <p><strong>Plazo perentorio:</strong> Tiempo límite estricto e irrevocable para cumplir una obligación, sin posibilidad de extensión.</p>
+    <p><strong>Persona non grata:</strong> Declaración oficial que considera a un diplomático o figura extranjera indeseable, llevando a su expulsión.</p>
+    <p><strong>Golpe de Estado:</strong> Derrocamiento ilegal y repentino de un gobierno, usualmente por medios violentos o inconstitucionales.</p>
+    <p><strong>Salvoconducto:</strong> Documento oficial que garantiza el paso seguro y protección para una persona al salir de un territorio.</p>
+    <p><strong>Convención de Caracas:</strong> Tratado internacional de 1954 sobre asilo diplomático en América Latina, regulado por la OEA.</p>
+  </div>
+  <div class="icon-box"><img src="icon-scale.png" style="width: 140pt; height: 140pt; opacity: 0.8;"></div>
+</div>
+</body></html>`;
+
+  // Slide 3: Contexto Original
+  const html3 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; }
+.left { width: 50%; background: #E33737; display: flex; flex-direction: column; justify-content: center; padding: 40pt; }
+.right { width: 50%; background: #292929; display: flex; flex-direction: column; justify-content: center; padding: 40pt; }
+.left h2 { color: #FFFFFF; font-size: 32pt; font-weight: bold; margin: 0 0 20pt 0; line-height: 1.2; }
+.left p { color: #FFFFFF; font-size: 13pt; margin: 8pt 0; }
+.right p { color: #CCCBCB; font-size: 13pt; margin: 8pt 0; }
+</style></head><body>
+<div class="left">
+  <h2>Ruptura Diplomática entre Perú y México</h2>
+  <p><strong>El Caso del Asilo a Betssy Chávez</strong></p>
+  <p>Fuente: La República</p>
+  <p>Fecha: 10 de noviembre de 2025</p>
+</div>
+<div class="right">
+  <p>Una crisis diplomática sin precedentes que pone a prueba las relaciones bilaterales entre dos naciones latinoamericanas.</p>
+  <p>El otorgamiento de asilo a una ex primera ministra investigada por golpe de estado genera tensiones regionales.</p>
+</div>
+</body></html>`;
+
+  // Slide 4: Vocabulario tabla
+  const html4 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.container { width: 100%; padding: 40pt; }
+.header-box { border-bottom: 4pt solid #E33737; padding-bottom: 10pt; margin-bottom: 30pt; }
+h2 { color: #292929; font-size: 28pt; font-weight: bold; margin: 0; }
+.grid { display: flex; flex-direction: column; gap: 12pt; }
+.row { display: flex; gap: 20pt; }
+.term { flex: 1; background: #292929; padding: 10pt 15pt; border-radius: 4pt; }
+.term p { color: #FFFFFF; font-size: 11pt; margin: 0; }
+.term strong { color: #E33737; font-size: 12pt; }
+</style></head><body>
+<div class="container">
+  <div class="header-box">
+    <h2>Vocabulario Clave</h2>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="term"><p><strong>Asilo diplomático:</strong> Protección en embajadas contra persecución política.</p></div>
+      <div class="term"><p><strong>Encargada de negocios:</strong> Representante diplomática temporal sin embajador.</p></div>
+    </div>
+    <div class="row">
+      <div class="term"><p><strong>Salvoconducto:</strong> Documento que permite paso seguro para salir de un país.</p></div>
+      <div class="term"><p><strong>Convención de Caracas:</strong> Tratado de 1954 sobre asilo en América Latina.</p></div>
+    </div>
+    <div class="row">
+      <div class="term"><p><strong>Persona non grata:</strong> Declaración que expulsa a un diplomático.</p></div>
+      <div class="term"><p><strong>Plazo perentorio:</strong> Tiempo límite estricto e inapelable.</p></div>
+    </div>
+    <div class="row">
+      <div class="term" style="flex: 2;"><p><strong>Golpe de Estado:</strong> Intento ilegal de derrocar un gobierno establecido.</p></div>
+    </div>
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 5: Gobierno Castillo
+  const html5 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.header { position: absolute; top: 0; left: 0; right: 0; height: 70pt; background: #E33737; display: flex; align-items: center; padding: 0 40pt; }
+.header h2 { color: #FFFFFF; font-size: 30pt; font-weight: bold; margin: 0; }
+.content { position: absolute; top: 90pt; left: 40pt; right: 40pt; bottom: 30pt; }
+.intro { font-size: 13pt; color: #292929; margin-bottom: 20pt; line-height: 1.5; }
+.bullets { margin-top: 15pt; }
+.bullets li { font-size: 12pt; color: #292929; margin: 10pt 0; line-height: 1.4; }
+</style></head><body>
+<div class="header"><h2>Contexto: Gobierno de Pedro Castillo (2021-2022)</h2></div>
+<div class="content">
+  <p class="intro">Pedro Castillo ascendió a la presidencia en 2021 en medio de una profunda polarización política. Su mandato estuvo marcado por conflictos constantes con el Congreso peruano.</p>
+  <ul class="bullets">
+    <li>Inestabilidad política con tres primeros ministros en corto tiempo</li>
+    <li>Betssy Chávez nombrada como tercera primera ministra en octubre 2022</li>
+    <li>Ex congresista con políticas de izquierda, enfrentó acusaciones de corrupción</li>
+    <li>Período caracterizado por crisis institucional y tensiones con el poder legislativo</li>
+  </ul>
+</div>
+</body></html>`;
+
+  // Slide 6: Intento golpe
+  const html6 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.left { width: 60%; padding: 40pt; display: flex; flex-direction: column; justify-content: center; }
+.right { width: 40%; background: #292929; padding: 30pt; display: flex; align-items: center; justify-content: center; }
+h2 { color: #E33737; font-size: 28pt; font-weight: bold; margin: 0 0 15pt 0; }
+.date { font-size: 16pt; font-weight: bold; color: #292929; margin-bottom: 20pt; }
+.content p { font-size: 12pt; color: #292929; line-height: 1.5; margin: 10pt 0; }
+</style></head><body>
+<div class="left">
+  <h2>Intento de Golpe de Estado</h2>
+  <p class="date">7 de diciembre de 2022</p>
+  <div class="content">
+    <p>Pedro Castillo intentó disolver el Congreso y gobernar por decreto, acción calificada como <strong>autogolpe</strong>.</p>
+    <p>Betssy Chávez, como ex primera ministra, fue investigada por <strong>rebelión y conspiración</strong> en este evento.</p>
+    <p>Este hecho llevó a su detención y juicio oral, generando tensiones con México que apoyaba a Castillo.</p>
+  </div>
+</div>
+<div class="right">
+  <img src="icon-warn.png" style="width: 120pt; height: 120pt;">
+</div>
+</body></html>`;
+
+  // Slide 7: Tensiones iniciales
+  const html7 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.container { width: 100%; padding: 40pt 50pt; }
+h2 { color: #292929; font-size: 28pt; font-weight: bold; margin: 0 0 25pt 0; text-align: center; }
+.timeline { display: flex; flex-direction: column; gap: 18pt; }
+.event { display: flex; gap: 15pt; align-items: flex-start; }
+.icon { width: 40pt; height: 40pt; background: #E33737; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon-text { color: #FFFFFF; font-weight: bold; font-size: 14pt; }
+.event-content { flex: 1; }
+.event-content h3 { color: #E33737; font-size: 14pt; margin: 0 0 5pt 0; font-weight: bold; }
+.event-content p { color: #292929; font-size: 11pt; margin: 0; line-height: 1.4; }
+</style></head><body>
+<div class="container">
+  <h2>Tensiones Diplomáticas Iniciales con México</h2>
+  <div class="timeline">
+    <div class="event">
+      <div class="icon"><p class="icon-text">1</p></div>
+      <div class="event-content">
+        <h3>Expulsión del Embajador Mexicano (2022)</h3>
+        <p>Perú expulsó al embajador Pablo Monroy por declaraciones de apoyo a Castillo, declarándolo persona non grata.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="icon"><p class="icon-text">2</p></div>
+      <div class="event-content">
+        <h3>Nueva Encargada de Negocios</h3>
+        <p>Karla Ornelas asumió como encargada de negocios de México en Perú.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="icon"><p class="icon-text">3</p></div>
+      <div class="event-content">
+        <h3>Precedente Histórico</h3>
+        <p>México tiene historia de otorgar asilos a figuras latinoamericanas, como Evo Morales en 2019.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 8: Asilo a Chávez
+  const html8 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; }
+.sidebar { width: 160pt; background: #E33737; padding: 30pt 20pt; }
+.main { flex: 1; padding: 40pt; background: #FFFFFF; }
+.sidebar h2 { color: #FFFFFF; font-size: 26pt; font-weight: bold; margin: 0 0 15pt 0; line-height: 1.2; writing-mode: horizontal-tb; }
+.sidebar .date-box { border-top: 2pt solid #FFFFFF; border-bottom: 2pt solid #FFFFFF; padding: 10pt 0; margin: 20pt 0; }
+.sidebar .date { color: #FFFFFF; font-size: 18pt; font-weight: bold; margin: 0; }
+.main h3 { color: #E33737; font-size: 20pt; font-weight: bold; margin: 0 0 15pt 0; }
+.main p { color: #292929; font-size: 12pt; line-height: 1.5; margin: 12pt 0; }
+.quote { background: #F5F5F5; border-left: 4pt solid #E33737; padding: 15pt; margin: 15pt 0; }
+.quote p { font-style: italic; margin: 0; color: #292929; font-size: 11pt; }
+</style></head><body>
+<div class="sidebar">
+  <h2>Otorgamiento de Asilo</h2>
+  <div class="date-box">
+    <p class="date">3 NOV 2025</p>
+  </div>
+</div>
+<div class="main">
+  <h3>México otorga asilo diplomático a Betssy Chávez</h3>
+  <p>Chávez, investigada por su participación en el intento de golpe de 2022, recibió protección en la embajada mexicana en Lima.</p>
+  <div class="quote">
+    <p>"Acto inamistoso que viola principios de no intervención"</p>
+    <p>— Hugo de Zela, Canciller peruano</p>
+  </div>
+  <p>Perú rompió relaciones diplomáticas inmediatamente. Chávez permanece en la embajada en un "limbo" judicial mientras el caso continúa.</p>
+</div>
+</body></html>`;
+
+  // Slide 9: Salida Ornelas
+  const html9 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #FFFFFF; }
+.container { width: 100%; padding: 50pt; display: flex; gap: 40pt; align-items: center; }
+.text { flex: 1.5; }
+.visual { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 20pt; }
+h2 { color: #292929; font-size: 30pt; font-weight: bold; margin: 0 0 20pt 0; }
+.date-box { background: #E33737; color: #FFFFFF; padding: 15pt 25pt; border-radius: 8pt; text-align: center; }
+.date-box p { font-size: 20pt; font-weight: bold; margin: 0; line-height: 1.3; }
+.text p { color: #292929; font-size: 13pt; line-height: 1.6; margin: 12pt 0; }
+.text p strong { color: #E33737; }
+</style></head><body>
+<div class="container">
+  <div class="text">
+    <h2>Salida de Karla Ornelas</h2>
+    <p>El 8 de noviembre de 2025, Karla Ornelas abandonó Perú tras recibir un <strong>plazo perentorio</strong> del gobierno.</p>
+    <p>Migraciones confirmó oficialmente su salida del país.</p>
+    <p>Esto culmina la representación diplomática mexicana en Perú, agravando la ruptura iniciada cinco días antes.</p>
+  </div>
+  <div class="visual">
+    <div class="date-box">
+      <p>8 NOV</p>
+      <p>2025</p>
+    </div>
+    <img src="icon-user.png" style="width: 100pt; height: 100pt;">
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 10: Reacciones
+  const html10 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #F5F5F5; }
+.header { position: absolute; top: 0; left: 0; right: 0; height: 65pt; background: #292929; display: flex; align-items: center; padding: 0 40pt; }
+.header h2 { color: #FFFFFF; font-size: 28pt; font-weight: bold; margin: 0; }
+.content { position: absolute; top: 85pt; left: 40pt; right: 40pt; bottom: 30pt; display: flex; flex-direction: column; gap: 15pt; }
+.reaction { background: #FFFFFF; border-left: 6pt solid #E33737; padding: 15pt 20pt; border-radius: 4pt; }
+.reaction h3 { color: #E33737; font-size: 14pt; font-weight: bold; margin: 0 0 8pt 0; }
+.reaction p { color: #292929; font-size: 11pt; margin: 0; line-height: 1.4; }
+</style></head><body>
+<div class="header"><h2>Reacciones Internacionales y Domésticas</h2></div>
+<div class="content">
+  <div class="reaction">
+    <h3>Presidenta Claudia Sheinbaum (México)</h3>
+    <p>Calificó la decisión peruana como "fuera de toda proporción" y defendió el derecho al asilo diplomático.</p>
+  </div>
+  <div class="reaction">
+    <h3>Congreso Peruano</h3>
+    <p>Declaró a la presidenta Sheinbaum persona non grata por respaldar a Pedro Castillo y cuestionar autoridades peruanas.</p>
+  </div>
+  <div class="reaction">
+    <h3>Embajador Cubano</h3>
+    <p>Carlos Zamora dejó Perú el 28 de octubre, señalando tensiones diplomáticas regionales más amplias.</p>
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 11: Impacto económico (with placeholder for chart)
+  const html11 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; }
+.left { width: 45%; padding: 40pt 30pt; background: #FFFFFF; }
+.right { width: 55%; padding: 40pt 30pt; background: #F5F5F5; display: flex; align-items: center; justify-content: center; }
+h2 { color: #292929; font-size: 26pt; font-weight: bold; margin: 0 0 20pt 0; }
+.left p { color: #292929; font-size: 11pt; line-height: 1.5; margin: 12pt 0; }
+.highlight { background: #E33737; color: #FFFFFF; padding: 15pt; border-radius: 6pt; text-align: center; margin: 20pt 0; }
+.highlight p { color: #FFFFFF; font-size: 24pt; font-weight: bold; margin: 0; }
+.highlight .label { font-size: 11pt; margin-top: 5pt; }
+</style></head><body>
+<div class="left">
+  <h2>Impacto Económico y Diplomático</h2>
+  <div class="highlight">
+    <p>$2,600M</p>
+    <p class="label">Comercio Bilateral Anual</p>
+  </div>
+  <p>La ruptura afecta importaciones peruanas de maquinaria mexicana y exportaciones de cobre y gas natural.</p>
+  <p>Inmigrantes y procesamientos diplomáticos se complican. Posibles efectos en la OEA y foros latinoamericanos.</p>
+</div>
+<div class="right">
+  <div id="chart-area" class="placeholder" style="width: 320pt; height: 240pt;"></div>
+</div>
+</body></html>`;
+
+  // Slide 12: Salvoconducto
+  const html12 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; }
+.container { width: 100%; display: flex; }
+.left { width: 65%; padding: 45pt; background: #FFFFFF; }
+.right { width: 35%; background: #292929; display: flex; align-items: center; justify-content: center; padding: 30pt; }
+h2 { color: #E33737; font-size: 28pt; font-weight: bold; margin: 0 0 10pt 0; }
+.date { color: #292929; font-size: 14pt; font-weight: bold; margin-bottom: 20pt; }
+.left p { color: #292929; font-size: 12pt; line-height: 1.5; margin: 12pt 0; }
+ul { margin: 15pt 0; padding-left: 20pt; }
+li { color: #292929; font-size: 11pt; margin: 8pt 0; line-height: 1.4; }
+</style></head><body>
+<div class="container">
+  <div class="left">
+    <h2>Denegación de Salvoconducto</h2>
+    <p class="date">7 de noviembre de 2025</p>
+    <p>La Cancillería peruana negó temporalmente el salvoconducto a Betssy Chávez.</p>
+    <ul>
+      <li>Argumento: No es persecución política sino delitos comunes</li>
+      <li>Chávez enfrenta juicio oral en etapa final</li>
+      <li>Prolonga su estancia indefinida en la embajada mexicana</li>
+      <li>Limbo legal y diplomático sin precedentes</li>
+    </ul>
+  </div>
+  <div class="right">
+    <img src="icon-gavel.png" style="width: 110pt; height: 110pt;">
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 13: Modificar Convención
+  const html13 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #FFFFFF; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #F5F5F5; }
+.container { width: 100%; padding: 50pt 60pt; }
+h2 { color: #292929; font-size: 30pt; font-weight: bold; margin: 0 0 25pt 0; text-align: center; }
+.main-box { background: #E33737; color: #FFFFFF; padding: 30pt; border-radius: 8pt; margin: 20pt 0; }
+.main-box h3 { color: #FFFFFF; font-size: 20pt; font-weight: bold; margin: 0 0 15pt 0; }
+.main-box p { color: #FFFFFF; font-size: 12pt; line-height: 1.6; margin: 10pt 0; }
+.footer { display: flex; gap: 20pt; margin-top: 20pt; }
+.box { flex: 1; background: #FFFFFF; padding: 15pt; border-radius: 6pt; border: 2pt solid #CCCBCB; }
+.box h4 { color: #E33737; font-size: 13pt; font-weight: bold; margin: 0 0 8pt 0; }
+.box p { color: #292929; font-size: 10pt; margin: 0; line-height: 1.4; }
+</style></head><body>
+<div class="container">
+  <h2>Propuesta de Modificar la Convención de Caracas</h2>
+  <div class="main-box">
+    <h3>Convención de Caracas 1954</h3>
+    <p>Perú planea proponer ante la OEA modificaciones al tratado, citando "uso indebido" donde delitos comunes se disfrazan de políticos.</p>
+  </div>
+  <div class="footer">
+    <div class="box">
+      <h4>Consultas Urgentes</h4>
+      <p>Iniciará diálogo con estados miembros para respetar el "imperio de la ley"</p>
+    </div>
+    <div class="box">
+      <h4>Objetivo</h4>
+      <p>Evitar abusos del asilo diplomático en casos de delitos comunes</p>
+    </div>
+  </div>
+</div>
+</body></html>`;
+
+  // Slide 14: Conclusión
+  const html14 = `<!DOCTYPE html>
+<html><head><style>
+html { background: #292929; }
+body { width: 720pt; height: 405pt; margin: 0; padding: 0; display: flex; font-family: Arial, sans-serif; background: #292929; }
+.container { width: 100%; padding: 50pt 70pt; display: flex; flex-direction: column; justify-content: center; }
+h2 { color: #E33737; font-size: 32pt; font-weight: bold; margin: 0 0 30pt 0; text-align: center; }
+.content { background: rgba(204, 203, 203, 0.1); border: 2pt solid #E33737; border-radius: 8pt; padding: 30pt; }
+.content p { color: #CCCBCB; font-size: 13pt; line-height: 1.7; margin: 15pt 0; text-align: center; }
+.bullets { margin-top: 20pt; }
+.bullets li { color: #CCCBCB; font-size: 12pt; margin: 12pt 0; line-height: 1.5; }
+.icon-row { display: flex; justify-content: center; gap: 40pt; margin-top: 25pt; }
+</style></head><body>
+<div class="container">
+  <h2>Desafíos Futuros y Lecciones</h2>
+  <div class="content">
+    <p>El gobierno peruano tomará decisiones tras consultas con la OEA, potencialmente restableciendo relaciones si se resuelve el caso del asilo.</p>
+    <ul class="bullets">
+      <li>Resalta desafíos del asilo diplomático en América Latina</li>
+      <li>Promueve reformas para evitar abusos del tratado</li>
+      <li>Fortalecimiento de instituciones democráticas regionales</li>
+    </ul>
+  </div>
+  <div class="icon-row">
+    <img src="icon-globe.png" style="width: 60pt; height: 60pt;">
+    <img src="icon-hand.png" style="width: 60pt; height: 60pt;">
+  </div>
+</div>
+</body></html>`;
+
+  // Generate all HTML files
+  require('fs').writeFileSync('slide1.html', html1);
+  require('fs').writeFileSync('slide2.html', html2);
+  require('fs').writeFileSync('slide3.html', html3);
+  require('fs').writeFileSync('slide4.html', html4);
+  require('fs').writeFileSync('slide5.html', html5);
+  require('fs').writeFileSync('slide6.html', html6);
+  require('fs').writeFileSync('slide7.html', html7);
+  require('fs').writeFileSync('slide8.html', html8);
+  require('fs').writeFileSync('slide9.html', html9);
+  require('fs').writeFileSync('slide10.html', html10);
+  require('fs').writeFileSync('slide11.html', html11);
+  require('fs').writeFileSync('slide12.html', html12);
+  require('fs').writeFileSync('slide13.html', html13);
+  require('fs').writeFileSync('slide14.html', html14);
+
+  // Convert to PPTX with speaker notes
+  const { slide: s1 } = await html2pptx('slide1.html', pptx);
+  s1.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 1:\n\nBienvenidos a esta presentación sobre un evento diplomático crucial que ha afectado las relaciones entre Perú y México.\n\nEsta situación comenzó el 3 de noviembre de 2025, cuando México otorgó asilo diplomático a Betssy Chávez, la ex primera ministra de Pedro Castillo que está siendo investigada por su participación en el intento de golpe de estado de diciembre 2022.\n\nLa encargada de negocios de México, Karla Ornelas, tuvo que abandonar Perú después de que el gobierno peruano le dio un plazo perentorio para salir del país.\n\nEste caso pone de relieve las tensiones continuas sobre el uso del asilo diplomático en América Latina y plantea preguntas importantes sobre cuándo la protección diplomática es apropiada y cuándo puede considerarse interferencia en asuntos internos de otro país.\n\nA lo largo de esta presentación, examinaremos los antecedentes históricos, los eventos recientes y las implicaciones futuras de esta ruptura diplomática sin precedentes.');
+
+  const { slide: s2 } = await html2pptx('slide2.html', pptx);
+  s2.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 2:\n\nAntes de profundizar en los detalles del caso, es fundamental que comprendamos el vocabulario especializado que utilizaremos a lo largo de esta presentación.\n\nASILO DIPLOMÁTICO: Es la protección que un país otorga a un ciudadano de otro país dentro de sus instalaciones diplomáticas, como embajadas o consulados, para protegerlo de persecución política. Es importante notar que esto ocurre a menudo dentro de las embajadas mismas.\n\nENCARGADA DE NEGOCIOS: Cuando un país no tiene un embajador pleno en otro país, nombra a un representante diplomático interino llamado encargado o encargada de negocios. Esta persona dirige la embajada temporalmente.\n\nPLAZO PERENTORIO: Un término legal que significa un tiempo límite estricto e irrevocable. No hay posibilidad de extensión cuando se establece un plazo perentorio.\n\nPERSONA NON GRATA: Es una declaración oficial por la cual un país considera a un diplomático extranjero como indeseable. Esta declaración típicamente resulta en la expulsión del diplomático.\n\nGOLPE DE ESTADO: El derrocamiento ilegal y usualmente repentino de un gobierno, frecuentemente por medios violentos o inconstitucionales.\n\nSALVOCONDUCTO: Un documento oficial que garantiza el paso seguro de una persona para salir de un territorio, protegiéndola durante su tránsito.\n\nCONVENCIÓN DE CARACAS: El tratado internacional firmado en 1954 que regula el asilo diplomático en América Latina, administrado por la Organización de Estados Americanos (OEA).\n\nEstos términos serán esenciales para entender los aspectos legales y diplomáticos del caso que estudiaremos.');
+
+  const { slide: s3 } = await html2pptx('slide3.html', pptx);
+  s3.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 3:\n\nAhora entramos al contexto general de esta crisis diplomática entre Perú y México.\n\nEstamos ante una ruptura diplomática sin precedentes que pone a prueba las relaciones bilaterales entre dos importantes naciones latinoamericanas.\n\nEl origen de esta crisis es el otorgamiento de asilo diplomático por parte de México a Betssy Chávez, quien fue la tercera primera ministra durante el breve gobierno de Pedro Castillo. Chávez está siendo investigada en Perú por su presunta participación en el intento de golpe de estado de diciembre 2022.\n\nEsta situación es particularmente delicada porque involucra cuestiones fundamentales del derecho internacional: ¿Cuándo se debe otorgar asilo diplomático? ¿Es este un caso de persecución política legítima o de evasión de la justicia por delitos comunes?\n\nLa fuente principal de esta información es el periódico peruano La República, con fecha del 10 de noviembre de 2025, cuando Karla Ornelas oficialmente abandonó el territorio peruano.\n\nEste caso no solo afecta a Perú y México, sino que tiene ramificaciones para toda América Latina en términos de cómo se aplican los tratados internacionales sobre asilo diplomático.');
+
+  const { slide: s4 } = await html2pptx('slide4.html', pptx);
+  s4.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 4:\n\nAquí presentamos nuevamente los términos clave del vocabulario, pero en un formato visual diferente para reforzar la comprensión.\n\nEsta tabla organizada nos permite ver rápidamente las definiciones más concisas de cada término:\n\nAsilo diplomático es la protección dentro de embajadas contra persecución política.\n\nEncargada de negocios es el representante diplomático temporal cuando no hay embajador.\n\nSalvoconducto es el documento que permite salida segura de un país.\n\nLa Convención de Caracas es el tratado de 1954 que regula el asilo en América Latina.\n\nPersona non grata es la declaración que resulta en la expulsión de un diplomático.\n\nPlazo perentorio es un tiempo límite estricto sin posibilidad de apelación.\n\nY golpe de estado es el intento ilegal de derrocar un gobierno establecido.\n\nEstos siete términos forman el vocabulario esencial para comprender los aspectos legales, diplomáticos y políticos del caso que estamos analizando.');
+
+  const { slide: s5 } = await html2pptx('slide5.html', pptx);
+  s5.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 5:\n\nPara entender completamente la situación actual, debemos retroceder al gobierno de Pedro Castillo que duró desde 2021 hasta diciembre de 2022.\n\nCastillo, un maestro rural y sindicalista, ascendió a la presidencia en julio de 2021 en medio de una profunda polarización política en Perú. Desde el principio, su mandato estuvo caracterizado por conflictos constantes con el Congreso peruano, que era de mayoría opositora.\n\nLa inestabilidad fue tal que Castillo tuvo tres primeros ministros diferentes en poco más de un año. Esta rotación constante reflejaba la dificultad que tenía su gobierno para gobernar efectivamente.\n\nBetssy Chávez fue nombrada como la tercera primera ministra en octubre de 2022, apenas dos meses antes del intento de golpe. Chávez era una ex congresista conocida por sus políticas de izquierda y ya había enfrentado acusaciones de corrupción durante su tiempo en el Congreso.\n\nEste período estuvo marcado por una crisis institucional profunda, con tensiones constantes entre el poder ejecutivo y el poder legislativo. Estas tensiones eventualmente llevarían a los eventos dramáticos de diciembre de 2022 que estudiaremos en la próxima diapositiva.');
+
+  const { slide: s6 } = await html2pptx('slide6.html', pptx);
+  s6.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 6:\n\nLlegamos al evento crítico que desencadenó todo: el intento de golpe de estado del 7 de diciembre de 2022.\n\nEn la mañana de ese día, enfrentando una tercera moción de vacancia (destitución) por parte del Congreso, Pedro Castillo tomó una decisión drástica. En un mensaje televisado a la nación, anunció que disolvería el Congreso y gobernaría por decreto, instalando lo que llamó un "gobierno de excepción".\n\nEsta acción fue inmediatamente calificada por las instituciones peruanas como un "autogolpe" - es decir, un golpe de estado perpetrado por el propio presidente contra las instituciones democráticas del país.\n\nEl intento fracasó en cuestión de horas. El Congreso se reunió de todas formas y procedió a destituir a Castillo por "permanente incapacidad moral". La vicepresidenta Dina Boluarte asumió la presidencia. Castillo fue arrestado cuando intentaba buscar asilo en la embajada de México.\n\nBetssy Chávez, como primera ministra en ese momento, fue investigada por los delitos de rebelión y conspiración relacionados con este evento. Las autoridades peruanas argumentan que ella participó en la planificación y ejecución del intento de golpe.\n\nEste hecho inmediatamente tensó las relaciones con México, cuyo gobierno expresó apoyo a Castillo y cuestionó la legitimidad de su destitución, considerándola un "golpe parlamentario".');
+
+  const { slide: s7 } = await html2pptx('slide7.html', pptx);
+  s7.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 7:\n\nLas tensiones diplomáticas entre Perú y México comenzaron inmediatamente después de los eventos de diciembre 2022.\n\nPRIMER EVENTO: En 2022, el gobierno peruano expulsó al embajador mexicano Pablo Monroy después de que hiciera declaraciones públicas de apoyo a Pedro Castillo y cuestionara la legitimidad del gobierno de Dina Boluarte. Perú lo declaró "persona non grata", lo que significaba que debía abandonar el país inmediatamente.\n\nSEGUNDO EVENTO: Después de la expulsión del embajador, Karla Ornelas asumió como encargada de negocios de México en Perú. Como mencionamos anteriormente, esta es una posición diplomática interina que se ocupa cuando no hay un embajador pleno.\n\nTERCER EVENTO Y CONTEXTO: Es importante notar que México tiene una larga historia de otorgar asilos a figuras políticas latinoamericanas. El precedente más reciente fue el asilo otorgado a Evo Morales, ex presidente de Bolivia, en 2019 cuando él también enfrentó acusaciones en su país después de su renuncia en medio de protestas.\n\nEsta tradición mexicana de otorgar asilos se basa en su política exterior de no intervención y respeto al derecho de asilo, principios que han definido la diplomacia mexicana por décadas. Sin embargo, esta tradición ahora choca directamente con la posición peruana de que estos casos no son de persecución política sino de delitos comunes que deben ser juzgados.');
+
+  const { slide: s8 } = await html2pptx('slide8.html', pptx);
+  s8.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 8:\n\nLlegamos al evento que desencadenó la crisis diplomática actual: el 3 de noviembre de 2025, cuando México otorgó formalmente asilo diplomático a Betssy Chávez.\n\nChávez, quien había estado escondiéndose de la justicia peruana, logró ingresar a la embajada mexicana en Lima y solicitó asilo. México aprobó su solicitud, argumentando que ella enfrentaba persecución política.\n\nLa reacción del gobierno peruano fue inmediata y contundente. El canciller Hugo de Zela declaró públicamente que esto constituía un "acto inamistoso" que violaba los principios de no intervención en asuntos internos de otro país. Perú argumentó que Chávez no está siendo perseguida por razones políticas, sino que está siendo procesada legítimamente por delitos comunes: rebelión y conspiración para derrocar un gobierno democrático.\n\nComo resultado directo, Perú anunció la ruptura de relaciones diplomáticas con México.\n\nMientras tanto, Betssy Chávez permanece en la embajada mexicana en Lima, en lo que los expertos llaman un "limbo" legal y diplomático. Ella no puede salir porque sería arrestada inmediatamente por las autoridades peruanas, pero tampoco puede viajar a México porque el gobierno peruano ha negado otorgarle el salvoconducto necesario.\n\nSu juicio oral en Perú continúa, pero obviamente ella no puede asistir a las audiencias mientras permanezca en la embajada.');
+
+  const { slide: s9 } = await html2pptx('slide9.html', pptx);
+  s9.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 9:\n\nCinco días después del otorgamiento del asilo, el 8 de noviembre de 2025, ocurrió el siguiente paso en el deterioro de las relaciones: la salida de Karla Ornelas de Perú.\n\nDespués de la ruptura de relaciones diplomáticas, el gobierno peruano, encabezado por el ministro José Jerí, emitió un "plazo perentorio" - recuerden que este es un término legal para un tiempo límite estricto e irrevocable - para que Ornelas abandonara el territorio peruano.\n\nOrnelas acató la orden y se presentó al aeropuerto Jorge Chávez de Lima, donde Migraciones confirmó oficialmente su salida del país.\n\nEsta salida marca la culminación de la representación diplomática mexicana en Perú. Ya no hay embajador, ya no hay encargada de negocios - la embajada de México en Lima permanece cerrada, excepto por el personal mínimo necesario para mantener las instalaciones donde Betssy Chávez se encuentra refugiada.\n\nEsto agrava significativamente la ruptura que se había iniciado cinco días antes. Sin representación diplomática, no hay canales formales de comunicación entre los dos gobiernos, lo que hace mucho más difícil encontrar una solución a esta crisis.');
+
+  const { slide: s10 } = await html2pptx('slide10.html', pptx);
+  s10.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 10:\n\nLa ruptura diplomática generó reacciones inmediatas tanto a nivel internacional como doméstico.\n\nPRIMERA REACCIÓN - PRESIDENTA MEXICANA: Claudia Sheinbaum, quien asumió la presidencia de México en 2024, defendió vigorosamente la decisión de su gobierno de otorgar asilo a Chávez. Calificó la respuesta peruana como "fuera de toda proporción" y argumentó que México simplemente estaba cumpliendo con sus obligaciones bajo la Convención de Caracas de proteger a personas que enfrentan persecución política.\n\nSEGUNDA REACCIÓN - CONGRESO PERUANO: La respuesta del Congreso peruano fue igualmente contundente. Declararon a la presidenta Sheinbaum como "persona non grata" - un movimiento sin precedentes contra una jefa de estado en funciones. Esto fue en respuesta no solo por el asilo a Chávez, sino también por declaraciones anteriores de Sheinbaum respaldando a Pedro Castillo y cuestionando la legitimidad de las autoridades peruanas actuales.\n\nTERCERA REACCIÓN - CONTEXTO REGIONAL: Es importante notar que el embajador cubano Carlos Zamora también dejó Perú el 28 de octubre, justo días antes de la crisis con México. Esto señala que las tensiones diplomáticas de Perú no se limitan solo a México, sino que reflejan tensiones más amplias con gobiernos de izquierda en la región que han expresado apoyo a Pedro Castillo.\n\nEstas reacciones muestran cómo un caso diplomático bilateral rápidamente puede tener ramificaciones regionales más amplias.');
+
+  const { slide: s11, placeholders: p11 } = await html2pptx('slide11.html', pptx);
+  s11.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 11:\n\nMás allá de las implicaciones políticas y diplomáticas, esta ruptura tiene consecuencias económicas y prácticas significativas.\n\nIMPACTO COMERCIAL: El comercio bilateral entre Perú y México alcanza aproximadamente 2,600 millones de dólares anuales. Perú importa principalmente maquinaria, equipos industriales y productos manufacturados de México, mientras que México importa de Perú principalmente cobre, gas natural y productos agrícolas.\n\nAunque las relaciones comerciales no se detienen automáticamente con una ruptura diplomática - las empresas privadas pueden seguir comerciando - la falta de representación diplomática complica enormemente la resolución de disputas comerciales, la emisión de visas comerciales y la coordinación de políticas económicas.\n\nIMPACTO EN PERSONAS: Hay miles de ciudadanos mexicanos viviendo en Perú y peruanos viviendo en México. Sin embajadas funcionando, estos ciudadanos enfrentan dificultades para renovar documentos, obtener certificados consulares y recibir asistencia consular en caso de emergencias.\n\nIMPACTO EN FOROS INTERNACIONALES: La ruptura también afecta la cooperación entre ambos países en organizaciones internacionales como la OEA (Organización de Estados Americanos), la Alianza del Pacífico y otros foros latinoamericanos donde tradicionalmente ambos países han trabajado juntos en temas de interés común.\n\nEl gráfico que ven ilustra la disminución esperada en el comercio bilateral y la cooperación económica como resultado de esta ruptura diplomática.');
+
+  // Add chart for economic impact
+  const tradeData = [
+    { name: 'Importaciones desde México', labels: ['2022', '2023', '2024', '2025 (proyección)'], values: [1200, 1300, 1400, 1100] },
+    { name: 'Exportaciones a México', labels: ['2022', '2023', '2024', '2025 (proyección)'], values: [1100, 1200, 1300, 1000] }
+  ];
+  s11.addChart(pptx.charts.BAR, tradeData, {
+    ...p11[0],
+    barDir: 'col',
+    showTitle: true,
+    title: 'Comercio Bilateral Perú-México (Millones USD)',
+    showLegend: true,
+    legendPos: 'b',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Año',
+    showValAxisTitle: true,
+    valAxisTitle: 'Millones USD',
+    valAxisMaxVal: 1600,
+    valAxisMinVal: 0,
+    chartColors: ['E33737', '292929']
+  });
+
+  const { slide: s12 } = await html2pptx('slide12.html', pptx);
+  s12.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 12:\n\nUno de los aspectos más críticos de esta situación es la negativa del gobierno peruano a otorgar el salvoconducto a Betssy Chávez.\n\nEl 7 de noviembre de 2025, un día antes de que Karla Ornelas abandonara el país, la Cancillería peruana oficialmente negó la solicitud mexicana de otorgar un salvoconducto a Chávez para que pudiera salir de Perú y viajar a México.\n\nRecuerden que un salvoconducto es un documento que garantiza el paso seguro de una persona para salir de un territorio. Bajo la Convención de Caracas, el país que otorga asilo debe solicitar al país territorial que proporcione este salvoconducto.\n\nARGUMENTO PERUANO: El gobierno peruano argumenta que este no es un caso de persecución política, sino de delitos comunes. Específicamente, Chávez está acusada de rebelión y conspiración - delitos graves bajo el código penal peruano. La Cancillería sostiene que la Convención de Caracas no fue diseñada para proteger a personas acusadas de delitos comunes, sino solo a aquellos que enfrentan persecución por sus opiniones políticas.\n\nSITUACIÓN DE CHÁVEZ: Como resultado, Chávez enfrenta su juicio oral en Perú, que está en su etapa final. Obviamente, ella no puede asistir a las audiencias del juicio mientras permanezca en la embajada. Esta situación prolonga indefinidamente su estancia en la embajada mexicana - ella no puede salir sin ser arrestada, pero tampoco puede viajar a México sin el salvoconducto.\n\nEsto crea un limbo legal y diplomático sin precedentes claros en la historia reciente de América Latina.');
+
+  const { slide: s13 } = await html2pptx('slide13.html', pptx);
+  s13.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 13:\n\nEl gobierno peruano ha tomado una posición aún más ambiciosa: proponer modificaciones a la Convención de Caracas de 1954, el tratado internacional que regula el asilo diplomático en América Latina.\n\nLA CONVENCIÓN DE CARACAS: Este tratado, firmado hace más de 70 años, establece las reglas sobre cuándo y cómo los países pueden otorgar asilo diplomático. Ha sido la base del sistema de asilo en la región durante décadas.\n\nPROPUESTA PERUANA: Perú planea llevar ante la Organización de Estados Americanos (OEA) una propuesta para modificar este tratado. El argumento central es que el tratado está siendo usado indebidamente en casos donde personas acusadas de delitos comunes pretenden que están siendo perseguidas políticamente.\n\nPerú sostiene que hay una distinción clara entre:\n1) Personas genuinamente perseguidas por sus opiniones políticas (para quienes el asilo es apropiado), y\n2) Personas acusadas de delitos comunes como rebelión, conspiración o corrupción (para quienes el asilo no debería aplicar).\n\nCONSULTAS URGENTES: El gobierno peruano ha anunciado que iniciará consultas urgentes con otros estados miembros de la OEA para promover lo que llaman el "imperio de la ley" - es decir, asegurar que los tratados internacionales no se usen para permitir que personas acusadas de delitos graves evadan la justicia.\n\nEsta propuesta, si avanza, podría tener implicaciones profundas para cómo funciona el asilo diplomático en toda América Latina en el futuro.');
+
+  const { slide: s14 } = await html2pptx('slide14.html', pptx);
+  s14.addNotes('NOTAS DEL ORADOR - DIAPOSITIVA 14 (CONCLUSIÓN):\n\nLlegamos a la conclusión de nuestra presentación, reflexionando sobre los desafíos futuros y las lecciones que podemos aprender de esta crisis diplomática.\n\nRESOLUCIÓN POSIBLE: El gobierno peruano ha indicado que tomará decisiones sobre cómo proceder después de completar sus consultas con otros países miembros de la OEA. Existe la posibilidad de que las relaciones diplomáticas se restablezcan eventualmente, especialmente si se encuentra alguna solución al caso de Betssy Chávez. Sin embargo, esto requerirá concesiones de ambos lados y probablemente llevará mucho tiempo.\n\nDESAFÍOS DEL ASILO DIPLOMÁTICO: Este caso resalta los desafíos fundamentales del sistema de asilo diplomático en América Latina. La pregunta central es: ¿Dónde está la línea entre la persecución política legítima y el procesamiento legítimo por delitos comunes? Esta pregunta no tiene respuestas fáciles.\n\nREFORMAS NECESARIAS: Claramente, hay una necesidad de reformas para evitar que el asilo diplomático sea usado de manera que algunos consideran abusiva. Pero estas reformas deben equilibrar dos principios importantes: por un lado, el derecho legítimo de las personas a buscar protección contra persecución política; por otro lado, la necesidad de que las personas acusadas de delitos graves enfrenten la justicia.\n\nFORTALECIMIENTO DEMOCRÁTICO: Finalmente, este caso subraya la importancia de fortalecer las instituciones democráticas en toda la región. Muchas de estas crisis surgen cuando hay desacuerdo fundamental sobre la legitimidad de las instituciones y procesos democráticos de un país.\n\nEste caso seguirá desarrollándose y probablemente establecerá precedentes importantes para situaciones similares en el futuro. Gracias por su atención.');
+
+  await pptx.writeFile({ fileName: 'Ruptura_Diplomatica_Peru_Mexico_Betssy_Chavez.pptx' });
+  console.log('✓ Presentation created successfully!');
+}
+
+createPresentation().catch(console.error);

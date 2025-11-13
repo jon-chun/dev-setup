@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #5EA8A7;
+}
+.content {
+  flex: 1;
+  padding: 26pt 45pt 40pt 45pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 28pt;
+  font-weight: bold;
+  margin: 0 0 12pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 13pt;
+  font-weight: bold;
+  margin-bottom: 10pt;
+}
+p {
+  color: #2E4053;
+  font-size: 12pt;
+  margin: 0 0 12pt 0;
+  line-height: 1.4;
+}
+.disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8pt;
+  margin-top: 12pt;
+}
+.discipline {
+  flex: 0 0 calc(33.333% - 6pt);
+  background: #FFFFFF;
+  padding: 10pt;
+  border-radius: 4pt;
+  border-left: 3pt solid #5EA8A7;
+}
+.discipline h3 {
+  color: #5EA8A7;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0 0 6pt 0;
+}
+.discipline p {
+  font-size: 10pt;
+  margin: 0;
+  line-height: 1.3;
+  color: #2E4053;
+}
+.goal {
+  background: #5EA8A7;
+  color: #FFFFFF;
+  padding: 8pt;
+  border-radius: 6pt;
+  margin-top: 8pt;
+  text-align: center;
+}
+.goal p {
+  color: #FFFFFF;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>Educational Strategy</h1>
+  <p class="label">FROM EVENT TO CURRICULUM</p>
+
+  <p>Active promotion of instructor packs to multiple academic programs, targeting <b>dozens of course adoptions</b> in the first year.</p>
+
+  <div class="disciplines">
+    <div class="discipline">
+      <h3>Philosophy</h3>
+      <p>RT1 & RT4: consciousness, AGI ethics</p>
+    </div>
+    <div class="discipline">
+      <h3>Computer Science</h3>
+      <p>RT2 & RT4: creativity, alignment</p>
+    </div>
+    <div class="discipline">
+      <h3>Cognitive Science</h3>
+      <p>RT1 & RT2: emotion, creativity</p>
+    </div>
+    <div class="discipline">
+      <h3>Ethics/STS</h3>
+      <p>All RTs: applied ethics</p>
+    </div>
+    <div class="discipline">
+      <h3>Education</h3>
+      <p>RT3: pedagogy in AI age</p>
+    </div>
+    <div class="discipline">
+      <h3>Business</h3>
+      <p>RT3: workforce transformation</p>
+    </div>
+  </div>
+
+  <div class="goal">
+    <p>Flagship Helix educational offering</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/jonc/.claude/skills, project=/Users/jonc/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/jonc/.zshrc
+[DEBUG] Snapshots directory: /Users/jonc/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/jonc/.claude/shell-snapshots/snapshot-zsh-1762295371119-4ke17h.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/jonc/.claude/todos/4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5-agent-4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5.json.tmp.37514.1762295371120
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/jonc/.claude/todos/4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5-agent-4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5.json.tmp.37514.1762295371120 to /Users/jonc/.claude/todos/4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5-agent-4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5.json
+[DEBUG] File /Users/jonc/.claude/todos/4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5-agent-4b0b09f9-d39e-4ac3-9633-5ca37eabf6b5.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.37514.1762295371131
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 61954 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.37514.1762295371131 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.37514.1762295371132
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 61954 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.37514.1762295371132 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Install: Starting installation process (force=false, target=undefined)
+[DEBUG] Install: Calling installLatest(force=true, target=undefined, forceReinstall=false)
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.6"},"request_id":"req_011CUoe3n5tPs2uzjcUpg26F"}
+[DEBUG] Checking for native installer update to version 2.0.32
+[DEBUG] Version 2.0.32 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.32
+[DEBUG] Install: installLatest returned version=2.0.32, wasUpdated=true, lockFailed=false
+[DEBUG] Install: Setup launcher completed with 0 messages
+[DEBUG] Install: Cleaning up npm installations after successful install
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.5-air"},"request_id":"req_011CUoe3n6dWqY4LYyzJSPV2"}
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.6"},"request_id":"req_011CUoe3nXvZeoU22LeHHgoh"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.6"},"request_id":"req_011CUoe3nXvZeoU22LeHHgoh"}
+    at generate (/$bunfs/root/claude:382:26201)
+    at makeRequest (/$bunfs/root/claude:527:5356)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.37514.1762295371447
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 61954 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.37514.1762295371447 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.5-air"},"request_id":"req_011CUoe3nfrm3cnLVC1XLiwC"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: glm-4.5-air"},"request_id":"req_011CUoe3nfrm3cnLVC1XLiwC"}
+    at generate (/$bunfs/root/claude:382:26201)
+    at makeRequest (/$bunfs/root/claude:527:5356)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Shell snapshot created successfully (134378 bytes)
+[DEBUG] Removed global npm installation of @anthropic-ai/claude-code
+[DEBUG] Cleaned up 1 npm installation(s)
+[DEBUG] Install: Shell PATH already configured

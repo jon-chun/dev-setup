@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #5EA8A7;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.text-column {
+  flex: 1;
+}
+.image-column {
+  flex: 0 0 280pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.image-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 18pt;
+  color: #277884;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+.artist-list {
+  background: #FFF3CD;
+  padding: 15pt;
+  border-radius: 6pt;
+  margin-top: 15pt;
+}
+.artist-list p {
+  margin: 0;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #277884;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Contexto Histórico: Exilio en París (1939)</h1>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h2>Amistades Influyentes</h2>
+    <p>Tras la victoria de Franco en 1939, Lam huyó a París, donde conoció a Picasso, Matisse, Miró y Ernst. Pintaba incansablemente en su pequeña habitación de hotel.</p>
+    <h2>Primer Reconocimiento</h2>
+    <p>Primera exposición en la Galerie Pierre. El MoMA compró "Madre e hijo", su primera obra en un museo.</p>
+    <div class="artist-list">
+      <p>Círculo artístico: Picasso • Matisse • Miró • Ernst</p>
+    </div>
+  </div>
+  <div class="image-column">
+    <p class="image-note"><b>Imagen sugerida:</b><br>Fotografía de Wifredo Lam junto a Pablo Picasso en París alrededor de 1939, capturando su amistad</p>
+  </div>
+</div>
+</body>
+</html>

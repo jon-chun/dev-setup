@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Analyze article and create 15-slide outline structure",
+    "status": "completed",
+    "activeForm": "Analyzing article and creating outline structure"
+  },
+  {
+    "content": "Create PowerPoint presentation with diverse layouts and images",
+    "status": "in_progress",
+    "activeForm": "Creating PowerPoint presentation with layouts and images"
+  },
+  {
+    "content": "Add detailed Spanish speaker notes to each slide",
+    "status": "pending",
+    "activeForm": "Adding detailed Spanish speaker notes to slides"
+  },
+  {
+    "content": "Create separate document with all speaker notes compiled",
+    "status": "pending",
+    "activeForm": "Creating separate speaker notes document"
+  }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #1C2833;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  text-align: center;
+  padding: 40pt;
+}
+h1 {
+  color: #5EA8A7;
+  font-size: 52pt;
+  font-weight: bold;
+  margin: 0 0 15pt 0;
+  line-height: 1.2;
+}
+.subtitle {
+  color: #FE4447;
+  font-size: 20pt;
+  margin: 0 0 30pt 0;
+  font-weight: 600;
+}
+.event-details {
+  color: #F4F6F6;
+  font-size: 24pt;
+  margin: 0;
+  line-height: 1.5;
+}
+.accent-bar {
+  width: 120pt;
+  height: 4pt;
+  background: #5EA8A7;
+  margin: 25pt auto;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>THE HUMAN ALGORITHM</h1>
+  <p class="subtitle">The Helix Center AI Weekend</p>
+  <div class="accent-bar"></div>
+  <p class="event-details"><b>April 18–19, 2026</b></p>
+  <p class="event-details" style="font-size: 16pt; margin-top: 20pt; color: #AAB7B8;">Re-negotiating Purpose, Creativity, and Flourishing in the Age of AI</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #FE4447;
+}
+.content {
+  flex: 1;
+  padding: 40pt 50pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0 0 25pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15pt;
+}
+p {
+  color: #2E4053;
+  font-size: 15pt;
+  margin: 0 0 20pt 0;
+  line-height: 1.6;
+}
+.callout {
+  background: #5EA8A7;
+  color: #FFFFFF;
+  padding: 20pt;
+  border-radius: 8pt;
+  margin-top: 25pt;
+}
+.callout p {
+  color: #FFFFFF;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0;
+}
+ul {
+  color: #2E4053;
+  font-size: 14pt;
+  margin: 15pt 0;
+  padding-left: 20pt;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>Why This Event, Why Now</h1>
+  <p class="label">THE STRATEGIC MOMENT</p>
+
+  <p>AI capabilities are accelerating faster than our societal understanding. <b>The discourse quality lags behind deployment.</b></p>
+
+  <ul>
+    <li>AI now embedded in education, creative industries, workplaces, governance</li>
+    <li>Public conversation toggles between hype and doom</li>
+    <li>Missing: nuanced, cross-disciplinary wisdom</li>
+  </ul>
+
+  <div class="callout">
+    <p>"The window for shaping AI's trajectory is now"</p>
+  </div>
+</div>
+</body>
+</html>

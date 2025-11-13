@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argentina: de la dictadura a la democracia</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: #333;
+}
+
+.slides-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.slide {
+  background: white;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slide iframe {
+  width: 100%;
+  height: 540px;
+  border: none;
+  display: block;
+}
+
+.slide-number {
+  background: #4A90E2;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2C2C2C;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav h3 {
+  color: #F4F6F6;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.nav a {
+  display: block;
+  color: #4A90E2;
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+.nav a:hover {
+  color: #C0392B;
+}
+
+@media print {
+  .nav {
+    display: none;
+  }
+  .slide {
+    page-break-after: always;
+    margin-bottom: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="nav">
+  <h3>Navegación</h3>
+  <a href="#slide1">1. Título</a>
+  <a href="#slide2">2. Vocabulario</a>
+  <a href="#slide3">3. Guerra Fría</a>
+  <a href="#slide4">4. Operación Cóndor</a>
+  <a href="#slide5">5. Historia golpes</a>
+  <a href="#slide6">6. Crisis 60-70</a>
+  <a href="#slide7">7. Golpe 1976</a>
+  <a href="#slide8">8. Estructura</a>
+  <a href="#slide9">9. Terrorismo</a>
+  <a href="#slide10">10. Economía</a>
+  <a href="#slide11">11. Transición</a>
+  <a href="#slide12">12. Justicia</a>
+  <a href="#slide13">13. Economía actual</a>
+  <a href="#slide14">14. Política actual</a>
+  <a href="#slide15">15. Futuro</a>
+</div>
+
+<div class="slides-container">
+  <div class="slide" id="slide1">
+    <div class="slide-number">Slide 1 / 15</div>
+    <iframe src="workspace/slides/slide01.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide2">
+    <div class="slide-number">Slide 2 / 15</div>
+    <iframe src="workspace/slides/slide02.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide3">
+    <div class="slide-number">Slide 3 / 15</div>
+    <iframe src="workspace/slides/slide03.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide4">
+    <div class="slide-number">Slide 4 / 15</div>
+    <iframe src="workspace/slides/slide04.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide5">
+    <div class="slide-number">Slide 5 / 15</div>
+    <iframe src="workspace/slides/slide05.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide6">
+    <div class="slide-number">Slide 6 / 15</div>
+    <iframe src="workspace/slides/slide06.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide7">
+    <div class="slide-number">Slide 7 / 15</div>
+    <iframe src="workspace/slides/slide07.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide8">
+    <div class="slide-number">Slide 8 / 15</div>
+    <iframe src="workspace/slides/slide08.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide9">
+    <div class="slide-number">Slide 9 / 15</div>
+    <iframe src="workspace/slides/slide09.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide10">
+    <div class="slide-number">Slide 10 / 15</div>
+    <iframe src="workspace/slides/slide10.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide11">
+    <div class="slide-number">Slide 11 / 15</div>
+    <iframe src="workspace/slides/slide11.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide12">
+    <div class="slide-number">Slide 12 / 15</div>
+    <iframe src="workspace/slides/slide12.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide13">
+    <div class="slide-number">Slide 13 / 15</div>
+    <iframe src="workspace/slides/slide13.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide14">
+    <div class="slide-number">Slide 14 / 15</div>
+    <iframe src="workspace/slides/slide14.html"></iframe>
+  </div>
+
+  <div class="slide" id="slide15">
+    <div class="slide-number">Slide 15 / 15</div>
+    <iframe src="workspace/slides/slide15.html"></iframe>
+  </div>
+</div>
+</body>
+</html>

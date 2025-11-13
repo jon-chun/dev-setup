@@ -1,0 +1,979 @@
+const globalModulesPath = '/Users/jonc/.nvm/versions/node/v22.19.0/lib/node_modules';
+const pptxgen = require(`${globalModulesPath}/pptxgenjs`);
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+const sharp = require(`${globalModulesPath}/sharp`);
+const fs = require('fs').promises;
+
+// Color palette for Spain housing crisis theme
+// Using burgundy, rust, cream, and charcoal for serious economic topic
+const colors = {
+  primary: '#5D1D2E',      // Burgundy (primary)
+  secondary: '#C15937',    // Rust (secondary)
+  accent: '#997929',       // Gold (accent)
+  dark: '#2C2C2C',         // Charcoal (text)
+  light: '#FAF7F2',        // Cream (backgrounds);
+  white: '#FFFFFF'
+};
+
+async function createGradientBackground(filename, color1, color2) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810">
+    <defs>
+      <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:${color1}"/>
+        <stop offset="100%" style="stop-color:${color2}"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#g)"/>
+  </svg>`;
+
+  await sharp(Buffer.from(svg)).png().toFile(filename);
+  return filename;
+}
+
+async function createPresentation() {
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = 'Estudiante';
+  pptx.title = 'La Crisis del Alquiler en España';
+
+  // Create gradient background for title slide
+  await createGradientBackground('images/gradient-title.png', colors.primary, colors.secondary);
+
+  // Speaker notes for all slides (in Spanish)
+  const speakerNotes = [];
+
+  // SLIDE 1: Cover
+  await fs.writeFile('slides/slide1.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0
+  background-image: url('../images/gradient-title.png');
+  background-size: cover;
+  display: flex; align-items: center; justify-content: center;
+  font-family: Arial, sans-serif;
+}
+.content { text-align: center; color: ${colors.white}; padding: 30pt }
+h1 { font-size: 43pt font-weight: bold; margin: 0 0 15pt 0 line-height: 1.2; }
+.subtitle { font-size: 18pt; margin: 11pt 0 }
+.meta { font-size: 12pt margin-top: 30pt; opacity: 0.9; }
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>¡Increíble pero cierto!<br>La Crisis del Alquiler en España 2024</h1>
+  <p class="subtitle">Más del tercio de alquileres superan los €1,500 mensuales</p>
+  <p class="meta">Fuente: pisos.com, INE, InfoJobs, Fotocasa<br>Noviembre 2025</p>
+</div>
+</body>
+</html>`);
+
+  const result1 = await html2pptx('slides/slide1.html', pptx);
+  const note1 = `Buenos días a todos. Hoy vamos a explorar una de las crisis más urgentes que enfrenta España actualmente: la crisis de vivienda y alquileres. Esta presentación está basada en datos recientes de pisos.com, el Instituto Nacional de Estadística (INE), InfoJobs y Fotocasa. Lo que veremos es alarmante: más de un tercio de todos los alquileres en España ahora cuestan más de 1,500 euros al mes, una cantidad que supera el salario mensual de millones de españoles. Esta crisis tiene raíces históricas profundas y consecuencias devastadoras para la población, especialmente para los jóvenes y las familias de ingresos medios.`;
+  result1.slide.addNotes(note1);
+  speakerNotes.push({ slide: 1, notes: note1 });
+
+  // SLIDE 2: Vocabulary
+  await fs.writeFile('slides/slide2.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header { background: ${colors.primary}; color: ${colors.white}; padding: 18pt 30pt }
+h1 { font-size: 32pt; margin: 0 }
+.content { padding: 22pt 30pt }
+.vocab-grid { display: flex; flex-wrap: wrap; gap: 11pt }
+.vocab-item { background: ${colors.white}; padding: 11pt; border-radius: 8pt;
+  width: 200pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+.term { font-size: 16pt font-weight: bold; color: ${colors.primary}; }
+.definition { font-size: 12pt; color: ${colors.dark}; margin-top: 5pt; }
+</style>
+</head>
+<body>
+<div style="width: 720pt;">
+  <div class="header">
+    <h1>Vocabulario Clave</h1>
+  </div>
+  <div class="content">
+    <div class="vocab-grid">
+      <div class="vocab-item">
+        <p class="term">Tercio</p>
+        <p class="definition">tercera parte</p>
+      </div>
+      <div class="vocab-item">
+        <p class="term">Bruto</p>
+        <p class="definition">antes de impuestos</p>
+      </div>
+      <div class="vocab-item">
+        <p class="term">Asequible</p>
+        <p class="definition">que se puede pagar</p>
+      </div>
+      <div class="vocab-item">
+        <p class="term">Escasez</p>
+        <p class="definition">falta de algo</p>
+      </div>
+      <div class="vocab-item">
+        <p class="term">Inaccesible</p>
+        <p class="definition">imposible de alcanzar</p>
+      </div>
+      <div class="vocab-item">
+        <p class="term">Brecha</p>
+        <p class="definition">diferencia grande</p>
+      </div>
+</div>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result2 = await html2pptx('slides/slide2.html', pptx);
+  const note2 = `Antes de profundizar en los datos, es importante familiarizarnos con algunos términos clave que aparecerán repetidamente. "Tercio" significa una tercera parte, crucial para entender que el 37% es más de un tercio. "Bruto" se refiere al salario antes de impuestos, importante porque los datos que veremos son salarios brutos, no netos. "Asequible" significa algo que se puede pagar razonablemente. "Escasez" indica una falta grave de algo, en este caso, viviendas baratas. "Inaccesible" describe algo imposible de alcanzar para la mayoría. "Brecha" se refiere a una diferencia grande, especialmente entre regiones. Y "segmento" significa una parte específica del mercado inmobiliario.`;
+  result2.slide.addNotes(note2);
+  speakerNotes.push({ slide: 2, notes: note2 });
+
+  // SLIDE 3: Historical Context - Real Estate Boom
+  await fs.writeFile('slides/slide3.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 360pt; padding: 30pt background: ${colors.white}; }
+.right { width: 360pt; padding: 30pt; display: flex; align-items: center; }
+h2 { font-size: 28pt; color: ${colors.primary}; margin: 0 0 11pt 0 font-weight: bold; }
+.subtitle { font-size: 14pt; color: ${colors.secondary}; margin-bottom: 20pt; font-weight: bold; }
+p { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+.highlight { background: ${colors.accent}; color: ${colors.white}; padding: 10pt 10pt; border-radius: 4pt; font-weight: bold; }
+.chart-placeholder { width: 100%; height: 280pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Contexto Histórico</h2>
+  <p class="subtitle">El boom inmobiliario (1990-2008)</p>
+  <p>España vivió una <span class="highlight">burbuja inmobiliaria</span> con construcción masiva.</p>
+  <p>El alquiler era minoritario: solo <b>15%</b> de hogares.</p>
+  <p>En 2007, precio medio <b>€600/mes</b> (INE).</p>
+</div>
+<div class="right">
+  <div id="chart1" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result3 = await html2pptx('slides/slide3.html', pptx);
+  result3.slide.addChart(pptx.charts.LINE, [{
+    name: "Precio medio alquiler",
+    labels: ["1990", "1995", "2000", "2005", "2007", "2008"],;
+    values: [300, 350, 420, 520, 600, 580]
+  }], {
+    ...result3.placeholders[0],
+    showTitle: true,
+    title: 'Evolución Precio Alquiler (€/mes)',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Año',
+    showValAxisTitle: true,
+    valAxisTitle: 'Precio (€)',
+    lineSize: 4,
+    lineSmooth: true,
+    chartColors: ["5D1D2E"],
+    showLegend: false,
+    valAxisMinVal: 200,;
+    valAxisMaxVal: 700
+  });
+
+  const note3 = `Empecemos con el contexto histórico. Entre 1990 y 2008, España experimentó una burbuja inmobiliaria masiva caracterizada por construcción desenfrenada y especulación. Durante este período, la cultura española favorecía fuertemente la propiedad sobre el alquiler: solo el 15% de los hogares alquilaban, uno de los porcentajes más bajos de Europa. La mayoría de los españoles aspiraban a comprar su propia vivienda. El gráfico muestra cómo el precio medio del alquiler creció de manera constante durante este período, alcanzando 600 euros mensuales en 2007, justo antes del colapso. Este precio, aunque alto para la época, parece modesto comparado con lo que veremos más adelante.`;
+  result3.slide.addNotes(note3);
+  speakerNotes.push({ slide: 3, notes: note3 });
+
+  // SLIDE 4: Historical Context - 2008 Crisis
+  await fs.writeFile('slides/slide4.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: ${colors.primary}; color: ${colors.white}; padding: 18pt 30pt }
+h1 { font-size: 28pt; margin: 0 }
+.content { display: flex; flex: 1; }
+.left { flex: 1; padding: 22pt 30pt }
+.right { flex: 1; padding: 22pt 30pt; display: flex; align-items: center; justify-content: center; }
+.subtitle { font-size: 16pt; color: ${colors.secondary}; font-weight: bold; margin-bottom: 15pt; }
+p { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+.stat { font-size: 43pt; color: ${colors.primary}; font-weight: bold; margin: 15pt 0 }
+.stat-label { font-size: 14pt; color: ${colors.dark}; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Crisis 2008 y Cambio de Modelo</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <p class="subtitle">Ruptura de la burbuja</p>
+    <p>Millones de desahucios</p>
+    <p>Aumento dramático del mercado de alquiler</p>
+    <p>Cambio cultural forzado: de la propiedad al alquiler</p>
+  </div>
+  <div class="right">
+    <div>
+      <p class="stat">15% → 23%</p>
+      <p class="stat-label">Hogares en alquiler<br>(2008-2020)</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result4 = await html2pptx('slides/slide4.html', pptx);
+  const note4 = `En 2008, la burbuja explotó de forma catastrófica. El resultado fue devastador: millones de españoles perdieron sus hogares en desahucios que se convirtieron en una crisis humanitaria. El movimiento "Stop Desahucios" surgió como respuesta a esta tragedia. La crisis forzó un cambio cultural profundo: de una sociedad orientada hacia la propiedad, España se transformó en una donde el alquiler se convirtió en la única opción viable para millones. Entre 2008 y 2020, el porcentaje de hogares que alquilaban aumentó del 15% al 23%, un crecimiento de más del 50%. Este cambio no fue por elección, sino por necesidad económica, especialmente entre las generaciones más jóvenes que encontraron imposible acceder a una hipoteca.`;
+  result4.slide.addNotes(note4);
+  speakerNotes.push({ slide: 4, notes: note4 });
+
+  // SLIDE 5: Current Situation - Shocking Data
+  await fs.writeFile('slides/slide5.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 300pt; padding: 30pt background: ${colors.primary}; color: ${colors.white};
+  display: flex; flex-direction: column; justify-content: center; }
+h2 { font-size: 25pt; margin: 0 0 15pt 0 }
+.big-stat { font-size: 64pt font-weight: bold; margin: 15pt 0 }
+.stat-label { font-size: 16pt line-height: 1.4; }
+.right { flex: 1; padding: 30pt; display: flex; align-items: center; }
+.chart-placeholder { width: 100%; height: 300pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Situación Actual</h2>
+  <p class="big-stat">37%</p>
+  <p class="stat-label">de alquileres superan €1,500/mes</p>
+  <p class="stat-label" style="margin-top: 20pt;">Salario más frecuente:<br><b>€1,297.91</b> brutos/mes</p>
+</div>
+<div class="right">
+  <div id="chart2" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result5 = await html2pptx('slides/slide5.html', pptx);
+  result5.slide.addChart(pptx.charts.BAR, [{
+    name: "Porcentaje de alquileres",
+    labels: ["< €700", "€700-1000", "€1000-1500", "> €1500"],;
+    values: [12, 27, 24, 37]
+  }], {
+    ...result5.placeholders[0],
+    barDir: 'col',
+    showTitle: true,
+    title: 'Distribución de Alquileres por Precio',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Rango de Precio',
+    showValAxisTitle: true,
+    valAxisTitle: 'Porcentaje (%)',
+    chartColors: ["C15937"],
+    showLegend: false,
+    dataLabelPosition: 'outEnd',
+    dataLabelColor: '000000',
+    valAxisMinVal: 0,;
+    valAxisMaxVal: 40
+  });
+
+  const note5 = `Y ahora llegamos al dato impactante que da título a esta presentación. Según el estudio de pisos.com de 2024, el 37% de todos los alquileres en España cuestan más de 1,500 euros mensuales. Para poner esto en perspectiva: el salario más frecuente entre los trabajadores españoles es de apenas 1,297.91 euros brutos mensuales, según el INE. Esto significa que más de un tercio de las viviendas en alquiler cuestan MÁS que el salario completo de la mayoría de los trabajadores españoles. El gráfico muestra la distribución completa: solo el 12% de los alquileres cuestan menos de 700 euros, el 27% están entre 700 y 1,000 euros, el 24% entre 1,000 y 1,500 euros, y ese devastador 37% supera los 1,500 euros. Esta distribución revela una escasez crítica de viviendas asequibles.`;
+  result5.slide.addNotes(note5);
+  speakerNotes.push({ slide: 5, notes: note5 });
+
+  // SLIDE 6: Salary Burden
+  await fs.writeFile('slides/slide6.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.white}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { padding: 22pt 30pt }
+h2 { font-size: 32pt; color: ${colors.primary}; margin: 0 }
+.content { flex: 1; display: flex; padding: 0 30pt 30pt 30pt gap: 22pt }
+.left { flex: 1; }
+.right { flex: 1; display: flex; align-items: center; justify-content: center; }
+p { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+.warning { background: ${colors.secondary}; color: ${colors.white}; padding: 11pt; border-radius: 8pt; font-size: 12pt margin-top: 15pt; }
+.chart-placeholder { width: 320pt; height: 240pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>Esfuerzo Salarial con el Alquiler</h2>
+</div>
+<div class="content">
+  <div class="left">
+    <p><b>2024:</b> El español promedio dedica el <b>47%</b> de su salario bruto al alquiler</p>
+    <p><b>2023:</b> Era el 43%</p>
+    <p><b>Estándar europeo:</b> No más del 30% se considera asequible</p>
+    <div class="warning">
+      <p><b>Alerta:</b> España supera el umbral de asequibilidad de la UE</p>
+    </div>
+  </div>
+  <div class="right">
+    <div id="chart3" class="placeholder chart-placeholder"></div>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result6 = await html2pptx('slides/slide6.html', pptx);
+  result6.slide.addChart(pptx.charts.PIE, [{
+    name: "Distribución del salario",
+    labels: ["Alquiler", "Otros gastos"],;
+    values: [47, 53]
+  }], {
+    ...result6.placeholders[0],
+    showPercent: true,
+    showLegend: true,
+    legendPos: 'b',;
+    chartColors: ["C15937", "997929"]
+  });
+
+  const note6 = `El esfuerzo salarial nos muestra la verdadera magnitud de la crisis. En 2024, el español promedio tuvo que dedicar el 47% de su salario bruto al pago del alquiler, comparado con el 43% en 2023. Esto representa un aumento de 4 puntos porcentuales en un solo año, una tendencia alarmante. Para contextualizar, la Unión Europea considera que dedicar más del 30% del salario a la vivienda indica una situación de sobrecarga económica. España está casi al 50%, muy por encima de este umbral. El gráfico circular muestra visualmente esta división: casi la mitad del salario se va en alquiler, dejando apenas el 53% para todos los demás gastos: comida, transporte, salud, ahorros. Esta situación es insostenible y explica por qué tantas familias españolas viven al límite financiero.`;
+  result6.slide.addNotes(note6);
+  speakerNotes.push({ slide: 6, notes: note6 });
+
+  // SLIDE 7: Price Distribution Detail
+  await fs.writeFile('slides/slide7.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar { width: 180pt; background: ${colors.primary}; color: ${colors.white};
+  padding: 30pt 22pt; display: flex; flex-direction: column; justify-content: center; }
+h2 { font-size: 21pt; margin: 0 0 11pt 0 line-height: 1.2; }
+.main { flex: 1; padding: 30pt }
+.price-bars { display: flex; flex-direction: column; gap: 15pt; margin-top: 20pt; }
+.bar-item { display: flex; align-items: center; gap: 11pt }
+.bar-label { font-size: 14pt; color: ${colors.dark}; width: 140pt; font-weight: bold; }
+.bar-container { flex: 1; height: 35pt; background: #E0E0E0; border-radius: 4pt; position: relative; }
+.bar-fill { height: 100%; border-radius: 4pt; display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 10pt; color: ${colors.white}; font-weight: bold; font-size: 14pt }
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <h2>Distribución Detallada por Precios</h2>
+</div>
+<div class="main">
+  <p style="font-size: 16pt; color: ${colors.primary}; font-weight: bold; margin: 0 0 11pt 0">
+    Escasez crítica en el segmento asequible
+  </p>
+  <div class="price-bars">
+    <div class="bar-item">
+      <p class="bar-label">&lt; €700/mes</p>
+      <div class="bar-container">
+        <div class="bar-fill" style="width: 12%; background: ${colors.accent};"><p style="margin: 0;">12%</p></div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <p class="bar-label">€700-1,000</p>
+      <div class="bar-container">
+        <div class="bar-fill" style="width: 27%; background: ${colors.accent};"><p style="margin: 0;">27%</p></div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <p class="bar-label">€1,000-1,500</p>
+      <div class="bar-container">
+        <div class="bar-fill" style="width: 24%; background: ${colors.secondary};"><p style="margin: 0;">24%</p></div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <p class="bar-label">&gt; €1,500/mes</p>
+      <div class="bar-container">
+        <div class="bar-fill" style="width: 37%; background: ${colors.primary};"><p style="margin: 0;">37%</p></div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size: 12pt; color: ${colors.dark}; margin-top: 25pt; font-style: italic;">
+    "Demuestra la escasez de oferta en el segmento más asequible del mercado" - pisos.com
+  </p>
+</div>
+</body>
+</html>`);
+
+  const result7 = await html2pptx('slides/slide7.html', pptx);
+  const note7 = `Profundicemos en la distribución de precios. Solo el 12% de las viviendas en alquiler cuestan menos de 700 euros mensuales. Este segmento, el único verdaderamente asequible para la mayoría de los trabajadores españoles, es extremadamente escaso. El 27% de los alquileres están entre 700 y 1,000 euros, todavía relativamente accesibles pero que representan una carga significativa. El 24% están en el rango de 1,000 a 1,500 euros, ya prohibitivos para muchos. Y finalmente, ese 37% que supera los 1,500 euros mensuales. Como señala el estudio de pisos.com, estos datos "demuestran la escasez de oferta en el segmento más asequible del mercado". El problema no es solo que los alquileres sean caros, sino que hay muy pocas alternativas baratas disponibles.`;
+  result7.slide.addNotes(note7);
+  speakerNotes.push({ slide: 7, notes: note7 });
+
+  // SLIDE 8: Balearic Islands
+  await fs.writeFile('slides/slide8.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.white}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 340pt; padding: 30pt }
+h2 { font-size: 28pt; color: ${colors.primary}; margin: 0 0 10pt 0 font-weight: bold; }
+.subtitle { font-size: 16pt; color: ${colors.secondary}; margin-bottom: 20pt; font-weight: bold; }
+.stat-box { background: ${colors.primary}; color: ${colors.white}; padding: 15pt; border-radius: 8pt; margin: 11pt 0 text-align: center; }
+.big-num { font-size: 48pt font-weight: bold; margin: 10pt 0 }
+.stat-label { font-size: 12pt }
+p { font-size: 13pt; color: ${colors.dark}; line-height: 1.5; margin: 10pt 0 }
+.right { flex: 1; padding: 30pt; display: flex; align-items: center; }
+.chart-placeholder { width: 100%; height: 300pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Regiones Extremas</h2>
+  <p class="subtitle">Islas Baleares: El caso más extremo</p>
+  <div class="stat-box">
+    <p class="big-num">86%</p>
+    <p class="stat-label">de alquileres > €1,500</p>
+  </div>
+  <div class="stat-box">
+    <p class="big-num">0%</p>
+    <p class="stat-label">alquileres < €700</p>
+  </div>
+  <p><b>Salario medio:</b> €2,294/mes</p>
+  <p>Alquiler medio: >65% del salario</p>
+</div>
+<div class="right">
+  <div id="chart4" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result8 = await html2pptx('slides/slide8.html', pptx);
+  result8.slide.addChart(pptx.charts.PIE, [{
+    name: "Distribución Baleares",
+    labels: ["> €1,500", "€1,000-1,500", "€700-1,000"],;
+    values: [86, 12, 2]
+  }], {
+    ...result8.placeholders[0],
+    showPercent: true,
+    showTitle: true,
+    title: 'Distribución Alquileres Baleares',
+    showLegend: true,
+    legendPos: 'b',;
+    chartColors: ["5D1D2E", "C15937", "997929"]
+  });
+
+  const note8 = `Las Islas Baleares representan el caso más extremo de la crisis de alquiler en España. Un asombroso 86% de las propiedades en alquiler cuestan más de 1,500 euros mensuales. Más impactante aún: no hay absolutamente ningún alquiler por debajo de 700 euros, cero por ciento. Solo el 2% están entre 700 y 1,000 euros. La causa principal es el auge del turismo y los alquileres vacacionales, especialmente plataformas como Airbnb, que han transformado el mercado inmobiliario del archipiélago. Los propietarios obtienen mucho más dinero alquilando por noches a turistas que por meses a residentes locales. El resultado: los precios han alcanzado niveles prácticamente inasequibles para los ingresos promedio. Aunque el salario medio en Baleares es de 2,294 euros mensuales, sexto más alto de España, el alquiler medio consume más del 65% de ese salario, una situación insostenible.`;
+  result8.slide.addNotes(note8);
+  speakerNotes.push({ slide: 8, notes: note8 });
+
+  // SLIDE 9: Madrid and Catalonia
+  await fs.writeFile('slides/slide9.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: ${colors.primary}; color: ${colors.white}; padding: 18pt 30pt }
+h1 { font-size: 28pt; margin: 0 }
+.content { flex: 1; display: flex; padding: 22pt gap: 15pt }
+.region { flex: 1; background: ${colors.white}; padding: 18pt; border-radius: 8pt;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
+h3 { font-size: 21pt; color: ${colors.primary}; margin: 0 0 11pt 0 }
+.stat { font-size: 36pt; color: ${colors.secondary}; font-weight: bold; margin: 10pt 0 }
+p { font-size: 12pt; color: ${colors.dark}; margin: 10pt 0 line-height: 1.4; }
+.quote { font-style: italic; font-size: 11pt; color: ${colors.dark};
+  border-left: 3pt solid ${colors.accent}; padding-left: 10pt; margin-top: 15pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Madrid y Cataluña: Mercados Inaccesibles</h1>
+</div>
+<div class="content">
+  <div class="region">
+    <h3>Madrid</h3>
+    <p class="stat">62%</p>
+    <p>de alquileres > €1,500</p>
+    <p style="margin-top: 15pt;"><b>0%</b> < €700</p>
+    <p><b>7%</b> €700-1,000</p>
+    <p><b>31%</b> €1,000-1,500</p>
+  </div>
+  <div class="region">
+    <h3>Cataluña</h3>
+    <p class="stat">68%</p>
+    <p>de alquileres > €1,500</p>
+    <p style="margin-top: 15pt;"><b>3%</b> < €700</p>
+    <p><b>8%</b> €700-1,000</p>
+    <p><b>21%</b> €1,000-1,500</p>
+  </div>
+</div>
+<div style="padding: 0 30pt 22pt 30pt">
+  <p class="quote">"Se han establecido como los mercados más inaccesibles en España... la falta de viviendas asequibles está causando problemas de acceso para la población local, especialmente jóvenes y familias de ingresos medios" - Ferran Font, Director de Estudios en pisos.com</p>
+</div>
+</body>
+</html>`);
+
+  const result9 = await html2pptx('slides/slide9.html', pptx);
+  const note9 = `Madrid y Cataluña, los dos centros económicos más importantes de España, también presentan situaciones críticas. En Madrid, el 62% de los alquileres superan los 1,500 euros mensuales, no hay propiedades por debajo de 700 euros, y solo el 7% están entre 700 y 1,000 euros. La situación en Cataluña, particularmente en Barcelona, es aún peor: el 68% de las propiedades cuestan más de 1,500 euros, solo el 3% están por debajo de 700 euros, y apenas el 8% en el rango de 700 a 1,000 euros. Como explica Ferran Font, Director de Estudios en pisos.com, estos lugares "se han establecido como los mercados más inaccesibles en España". La paradoja es cruel: estas regiones ofrecen las mejores oportunidades laborales, pero los alquileres son tan altos que muchos trabajadores no pueden permitirse vivir cerca de sus empleos. Esto afecta especialmente a jóvenes y familias de ingresos medios que se ven obligados a alejarse cada vez más de los centros urbanos o a vivir en condiciones precarias.`;
+  result9.slide.addNotes(note9);
+  speakerNotes.push({ slide: 9, notes: note9 });
+
+  // SLIDE 10: Affordable Regions
+  await fs.writeFile('slides/slide10.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.white}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 360pt; padding: 30pt }
+h2 { font-size: 28pt; color: ${colors.accent}; margin: 0 0 10pt 0 font-weight: bold; }
+.subtitle { font-size: 16pt; color: ${colors.dark}; margin-bottom: 20pt; font-weight: bold; }
+.region-box { background: ${colors.light}; padding: 15pt; border-radius: 8pt;
+  margin: 11pt 0 border-left: 5pt solid ${colors.accent}; }
+h4 { font-size: 18pt; color: ${colors.primary}; margin: 0 0 10pt 0 }
+p { font-size: 13pt; color: ${colors.dark}; margin: 10pt 0 }
+.highlight { color: ${colors.accent}; font-weight: bold; }
+.right { flex: 1; padding: 30pt; display: flex; align-items: center; }
+.chart-placeholder { width: 100%; height: 300pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Otra Cara de la Moneda</h2>
+  <p class="subtitle">Regiones Asequibles</p>
+  <div class="region-box">
+    <h4>Extremadura</h4>
+    <p><span class="highlight">56%</span> < €700/mes</p>
+    <p>Solo 2% > €1,500</p>
+    <p>Salario: €23,684/año</p>
+  </div>
+  <div class="region-box">
+    <h4>Castilla-La Mancha</h4>
+    <p><span class="highlight">28%</span> < €700/mes</p>
+    <p>Solo 2% > €1,500</p>
+  </div>
+</div>
+<div class="right">
+  <div id="chart5" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result10 = await html2pptx('slides/slide10.html', pptx);
+  result10.slide.addChart(pptx.charts.BAR, [{
+    name: "< €700/mes",
+    labels: ["Extremadura", "Castilla-La Mancha", "España (media)"],;
+    values: [56, 28, 12]
+  }], {
+    ...result10.placeholders[0],
+    barDir: 'col',
+    showTitle: true,
+    title: 'Alquileres Asequibles por Región',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Región',
+    showValAxisTitle: true,
+    valAxisTitle: 'Porcentaje < €700/mes',
+    chartColors: ["997929"],
+    showLegend: false,
+    dataLabelPosition: 'outEnd',
+    dataLabelColor: '000000',
+    valAxisMinVal: 0,;
+    valAxisMaxVal: 60
+  });
+
+  const note10 = `Pero hay otra cara de la moneda. En Extremadura, más de la mitad de las propiedades, el 56%, cuestan menos de 700 euros mensuales, y solo el 2% supera los 1,500 euros. Sin embargo, hay que contextualizar: según el INE, el salario promedio en Extremadura es de apenas 23,684 euros al año, el más bajo de España y muy por debajo del promedio nacional. Los alquileres son baratos porque la economía local es débil y los salarios son bajos. En Castilla-La Mancha, el 28% de las propiedades cuestan menos de 700 euros y solo el 2% están por encima de 1,500 euros. El gráfico compara estas regiones con el promedio nacional del 12%, mostrando una diferencia dramática. Estas regiones del interior ofrecen alquileres asequibles, pero enfrentan otros problemas: menos oportunidades de empleo, menor desarrollo económico, y éxodo de población joven hacia las ciudades costeras.`;
+  result10.slide.addNotes(note10);
+  speakerNotes.push({ slide: 10, notes: note10 });
+
+  // SLIDE 11: Social Consequences - Youth
+  await fs.writeFile('slides/slide11.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: ${colors.secondary}; color: ${colors.white}; padding: 18pt 30pt }
+h1 { font-size: 28pt; margin: 0 }
+.content { flex: 1; display: flex; padding: 22pt 30pt gap: 22pt }
+.left { flex: 1; }
+.right { width: 300pt; display: flex; flex-direction: column; justify-content: center; gap: 15pt }
+.subtitle { font-size: 18pt; color: ${colors.primary}; font-weight: bold; margin-bottom: 15pt; }
+p { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+ul { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin-left: 20pt; }
+.stat-card { background: ${colors.white}; padding: 15pt; border-radius: 8pt; text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+.stat-num { font-size: 43pt; color: ${colors.primary}; font-weight: bold; margin: 0 }
+.stat-label { font-size: 12pt; color: ${colors.dark}; margin-top: 5pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Consecuencias Sociales</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <p class="subtitle">Jóvenes y Familias</p>
+    <p><b>Los jóvenes más afectados:</b></p>
+    <ul>
+      <li>Imposibilidad de independizarse</li>
+      <li>Retraso en formación de familias</li>
+      <li>Migración forzada al extranjero</li>
+    </ul>
+    <p><b>Familias de ingresos medios:</b></p>
+    <ul>
+      <li>Excluidas de grandes ciudades</li>
+      <li>Calidad de vida reducida</li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="stat-card">
+      <p class="stat-num">70%</p>
+      <p class="stat-label">Jóvenes (18-34) viven<br>con sus padres<br>(Eurostat 2024)</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result11 = await html2pptx('slides/slide11.html', pptx);
+  const note11 = `Las consecuencias sociales de esta crisis son profundas y duraderas. Los jóvenes son el grupo más afectado. Según Eurostat 2024, el 70% de los jóvenes españoles entre 18 y 34 años todavía viven con sus padres, uno de los porcentajes más altos de Europa. No es por elección cultural, sino por necesidad económica: simplemente no pueden permitirse independizarse. Esto tiene un efecto dominó: los jóvenes retrasan la formación de familias, lo que contribuye a la baja tasa de natalidad de España. Muchos profesionales cualificados están emigrando a otros países europeos donde pueden encontrar vivienda asequible. Las familias de ingresos medios también sufren: están siendo excluidas de las grandes ciudades donde están concentradas las oportunidades laborales y culturales. Se ven obligadas a vivir en las periferias, con largos tiempos de desplazamiento y menor calidad de vida. Esta situación está creando una generación marcada por la precariedad habitacional.`;
+  result11.slide.addNotes(note11);
+  speakerNotes.push({ slide: 11, notes: note11 });
+
+  // SLIDE 12: Economic Consequences - Tourism
+  await fs.writeFile('slides/slide12.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.white}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 360pt; padding: 30pt background: ${colors.light}; }
+h2 { font-size: 27pt; color: ${colors.primary}; margin: 0 0 11pt 0 font-weight: bold; }
+.subtitle { font-size: 16pt; color: ${colors.secondary}; margin-bottom: 20pt; font-weight: bold; }
+p { font-size: 13pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+.impact { background: ${colors.white}; padding: 11pt; border-radius: 8pt; margin: 11pt 0
+  border-left: 4pt solid ${colors.secondary}; }
+.impact-title { font-weight: bold; color: ${colors.primary}; margin-bottom: 5pt; }
+.right { flex: 1; padding: 30pt; display: flex; flex-direction: column; justify-content: center; }
+.chart-placeholder { width: 100%; height: 280pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Consecuencias Económicas</h2>
+  <p class="subtitle">Turismo vs. Residentes</p>
+  <div class="impact">
+    <p class="impact-title">El problema de Airbnb:</p>
+    <p>Los alquileres vacacionales disparan los precios en zonas turísticas</p>
+  </div>
+  <div class="impact">
+    <p class="impact-title">Resultado:</p>
+    <p>Pérdida de población local y creación de "ciudades dormitorio"</p>
+  </div>
+</div>
+<div class="right">
+  <div id="chart6" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result12 = await html2pptx('slides/slide12.html', pptx);
+  result12.slide.addChart(pptx.charts.BAR, [{
+    name: "Ingresos mensuales",
+    labels: ["Alquiler vacacional (por noche x 30)", "Alquiler tradicional"],;
+    values: [3600, 1200]
+  }], {
+    ...result12.placeholders[0],
+    barDir: 'bar',
+    showTitle: true,
+    title: 'Comparación: Vacacional vs. Tradicional',
+    showCatAxisTitle: false,
+    showValAxisTitle: true,
+    valAxisTitle: 'Ingresos potenciales (€/mes)',
+    chartColors: ["5D1D2E"],
+    showLegend: false,
+    dataLabelPosition: 'outEnd',
+    dataLabelColor: '000000',
+    valAxisMinVal: 0,;
+    valAxisMaxVal: 4000
+  });
+
+  const note12 = `Una de las principales causas del aumento de precios es el conflicto entre el turismo y los residentes locales. El gráfico muestra la raíz del problema: un propietario puede ganar aproximadamente 3,600 euros al mes alquilando por noches a turistas, comparado con solo 1,200 euros al mes con un alquiler tradicional a residentes. La diferencia es de tres veces más. Esta disparidad económica ha llevado a miles de propietarios a convertir sus propiedades en alquileres vacacionales, especialmente en zonas turísticas como Baleares, Málaga, Barcelona y Madrid. El resultado es una pérdida dramática de viviendas disponibles para residentes locales. Barrios enteros se han transformado en "ciudades dormitorio" para turistas, perdiendo su carácter residencial y su tejido social. Los comercios locales cierran para ser reemplazados por tiendas de souvenirs. Los residentes locales no pueden competir económicamente con los turistas, creando un proceso de expulsión gradual de la población nativa.`;
+  result12.slide.addNotes(note12);
+  speakerNotes.push({ slide: 12, notes: note12 });
+
+  // SLIDE 13: Future Challenge - Supply Scarcity
+  await fs.writeFile('slides/slide13.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: ${colors.primary}; color: ${colors.white}; padding: 18pt 30pt }
+h1 { font-size: 28pt; margin: 0 }
+.content { flex: 1; display: flex; padding: 22pt 30pt gap: 22pt align-items: center; }
+.left { flex: 1; }
+.right { flex: 1; display: flex; align-items: center; }
+.subtitle { font-size: 18pt; color: ${colors.primary}; font-weight: bold; margin-bottom: 15pt; }
+p { font-size: 14pt; color: ${colors.dark}; line-height: 1.4; margin: 10pt 0 }
+.problem { background: ${colors.white}; padding: 15pt; border-radius: 8pt; margin: 11pt 0
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+.problem-title { font-weight: bold; color: ${colors.secondary}; font-size: 16pt margin-bottom: 10pt; }
+.chart-placeholder { width: 100%; height: 280pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Desafíos Futuros</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <p class="subtitle">Escasez de Oferta Asequible</p>
+    <div class="problem">
+      <p class="problem-title">El problema estructural:</p>
+      <p>Solo <b>12%</b> de alquileres < €700 en toda España</p>
+    </div>
+    <div class="problem">
+      <p class="problem-title">Construcción nueva:</p>
+      <p><b>90%</b> para venta, no alquiler</p>
+    </div>
+    <p>La oferta de vivienda asequible no está creciendo al ritmo necesario</p>
+  </div>
+  <div class="right">
+    <div id="chart7" class="placeholder chart-placeholder"></div>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result13 = await html2pptx('slides/slide13.html', pptx);
+  result13.slide.addChart(pptx.charts.BAR, [{
+    name: "Destino",
+    labels: ["Venta", "Alquiler privado", "Alquiler asequible"],;
+    values: [90000, 9000, 1000]
+  }], {
+    ...result13.placeholders[0],
+    barDir: 'col',
+    showTitle: true,
+    title: 'Viviendas Nuevas: Destino (de 100,000)',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Tipo',
+    showValAxisTitle: true,
+    valAxisTitle: 'Número de viviendas',
+    chartColors: ["C15937"],
+    showLegend: false,
+    dataLabelPosition: 'outEnd',
+    dataLabelColor: '000000',
+    valAxisMinVal: 0,;
+    valAxisMaxVal: 100000
+  });
+
+  const note13 = `Mirando hacia el futuro, uno de los desafíos más grandes es la escasez estructural de oferta asequible. Recordemos que solo el 12% de los alquileres en toda España cuestan menos de 700 euros mensuales. El problema es que esta situación no está mejorando. La construcción nueva está orientada principalmente hacia la venta, no hacia el alquiler: aproximadamente el 90% de las viviendas nuevas se construyen para venta. De las pocas que se construyen para alquiler, la mayoría son de mercado privado con precios altos. Solo una fracción mínima, alrededor del 1%, se destina a alquiler social o asequible. El gráfico muestra esta distribución: de 100,000 viviendas nuevas, 90,000 van a venta, 9,000 a alquiler privado, y apenas 1,000 a alquiler asequible. Sin un cambio fundamental en las políticas de construcción, la escasez de viviendas asequibles continuará empeorando.`;
+  result13.slide.addNotes(note13);
+  speakerNotes.push({ slide: 13, notes: note13 });
+
+  // SLIDE 14: Growing Regional Gap
+  await fs.writeFile('slides/slide14.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.white}; font-family: Arial, sans-serif;
+  display: flex;
+}
+.left { width: 320pt; padding: 30pt background: ${colors.light}; }
+h2 { font-size: 27pt; color: ${colors.primary}; margin: 0 0 11pt 0 font-weight: bold; line-height: 1.2; }
+.region-type { margin: 15pt 0 padding: 11pt background: ${colors.white}; border-radius: 8pt; }
+.type-title { font-size: 14pt font-weight: bold; color: ${colors.secondary}; margin-bottom: 8pt; }
+p { font-size: 12pt; color: ${colors.dark}; line-height: 1.5; margin: 10pt 0 }
+.quote { font-style: italic; font-size: 11pt margin-top: 15pt; padding: 10pt;
+  background: ${colors.accent}; color: ${colors.white}; border-radius: 6pt; }
+.right { flex: 1; padding: 30pt; display: flex; align-items: center; }
+.chart-placeholder { width: 100%; height: 300pt; }
+</style>
+</head>
+<body>
+<div class="left">
+  <h2>Brecha Regional Creciente</h2>
+  <div class="region-type">
+    <p class="type-title">Costa y turismo:</p>
+    <p>Baleares, Barcelona, Madrid, Málaga</p>
+    <p><b>>50%</b> alquileres > €1,500</p>
+  </div>
+  <div class="region-type">
+    <p class="type-title">Interior:</p>
+    <p>Jaén, Zamora, Badajoz, Ciudad Real, Teruel</p>
+    <p><b>>70%</b> alquileres < €700</p>
+  </div>
+  <div class="quote">
+    <p>"La brecha entre las provincias costeras y turísticas y las provincias del interior se hace cada vez más pronunciada"</p>
+  </div>
+</div>
+<div class="right">
+  <div id="chart8" class="placeholder chart-placeholder"></div>
+</div>
+</body>
+</html>`);
+
+  const result14 = await html2pptx('slides/slide14.html', pptx);
+  result14.slide.addChart(pptx.charts.BAR, [
+    {
+      name: "> €1,500",
+      labels: ["Costa/Turismo", "Interior"],;
+      values: [65, 5]
+    },
+    {
+      name: "< €700",
+      labels: ["Costa/Turismo", "Interior"],;
+      values: [2, 70]
+    }
+  ], {
+    ...result14.placeholders[0],
+    barDir: 'col',
+    showTitle: true,
+    title: 'Divergencia Regional en Precios',
+    showCatAxisTitle: true,
+    catAxisTitle: 'Tipo de región',
+    showValAxisTitle: true,
+    valAxisTitle: 'Porcentaje de alquileres',
+    chartColors: ["5D1D2E", "997929"],
+    showLegend: true,
+    legendPos: 'b',
+    valAxisMinVal: 0,;
+    valAxisMaxVal: 80
+  });
+
+  const note14 = `Otro desafío futuro es la creciente brecha regional. Como explica Ferran Font, "la brecha entre las provincias costeras y turísticas y las provincias del interior se hace cada vez más pronunciada". España se está dividiendo en dos mercados completamente diferentes. Por un lado, las zonas costeras y turísticas: Islas Baleares, Barcelona, Madrid y Málaga, donde más del 50% de los alquileres superan los 1,500 euros mensuales. Por otro lado, las provincias del interior como Jaén, Zamora, Badajoz, Ciudad Real y Teruel, donde más del 70% de los alquileres cuestan menos de 700 euros mensuales. El gráfico muestra esta divergencia dramática. El problema es que las zonas caras tienen empleos pero vivienda inaccesible, mientras que las zonas baratas tienen vivienda asequible pero pocas oportunidades laborales. Esto crea un dilema imposible para muchos españoles: ¿vivir donde hay trabajo pero no puedes pagar el alquiler, o vivir donde puedes pagar el alquiler pero no hay trabajo? Esta brecha geográfica está alimentando desigualdad regional y despoblación del interior.`;
+  result14.slide.addNotes(note14);
+  speakerNotes.push({ slide: 14, notes: note14 });
+
+  // SLIDE 15: Possible Solutions
+  await fs.writeFile('slides/slide15.html', `<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: ${colors.white}; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: ${colors.light}; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: ${colors.primary}; color: ${colors.white}; padding: 22pt 30pt text-align: center; }
+h1 { font-size: 32pt; margin: 0 }
+.content { flex: 1; padding: 22pt 30pt }
+.solutions { display: flex; gap: 15pt margin-bottom: 20pt; }
+.solution { flex: 1; background: ${colors.white}; padding: 15pt; border-radius: 8pt;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-top: 4pt solid ${colors.secondary}; }
+.solution-title { font-size: 16pt font-weight: bold; color: ${colors.primary}; margin-bottom: 10pt; }
+.solution-text { font-size: 12pt; color: ${colors.dark}; line-height: 1.5; }
+.stat { font-size: 21pt; color: ${colors.secondary}; font-weight: bold; margin: 10pt 0 }
+.debate { background: ${colors.accent}; color: ${colors.white}; padding: 11pt; border-radius: 8pt; text-align: center; font-size: 14pt font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Posibles Soluciones y Debate</h1>
+</div>
+<div class="content">
+  <div class="solutions">
+    <div class="solution">
+      <p class="solution-title">1. Vivienda Pública</p>
+      <p class="stat">España: 2.5%</p>
+      <p class="solution-text">vs.</p>
+      <p class="stat">UE: 18%</p>
+      <p class="solution-text">Aumentar el parque de vivienda pública protegida</p>
+    </div>
+    <div class="solution">
+      <p class="solution-title">2. Regulación Turística</p>
+      <p class="solution-text">Control de alquileres vacacionales tipo Airbnb</p>
+      <p class="solution-text">Límites por zona</p>
+      <p class="solution-text">Licencias restrictivas</p>
+    </div>
+    <div class="solution">
+      <p class="solution-title">3. Incentivos</p>
+      <p class="solution-text">Incentivos fiscales para construcción de alquiler social</p>
+      <p class="solution-text">Bonificaciones para propietarios</p>
+    </div>
+  </div>
+  <div class="debate">
+    <p>¿Cuál es la mejor solución? ¿Deberían combinarse? ¿Hay otras alternativas?</p>
+  </div>
+</div>
+</body>
+</html>`);
+
+  const result15 = await html2pptx('slides/slide15.html', pptx);
+  const note15 = `Para concluir, ¿qué soluciones existen? Hay varios caminos posibles. Primero, aumentar la vivienda pública. España tiene solo el 2.5% de su parque de vivienda en manos públicas, comparado con el 18% de promedio en la Unión Europea. Países como Austria y Holanda tienen más del 30%. Aumentar la inversión en vivienda pública protegida podría crear una alternativa asequible al mercado privado. Segundo, regular los alquileres turísticos. Ciudades como Barcelona ya han implementado restricciones a Airbnb, limitando el número de licencias y prohibiendo nuevos alquileres vacacionales en ciertas zonas. Esta regulación podría liberar miles de viviendas para residentes permanentes. Tercero, incentivos para la construcción de alquiler social. Bonificaciones fiscales para desarrolladores que construyan vivienda asequible, beneficios para propietarios que alquilen por debajo del precio de mercado. Pero aquí viene la pregunta del debate: ¿cuál es la mejor solución? ¿Deberían combinarse todas? ¿Hay otras alternativas como el control de rentas o la limitación de la propiedad múltiple? Esta es una conversación que toda España necesita tener urgentemente, porque el statu quo es insostenible para millones de personas.`;
+  result15.slide.addNotes(note15);
+  speakerNotes.push({ slide: 15, notes: note15 });
+
+  // Save presentation
+  await pptx.writeFile({ fileName: 'crisis-alquiler-espana.pptx' });
+  console.log('✓ Presentation created: workspace/crisis-alquiler-espana.pptx');
+
+  // Create separate speaker notes document
+  let notesDoc = '# NOTAS DEL ORADOR - La Crisis del Alquiler en España 2024\n\n';
+  notesDoc += '---\n\n';
+
+  for (const note of speakerNotes) {
+    notesDoc += `## Diapositiva ${note.slide}\n\n`;
+    notesDoc += `${note.notes}\n\n`;
+    notesDoc += '---\n\n';
+  }
+
+  await fs.writeFile('notas-orador.md', notesDoc);
+  console.log('✓ Speaker notes document created: workspace/notas-orador.md');
+
+  return { success: true, speakerNotes };
+}
+
+createPresentation().catch(console.error);

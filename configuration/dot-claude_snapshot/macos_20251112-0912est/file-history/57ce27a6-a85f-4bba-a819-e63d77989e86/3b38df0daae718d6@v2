@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #C0392B;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 28pt;
+  font-weight: bold;
+}
+.subtitle {
+  margin: 5pt 0 0 0;
+  font-size: 16pt;
+  color: #F4F6F6;
+  opacity: 0.9;
+}
+.content {
+  margin-top: 100pt;
+  padding: 20pt 40pt;
+  display: flex;
+  gap: 30pt;
+  width: 100%;
+}
+.text-column {
+  flex: 0 0 320pt;
+}
+.chart-column {
+  flex: 1;
+}
+h3 {
+  color: #C0392B;
+  font-size: 18pt;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #2C2C2C;
+  font-size: 13pt;
+  line-height: 1.7;
+}
+.stat-box {
+  background: #C0392B;
+  color: #F4F6F6;
+  padding: 12pt;
+  border-radius: 8pt;
+  text-align: center;
+  margin-top: 12pt;
+}
+.stat-box .number {
+  font-size: 48pt;
+  font-weight: bold;
+  margin: 0;
+}
+.stat-box .label {
+  font-size: 13pt;
+  margin: 5pt 0 0 0;
+}
+.placeholder {
+  background: #E8E8E8;
+  border: 2pt dashed #7F8C8D;
+  border-radius: 8pt;
+  width: 100%;
+  height: 240pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Problemas actuales</h1>
+  <p class="subtitle">Economía y desigualdad</p>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h3>Crisis económica crónica</h3>
+    <ul>
+      <li>Inflación muy alta y recurrente</li>
+      <li>Devaluaciones frecuentes</li>
+      <li>Endeudamiento externo</li>
+      <li>Recesiones periódicas</li>
+      <li>Impacto en derechos sociales</li>
+    </ul>
+    <div class="stat-box">
+      <p class="number">~40%</p>
+      <p class="label">pobreza (2023)</p>
+    </div>
+  </div>
+  <div class="chart-column">
+    <div id="poverty-chart" class="placeholder"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #2C2C2C;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  text-align: center;
+  padding: 35pt;
+  max-width: 600pt;
+}
+h1 {
+  color: #F4F6F6;
+  font-size: 38pt;
+  margin: 0 0 25pt 0;
+  font-weight: bold;
+}
+.challenges {
+  background: rgba(74, 144, 226, 0.2);
+  border: 2pt solid #4A90E2;
+  padding: 16pt;
+  border-radius: 10pt;
+  margin-bottom: 20pt;
+}
+.challenges ul {
+  margin: 0;
+  padding-left: 20pt;
+  color: #F4F6F6;
+  font-size: 14pt;
+  line-height: 1.9;
+  text-align: left;
+}
+.quote-final {
+  background: #C0392B;
+  color: #F4F6F6;
+  padding: 20pt;
+  border-radius: 10pt;
+  font-size: 18pt;
+  font-weight: bold;
+  line-height: 1.4;
+  box-shadow: 0 4pt 12pt rgba(0, 0, 0, 0.3);
+}
+.quote-final p {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>Desafíos y perspectivas futuras</h1>
+  <div class="challenges">
+    <ul>
+      <li>Consolidar una democracia con justicia social</li>
+      <li>Defender la memoria y los derechos humanos</li>
+      <li>Reformas económicas e institucionales</li>
+      <li>Superar la "inestabilidad permanente"</li>
+    </ul>
+  </div>
+  <div class="quote-final">
+    <p>"Nunca Más no es sólo recuerdo,<br>es un proyecto de futuro"</p>
+  </div>
+</div>
+</body>
+</html>

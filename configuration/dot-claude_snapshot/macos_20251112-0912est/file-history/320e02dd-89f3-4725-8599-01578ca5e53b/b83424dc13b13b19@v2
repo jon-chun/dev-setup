@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FE4447;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.text-column {
+  flex: 1;
+}
+.diagram-column {
+  flex: 0 0 280pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.diagram-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 18pt;
+  color: #277884;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+ul {
+  margin: 10pt 0;
+  padding-left: 20pt;
+}
+li {
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 8pt;
+}
+.problem-box {
+  background: #FFF3CD;
+  padding: 10pt;
+  border-radius: 6pt;
+  margin-top: 8pt;
+}
+.problem-box p {
+  margin: 0;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #FE4447;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Desafíos Futuros: Marginalización</h1>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h2>El Problema de las Etiquetas</h2>
+    <p>La historia del arte tiende a encasillar artistas en etiquetas, y Lam no encajaba por su transnacionalidad.</p>
+    <h2>Desafíos a Resolver:</h2>
+    <ul>
+      <li>Promover inclusión de artistas no occidentales en narrativas globales</li>
+      <li>Educar sobre descolonización en el arte</li>
+      <li>Evitar clasificaciones rígidas que ignoren figuras complejas</li>
+    </ul>
+    <div class="problem-box">
+      <p>¿Cómo categorizar lo incategorizable?</p>
+    </div>
+  </div>
+  <div class="diagram-column">
+    <p class="diagram-note"><b>Diagrama sugerido:</b><br>Diagrama de Venn comparando influencias de Lam (Caribe, Europa, Surrealismo), superponiendo círculos para mostrar su posición única</p>
+  </div>
+</div>
+</body>
+</html>

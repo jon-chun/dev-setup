@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #B165FB;
+  padding: 25pt 40pt;
+  border-bottom: 8pt solid #40695B;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 30pt 40pt;
+  flex: 1;
+}
+.subtitle {
+  color: #181B24;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 0 0 15pt 0;
+}
+ul {
+  margin: 0;
+  padding-left: 20pt;
+}
+li {
+  color: #181B24;
+  font-size: 15pt;
+  margin: 8pt 0;
+  line-height: 1.3;
+}
+.highlight {
+  color: #B165FB;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Planning Phase: Key Requirements</h1>
+</div>
+<div class="content">
+  <p class="subtitle">Structured Planning Reduces LLM Assumptions</p>
+  <ul>
+    <li><span class="highlight">Data Sourcing:</span> Ingest transcripts from channel ID in environment variables</li>
+    <li><span class="highlight">Temporal Filter:</span> Only process videos from the last 7 days</li>
+    <li><span class="highlight">Idempotency:</span> Database checks prevent processing same video twice</li>
+    <li><span class="highlight">Chunking Parameters:</span> Configurable min/max chunk sizes (400-1,000 characters)</li>
+    <li><span class="highlight">Tooling Consistency:</span> Leverage existing code patterns from examples directory</li>
+  </ul>
+</div>
+</body>
+</html>

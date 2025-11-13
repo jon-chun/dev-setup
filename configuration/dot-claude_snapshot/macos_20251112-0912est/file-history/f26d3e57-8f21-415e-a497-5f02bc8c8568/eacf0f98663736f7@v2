@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 8pt;
+  background: #5EA8A7;
+}
+.content {
+  flex: 1;
+  padding: 35pt 45pt;
+}
+h1 {
+  color: #1C2833;
+  font-size: 32pt;
+  font-weight: bold;
+  margin: 0 0 20pt 0;
+}
+.label {
+  color: #FE4447;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 12pt;
+}
+p {
+  color: #2E4053;
+  font-size: 13pt;
+  margin: 0 0 15pt 0;
+  line-height: 1.5;
+}
+.framework {
+  display: flex;
+  gap: 15pt;
+  margin-top: 20pt;
+}
+.rt-box {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 15pt;
+  border-radius: 6pt;
+  border-left: 4pt solid #5EA8A7;
+}
+.rt-box h3 {
+  color: #5EA8A7;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 0 0 8pt 0;
+}
+.rt-box p {
+  font-size: 11pt;
+  margin: 0;
+  line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="sidebar"></div>
+<div class="content">
+  <h1>The Human Algorithm Framework</h1>
+  <p class="label">OUR CONCEPTUAL ARCHITECTURE</p>
+
+  <p>We juxtapose the <b>"human algorithm"</b> (evolved capacities for emotion, creativity, meaning) with <b>artificial algorithms</b>, exploring four dimensions:</p>
+
+  <div class="framework">
+    <div class="rt-box">
+      <h3>RT1: Feeling</h3>
+      <p>Emotion vs. simulation</p>
+    </div>
+    <div class="rt-box">
+      <h3>RT2: Creativity</h3>
+      <p>Tool, collaborator, or competitor?</p>
+    </div>
+    <div class="rt-box">
+      <h3>RT3: Work</h3>
+      <p>Dignity in AI economy</p>
+    </div>
+    <div class="rt-box">
+      <h3>RT4: AGI</h3>
+      <p>Long-term alignment</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 20pt; font-size: 12pt; font-style: italic;">A structured arc from inner experience → expression → institutions → future</p>
+</div>
+</body>
+</html>

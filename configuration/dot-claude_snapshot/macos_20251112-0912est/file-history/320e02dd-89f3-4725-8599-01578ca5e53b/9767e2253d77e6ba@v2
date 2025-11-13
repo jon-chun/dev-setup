@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FE4447;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 30pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+}
+h2 {
+  font-size: 18pt;
+  color: #277884;
+  margin: 0 0 15pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+.info-grid {
+  display: flex;
+  gap: 20pt;
+  margin-top: 20pt;
+}
+.info-box {
+  flex: 1;
+  background: #ffffff;
+  padding: 20pt;
+  border-radius: 8pt;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-top: 5pt solid #5EA8A7;
+}
+.info-box h3 {
+  font-size: 14pt;
+  color: #277884;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+.info-box p {
+  font-size: 12pt;
+  margin: 0;
+}
+.dates {
+  background: #FFF3CD;
+  padding: 12pt 20pt;
+  border-radius: 6pt;
+  text-align: center;
+  margin-bottom: 20pt;
+}
+.dates p {
+  margin: 0;
+  font-size: 14pt;
+  font-weight: bold;
+  color: #277884;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Situación Actual: La Retrospectiva en el MoMA</h1>
+</div>
+<div class="content">
+  <div class="dates">
+    <p>"When I don't sleep, I dream" | 10 noviembre - 11 abril</p>
+  </div>
+  <h2>Primera Gran Retrospectiva en EE.UU.</h2>
+  <p>La exposición en el MoMA de Nueva York es la primera gran retrospectiva de Lam en Estados Unidos. Reúne más de 100 piezas, incluyendo pinturas, dibujos y un documental.</p>
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>Alcance</h3>
+      <p>Más de 100 obras exhibidas de todas las épocas del artista</p>
+    </div>
+    <div class="info-box">
+      <h3>Desafío</h3>
+      <p>El Museo de Bellas Artes de La Habana negó préstamo de obras</p>
+    </div>
+    <div class="info-box">
+      <h3>Formatos</h3>
+      <p>Pinturas, dibujos y documental sobre su vida</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

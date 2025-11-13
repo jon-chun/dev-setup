@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #2C2C2C;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 32pt;
+  font-weight: bold;
+}
+.content {
+  margin-top: 80pt;
+  padding: 0 40pt 40pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.column {
+  flex: 1;
+}
+h3 {
+  color: #C0392B;
+  font-size: 14pt;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #2C2C2C;
+  font-size: 12pt;
+  line-height: 1.6;
+}
+li {
+  margin-bottom: 6pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Vocabulario clave</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <h3>Conceptos políticos</h3>
+    <ul>
+      <li><b>Golpe de Estado:</b> Derrocamiento violento del gobierno</li>
+      <li><b>Dictadura militar/cívico-militar:</b> Régimen autoritario</li>
+      <li><b>Burocracia autoritaria:</b> Estado represivo y tecnocrático</li>
+      <li><b>Terrorismo de Estado:</b> Violencia sistemática desde el poder</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Memoria y justicia</h3>
+    <ul>
+      <li><b>Desaparecido/a:</b> Víctima de secuestro y desaparición forzada</li>
+      <li><b>Guerra Sucia:</b> Campaña ilegal de represión (1976-1983)</li>
+      <li><b>Nunca Más:</b> Informe de la CONADEP sobre crímenes</li>
+      <li><b>Juicio a las Juntas:</b> Proceso histórico de 1985</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

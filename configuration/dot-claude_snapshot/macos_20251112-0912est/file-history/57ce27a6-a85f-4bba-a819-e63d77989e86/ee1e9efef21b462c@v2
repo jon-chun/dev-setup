@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #4A90E2;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  text-align: center;
+  padding: 40pt;
+  max-width: 600pt;
+}
+h1 {
+  color: #F4F6F6;
+  font-size: 42pt;
+  margin: 0 0 20pt 0;
+  font-weight: bold;
+}
+.year {
+  color: #F4F6F6;
+  font-size: 72pt;
+  font-weight: bold;
+  margin: 0 0 30pt 0;
+}
+.info-boxes {
+  display: flex;
+  gap: 20pt;
+  margin-top: 30pt;
+}
+.info-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20pt;
+  border-radius: 8pt;
+  box-shadow: 0 4pt 12pt rgba(0, 0, 0, 0.2);
+}
+.info-box h3 {
+  color: #C0392B;
+  font-size: 16pt;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+.info-box p {
+  color: #2C2C2C;
+  font-size: 13pt;
+  margin: 0;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <p class="year">1983</p>
+  <h1>La transición democrática</h1>
+  <div class="info-boxes">
+    <div class="info-box">
+      <h3>Elecciones libres</h3>
+      <p>Octubre de 1983<br>Sin proscripciones importantes</p>
+    </div>
+    <div class="info-box">
+      <h3>Raúl Alfonsín (UCR)</h3>
+      <p>Discurso de democracia y derechos humanos</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

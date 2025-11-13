@@ -1,0 +1,38 @@
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+
+async function createPresentation() {
+    const pptx = new pptxgen();
+    pptx.layout = 'LAYOUT_16x9';
+    pptx.author = 'AI Coding Session';
+    pptx.title = 'Fullstack RAG Agent for YouTube Content';
+
+    // Slide 1: Title
+    await html2pptx('slide1.html', pptx);
+
+    // Slide 2: Project Goal & Architecture
+    await html2pptx('slide2.html', pptx);
+
+    // Slide 3: PIV Loop Methodology
+    await html2pptx('slide3.html', pptx);
+
+    // Slide 4: Planning Phase
+    await html2pptx('slide4.html', pptx);
+
+    // Slide 5: RAG Pipeline
+    await html2pptx('slide5.html', pptx);
+
+    // Slide 6: AI Agent & API
+    await html2pptx('slide6.html', pptx);
+
+    // Slide 7: Foundational Principles
+    await html2pptx('slide7.html', pptx);
+
+    // Slide 8: Key Takeaways
+    await html2pptx('slide8.html', pptx);
+
+    await pptx.writeFile({ fileName: 'week11_rag-ai-tutor.pptx' });
+    console.log('Presentation created successfully!');
+}
+
+createPresentation().catch(console.error);
