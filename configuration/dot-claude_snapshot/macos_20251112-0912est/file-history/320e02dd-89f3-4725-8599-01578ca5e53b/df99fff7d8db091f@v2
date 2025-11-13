@@ -1,0 +1,289 @@
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+
+async function createPresentation() {
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = 'Kap Spanish';
+  pptx.title = 'Wifredo Lam - Retrospectiva MoMA';
+
+  // Detailed Spanish speaker notes for each slide
+  const speakerNotes = {
+    1: `Bienvenidos a esta presentación sobre Wifredo Lam, uno de los artistas más importantes del siglo XX. Lam fue un pionero que logró unir dos mundos aparentemente distantes: el Caribe, con sus ricas tradiciones afrocaribeñas, y Europa, con sus movimientos artísticos de vanguardia como el surrealismo y el modernismo.
+
+Esta presentación se basa en un artículo periodístico que cubre la primera gran retrospectiva de Lam en Estados Unidos, actualmente en exhibición en el Museo de Arte Moderno (MoMA) de Nueva York. La exposición se titula "When I don't sleep, I dream" (Cuando no duermo, sueño) y estará abierta desde el 10 de noviembre de 2025 hasta el 11 de abril de 2026.
+
+La fotografía que se sugiere para esta diapositiva es de Lam en su estudio de La Habana en 1943, un momento crucial en su carrera cuando regresó a Cuba después de casi dos décadas en Europa. Esta imagen captura la esencia del artista trabajando, rodeado de sus pinceles y lienzos, en pleno proceso creativo.`,
+
+    2: `Antes de adentrarnos en la vida y obra de Wifredo Lam, es importante familiarizarnos con algunos términos especializados que aparecen frecuentemente en el artículo y que son esenciales para comprender su legado artístico.
+
+Primero, el término "retrospectiva" se refiere a una exposición que presenta una visión completa de la obra de un artista a lo largo de toda su vida, desde sus trabajos tempranos hasta sus últimas creaciones. Este es precisamente el tipo de exposición que el MoMA está presentando.
+
+El "modernismo" fue un movimiento artístico dominante del siglo XX que buscaba romper con las tradiciones del pasado e innovar constantemente en formas y estilos. El "surrealismo", más específicamente, fue una corriente dentro del modernismo que exploraba el subconsciente, los sueños y lo irracional, y Lam fue un miembro importante de este movimiento.
+
+"Descolonización" es un concepto fundamental para entender el trabajo de Lam. Se refiere al proceso de liberación cultural y política de las influencias coloniales, algo que Lam intentó lograr a través de su arte. El término "diáspora" describe la dispersión de un pueblo fuera de su tierra natal, experiencia que Lam vivió personalmente al pasar casi dos décadas fuera de Cuba.
+
+Las figuras "híbridas" son características del estilo de Lam: combinan elementos humanos, animales y vegetales en una sola imagen, reflejando la fusión de culturas y tradiciones. Una "etnógrafa" como Lydia Cabrera, quien influyó mucho en Lam, es una persona que estudia y describe culturas, especialmente las tradiciones afrocaribeñas.
+
+Finalmente, el "fascismo" fue la ideología autoritaria y nacionalista contra la cual Lam luchó durante la Guerra Civil Española, una experiencia que marcó profundamente su arte y su compromiso político.
+
+La imagen sugerida es una nube de palabras con estos términos en colores vibrantes inspirados en el estilo surrealista de Lam, creando una introducción visual al vocabulario especializado.`,
+
+    3: `Esta diapositiva es un espacio reservado para insertar un ejemplo de la obra de Wifredo Lam. Se recomienda incluir aquí una de sus pinturas emblemáticas que muestre su estilo distintivo.
+
+Las opciones ideales podrían incluir obras de su período cubano que muestren las figuras híbridas características de su estilo, donde elementos humanos se fusionan con formas vegetales y animales, creando composiciones densas y místicas.
+
+Este es el primer de tres espacios dedicados exclusivamente a la apreciación visual de su arte, permitiendo a la audiencia conectar con la obra de Lam directamente antes de continuar con el análisis histórico y contextual.
+
+Se sugiere elegir una obra que muestre claramente la fusión de influencias caribeñas y europeas, posiblemente de su período surrealista o de su regreso a Cuba en los años 40.`,
+
+    4: `Ahora comenzamos a explorar el contexto histórico de la vida de Wifredo Lam, empezando por su infancia y formación inicial, factores fundamentales que moldearon su visión artística única.
+
+Wifredo Lam nació en 1902 en Sagua la Grande, un pueblo en la provincia de Villa Clara, Cuba. Su origen familiar fue extraordinariamente diverso: su padre era un inmigrante chino que había llegado a Cuba, y su madre era de ascendencia mixta africana y española. Esta combinación multicultural no era inusual en Cuba, pero en el caso de Lam fue particularmente significativa porque creció inmerso en tradiciones muy diversas.
+
+Desde pequeño, Lam estuvo expuesto a las prácticas religiosas afrocubanas, especialmente a través de su madrina, quien era practicante de la santería. Estas experiencias tempranas con rituales, símbolos y mitología afrocaribeña más tarde se convertirían en elementos centrales de su arte.
+
+A pesar de este rico trasfondo multicultural, Lam no encontró en Cuba las oportunidades educativas que buscaba para desarrollarse como artista. A los 21 años, en 1923, recibió una beca para estudiar en la prestigiosa Academia de Bellas Artes de San Fernando en Madrid, España. Esta fue una oportunidad transformadora que lo llevó a Europa y marcó el comienzo de su trayectoria como artista transnacional, alguien que operaría entre múltiples culturas y geografías.
+
+El mapa sugerido para esta diapositiva debe mostrar visualmente esta migración crucial: desde Cuba, su tierra natal, hacia España y el resto de Europa, ilustrando el comienzo de su viaje de casi dos décadas fuera de su país de origen.`,
+
+    5: `Esta diapositiva aborda uno de los períodos más dramáticos e influyentes en la vida de Lam: su experiencia durante la Guerra Civil Española.
+
+Cuando la Guerra Civil Española estalló en julio de 1936, Lam llevaba más de una década viviendo en Madrid. El conflicto enfrentó al gobierno republicano democráticamente elegido contra las fuerzas nacionalistas lideradas por el General Francisco Franco, quien contaba con el apoyo de la Alemania nazi y la Italia fascista.
+
+Lam no dudó en tomar partido. Se alistó en el bando republicano, motivado por un profundo deber moral contra el fascismo y el autoritarismo. Esta decisión no fue meramente política; reflejaba sus valores fundamentales sobre la libertad, la justicia y la dignidad humana.
+
+Durante este período tumultuoso, Lam creó una de sus obras más importantes hasta ese momento: "La guerra civil". Esta pintura monumental fue su trabajo más grande hasta entonces y fue encargada específicamente para el Pabellón Español en la Exposición Internacional de París de 1937. Esta misma exposición es famosa por haber presentado también el "Guernica" de Picasso, otra respuesta artística devastadora a los horrores de la guerra.
+
+"La guerra civil" de Lam presenta figuras abstractas y deformadas en tonos oscuros y sombríos, capturando el caos, la violencia y el sufrimiento del conflicto. Esta experiencia de guerra marcó profundamente el arte de Lam, introduciendo temas de violencia, resistencia y compromiso político que permanecerían en su obra.
+
+La guerra terminó en 1939 con la victoria de Franco, obligando a Lam, como a muchos otros republicanos y artistas, a huir de España. Esta derrota fue devastadora personal y políticamente, pero también marcó el comienzo de la siguiente fase crucial de su carrera artística.`,
+
+    6: `Después de la victoria de Franco en 1939, Lam se unió a miles de refugiados republicanos que huyeron de España. Su destino fue París, entonces la capital mundial del arte y el epicentro de las vanguardias artísticas europeas.
+
+París en 1939 era un hervidero de creatividad artística, y Lam tuvo la extraordinaria fortuna de conectar con algunas de las figuras más importantes del arte moderno. Su amistad más significativa fue con Pablo Picasso, el artista español más famoso del siglo XX. Picasso, quien compartía con Lam tanto el origen hispánico como las convicciones políticas republicanas, se convirtió en su mentor y amigo cercano.
+
+Además de Picasso, Lam conoció a Henri Matisse, Joan Miró y Max Ernst, todos ellos gigantes del arte moderno. Estos artistas reconocieron inmediatamente el talento de Lam y lo acogieron en sus círculos. A pesar de vivir en condiciones modestas, pintando incansablemente en una pequeña habitación de hotel, Lam estaba en el centro de la vida artística parisina.
+
+En 1939, Lam tuvo su primera exposición individual en la Galerie Pierre, una galería importante en París. En esta exposición, exploró temas como la maternidad, y su trabajo comenzó a atraer atención seria. El reconocimiento más significativo llegó cuando el Museo de Arte Moderno de Nueva York (MoMA) compró su obra "Madre e hijo", convirtiéndose en la primera obra de Lam en entrar a una colección museística importante.
+
+La fotografía sugerida muestra a Lam junto a Picasso en París alrededor de 1939, capturando visualmente esta amistad crucial y el intercambio cultural entre el artista cubano y los maestros europeos. Esta imagen simboliza el momento en que Lam se estableció firmemente en la vanguardia artística internacional.`,
+
+    7: `El exilio de Lam en París fue breve pero intenso. En junio de 1940, apenas un año después de su llegada, las tropas alemanas invadieron Francia y ocuparon París. Una vez más, Lam se vio obligado a huir.
+
+Se refugió en Marsella, en el sur de Francia, donde se congregó un grupo extraordinario de artistas e intelectuales que también habían escapado de la ocupación nazi. En Marsella, Lam intensificó su amistad con André Breton, el fundador y líder del movimiento surrealista.
+
+Breton era una figura dominante en el mundo artístico, conocido por sus manifiestos surrealistas y su promoción de artistas que exploraban el subconsciente y lo irracional. Bajo la influencia de Breton, Lam se unió formalmente al movimiento surrealista. Como explicó más tarde, el surrealismo le ofrecía una forma de "liberarse de preocupaciones y temores" en medio de la incertidumbre y el terror de la Segunda Guerra Mundial.
+
+El surrealismo resonó profundamente con Lam porque le permitía explorar las tradiciones místicas y rituales que había conocido en su infancia cubana, pero a través de un lenguaje artístico moderno y europeo. Las figuras híbridas y oníricas del surrealismo se alineaban perfectamente con las imágenes de la santería y las religiones afrocubanas.
+
+En 1941, a los 39 años, Lam intentó continuar su viaje hacia Estados Unidos o México, pero fue rechazado en ambos países debido a sus vínculos con movimientos izquierdistas y el Partido Comunista. Sin opciones en Europa o América del Norte, Lam se vio obligado a regresar a Cuba, su tierra natal, después de casi dos décadas en diáspora.
+
+Este regreso forzado, aunque inicialmente no deseado, resultaría ser el catalizador para la fase más innovadora y significativa de su carrera artística.`,
+
+    8: `Esta segunda diapositiva de espacio para obra de arte está estratégicamente colocada después de discutir el período europeo de Lam y antes de explorar su regreso transformador a Cuba.
+
+Este es el momento ideal para mostrar una obra que capture la transición en su estilo artístico, posiblemente una pieza de su período surrealista en Europa o de sus primeros trabajos al regresar a Cuba.
+
+Se recomienda elegir una obra que ilustre claramente las influencias surrealistas que Lam absorbió en Europa, especialmente las figuras oníricas y las composiciones que desafían la lógica convencional.
+
+Alternativamente, se podría mostrar una obra que comience a incorporar elementos afrocaribeños con técnicas surrealistas, mostrando el inicio de la síntesis única que Lam desarrollaría plenamente en Cuba.
+
+Este espacio visual permite a la audiencia apreciar la evolución de su estilo antes de adentrarnos en su período cubano más maduro y revolucionario.`,
+
+    9: `El regreso de Lam a Cuba en 1941 marcó un punto de inflexión revolucionario en su arte. Después de casi dos décadas en Europa, regresó a su tierra natal con una perspectiva completamente nueva y una misión artística clara.
+
+En Cuba, Lam se reconectó intensamente con sus raíces afrocaribeñas. Una figura clave en esta reconexión fue Lydia Cabrera, una etnógrafa cubana que había dedicado su vida a estudiar y documentar las tradiciones afrocubanas, especialmente la santería y otras prácticas religiosas de origen africano. Cabrera se convirtió en amiga cercana y colaboradora intelectual de Lam, profundizando su comprensión de las mitologías y símbolos que había conocido superficialmente en su juventud.
+
+Con esta renovada conexión cultural y las técnicas vanguardistas que había aprendido en Europa, Lam creó en 1943 su obra maestra indiscutible: "La Jungla" (The Jungle). Esta pintura monumental mide aproximadamente 2.4 metros de alto por 2.3 metros de ancho y es considerada su logro artístico más importante.
+
+"La Jungla" presenta un mundo donde lo humano, lo vegetal y lo animal se fusionan inextricablemente. Figuras alargadas con características humanas, pero también con elementos de plantas de caña de azúcar y animales totémicos, pueblan un espacio denso y claustrofóbico que sugiere tanto una selva tropical como un espacio ritual sagrado.
+
+Curiosamente, debido a la escasez de materiales durante la Segunda Guerra Mundial, Lam tuvo que pintar sobre papel kraft grueso en lugar de lienzo tradicional, usando óleo diluido. Esta limitación técnica contribuyó al aspecto único y la textura distintiva de la obra.
+
+Lam describió su trabajo en este período como "un acto de descolonización", un intento consciente de recuperar y celebrar las tradiciones culturales africanas y caribeñas que habían sido suprimidas, marginadas o exotizadas por siglos de colonialismo europeo. Su objetivo era presentar estas tradiciones no como curiosidades antropológicas, sino como fuentes vitales de poder espiritual y artístico.
+
+"La Jungla" fue adquirida por el MoMA en 1945 y durante años fue exhibida prominentemente en el vestíbulo del museo, convirtiéndose en una de las obras más icónicas de la colección.`,
+
+    10: `Ahora nos movemos del contexto histórico a la situación actual: la exposición retrospectiva en el MoMA que motiva este artículo periodístico.
+
+La exposición "When I don't sleep, I dream" (Cuando no duermo, sueño) se inauguró el 10 de noviembre de 2025 y permanecerá abierta hasta el 11 de abril de 2026. Este título evocador proviene de una cita del propio Lam y captura la naturaleza onírica y surrealista de su arte, así como su intensa dedicación al trabajo creativo.
+
+Esta es la primera gran retrospectiva de Wifredo Lam en Estados Unidos, un hecho sorprendente dado su importancia en la historia del arte del siglo XX. Aunque ha habido exposiciones de su trabajo en museos estadounidenses antes, ninguna ha sido tan completa o ambiciosa como esta.
+
+La exposición reúne más de 100 piezas de todas las fases de la carrera de Lam, incluyendo pinturas, dibujos, grabados y materiales documentales. También incluye un documental sobre su vida y obra, proporcionando contexto adicional para los visitantes que quizás no estén familiarizados con su historia.
+
+Sin embargo, la organización de esta exposición no estuvo exenta de desafíos. Significativamente, el Museo Nacional de Bellas Artes de La Habana, que posee una colección importante de obras de Lam, se negó a prestar obras para la exposición. Esta negativa refleja las tensiones políticas persistentes entre Cuba y Estados Unidos, demostrando cómo la política internacional continúa afectando el acceso al arte.
+
+A pesar de este contratiempo, los curadores lograron reunir una colección impresionante de obras de museos y colecciones privadas de todo el mundo, ofreciendo la visión más completa de la carrera de Lam que se haya presentado en Estados Unidos.`,
+
+    11: `Esta diapositiva explora las consecuencias de la exposición del MoMA y el legado expandido de Lam en el mundo del arte contemporáneo.
+
+Una de las adquisiciones más significativas para esta exposición fue "Grande Composition", una pintura masiva que mide 4.2 metros de alto por 2.7 metros de ancho. Esta obra monumental no había sido vista públicamente en 62 años antes de esta exposición, haciendo su inclusión particularmente emocionante para historiadores del arte y admiradores de Lam.
+
+La escala de "Grande Composition" es importante porque permite a Lam crear mundos visuales envolventes donde las figuras híbridas características de su estilo pueden desplegarse en toda su complejidad. Las formas abstractas y simbólicas llenan el lienzo, creando un impacto visual abrumador que debe ser experimentado en persona.
+
+Esta retrospectiva del MoMA se diferencia de exposiciones previas importantes de Lam, incluyendo las presentadas en el Centro Pompidou de París (2015), la Tate Modern de Londres (2016) y el Museo Reina Sofía de Madrid (2016). Cada una de estas exposiciones contribuyó a revivir el interés en Lam, pero la del MoMA es significativa por su ubicación en Estados Unidos y por su alcance comprensivo.
+
+El legado de Lam continúa inspirando a artistas contemporáneos en múltiples continentes. En Europa, el Caribe, Sudamérica y Estados Unidos, artistas exploran temas similares de identidad cultural, descolonización, diáspora y fusión de tradiciones. Su trabajo ha sido particularmente influyente para artistas de la diáspora africana que buscan formas de conectar con sus herencias culturales mientras trabajan dentro de contextos artísticos contemporáneos.
+
+Lam trascendió las limitaciones de su época al rechazar tanto el exotismo europeo que trataba las culturas no occidentales como curiosidades, como el nacionalismo estrecho que rechazaba las influencias extranjeras. En cambio, creó un arte verdaderamente transnacional que celebraba la hibridez y la mezcla cultural como fuentes de fortaleza y creatividad.`,
+
+    12: `Esta diapositiva examina el fenómeno paradójico del reconocimiento tardío de Lam y el cambio gradual en cómo se percibe su legado.
+
+Como señala el artículo, Lam era simultáneamente "famoso y desconocido". Por un lado, sus obras estaban en las colecciones de los museos más importantes del mundo, incluyendo el MoMA, y fue reconocido por sus contemporáneos como un artista importante. Por otro lado, rara vez aparecía en los libros de texto de historia del arte, y su nombre no era tan conocido como el de otros artistas de su generación.
+
+Esta marginalización ocurrió a pesar de que Lam fue un pionero del modernismo, alguien que trabajó junto a figuras como Picasso y Breton y que desarrolló un lenguaje visual completamente original. El problema era que su complejidad no encajaba fácilmente en las categorías que los historiadores del arte occidentales habían creado.
+
+¿Era un artista cubano? Sí, pero pasó la mayor parte de su vida fuera de Cuba. ¿Era un surrealista europeo? Sí, pero su trabajo incorporaba tradiciones que los surrealistas europeos solo podían imaginar. ¿Era un artista "primitivo" que representaba culturas "exóticas"? Absolutamente no; era un artista cosmopolita altamente educado que hacía comentarios sofisticados sobre el colonialismo y la modernidad.
+
+La exposición del MoMA, curada por Beverly Adams y Christophe Cherix, intenta expandir activamente la percepción del legado de Lam. Los curadores presentan su trabajo como abarcando múltiples dimensiones: poder político, poesía visual, compromiso social y innovación estética dentro del modernismo.
+
+El gráfico sugerido muestra visualmente el aumento dramático en el interés por Lam desde 2015, con exposiciones importantes en el Pompidou, la Tate, el Reina Sofía y ahora el MoMA. Este incremento refleja un cambio más amplio en la historia del arte hacia la inclusión de artistas no occidentales o transnacionales que anteriormente habían sido marginados.`,
+
+    13: `Esta tercera y final diapositiva reservada para obra de arte está estratégicamente colocada después de discutir el legado de Lam y antes de abordar los desafíos futuros.
+
+Este es el momento perfecto para mostrar una de sus obras más maduras y reconocidas, idealmente una que ejemplifique plenamente su estilo desarrollado y su visión descolonizadora.
+
+Las opciones ideales incluyen obras de su período más productivo en Cuba durante los años 40 y 50, o trabajos posteriores que muestran la evolución continua de su lenguaje visual.
+
+Se recomienda elegir una obra que sea visualmente impactante y que muestre claramente todos los elementos discutidos: las figuras híbridas, la fusión de tradiciones africanas y caribeñas con técnicas modernistas, la densidad compositiva y la riqueza simbólica.
+
+Esta obra debe servir como evidencia visual del por qué Lam merece ser considerado uno de los artistas más importantes del siglo XX, y por qué su marginalización histórica ha sido tan injustificada.
+
+Alternativamente, se podría mostrar una obra de su período posterior en París (regresó a Europa en los años 50) que demuestre cómo continuó desarrollando y refinando su visión artística hasta el final de su carrera.`,
+
+    14: `Esta diapositiva aborda directamente los desafíos futuros en términos de cómo la historia del arte puede resolver la marginalización histórica de artistas como Lam.
+
+El problema fundamental es que la historia del arte, especialmente como se enseña en instituciones occidentales, tiende a encasillar a los artistas en categorías rígidas basadas en nacionalidad, estilo o período. Estas categorías funcionan bien para artistas que encajan limpiamente en ellas, pero excluyen o minimizan a aquellos que, como Lam, operaban entre múltiples mundos.
+
+Lam no encajaba porque su transnacionalidad era fundamental para su identidad y su arte. No era simplemente un artista cubano que había estudiado en Europa; era alguien que conscientemente sintetizaba múltiples tradiciones culturales en algo completamente nuevo. Tampoco era simplemente un surrealista que usaba motivos "exóticos"; estaba haciendo una declaración política sofisticada sobre el colonialismo, la descolonización y la recuperación cultural.
+
+Los desafíos que deben abordarse incluyen:
+
+Primero, promover la inclusión genuina de artistas no occidentales en las narrativas globales del arte moderno, no como apéndices o notas al pie, sino como contribuyentes centrales e iguales.
+
+Segundo, educar a estudiantes, profesores y al público sobre la descolonización en el arte, ayudando a todos a comprender cómo el colonialismo ha distorsionado nuestra comprensión de la creatividad global y cómo los artistas como Lam trabajaron activamente para desafiar esas distorsiones.
+
+Tercero, evitar clasificaciones rígidas que ignoren la complejidad de figuras como Lam. En lugar de tratar de decidir si era "cubano" o "europeo", "surrealista" o "primitivista", necesitamos desarrollar vocabularios críticos más sofisticados que puedan manejar la hibridez y la multiplicidad.
+
+El diagrama de Venn sugerido ilustra visualmente esta complejidad: tres círculos que representan el Caribe, Europa y el surrealismo se superponen, y Lam ocupa el espacio central donde todos se intersectan. Esta posición única, que debería ser vista como una fortaleza, históricamente ha sido problemática para historiadores del arte acostumbrados a categorías claras y separadas.`,
+
+    15: `Esta diapositiva final aborda las soluciones prácticas y los pasos concretos necesarios para asegurar que el legado de Lam continúe creciendo e inspirando a futuras generaciones.
+
+Para resolver el problema de la subestimación histórica de Lam, se necesitan múltiples estrategias coordinadas:
+
+Primero, más exposiciones mundiales que presenten su trabajo en diferentes contextos geográficos y culturales. La retrospectiva del MoMA es un paso importante, pero se necesitan exposiciones similares en otros países, especialmente en América Latina, África y Asia, donde su trabajo sobre la descolonización puede resonar de maneras particularmente poderosas.
+
+Segundo, colaboraciones educativas entre museos, universidades y escuelas que integren a Lam en los currículos de arte de manera sustantiva, no solo como una mención breve sino como un caso de estudio importante para entender el modernismo global.
+
+Tercero, estudios académicos sobre su impacto en artistas contemporáneos. Necesitamos investigación que trace las líneas de influencia desde Lam hasta artistas que trabajan hoy, documentando cómo sus innovaciones continúan inspirando prácticas artísticas actuales.
+
+Cuarto, digitalización de su obra para hacer su trabajo accesible globalmente. Muchas de sus obras están en colecciones privadas o museos que no tienen presencia digital robusta. Un archivo digital comprensivo permitiría a estudiantes, investigadores y entusiastas del arte en todo el mundo estudiar su trabajo.
+
+Quinto, fomentar diálogos sobre diáspora, identidad y descolonización en escuelas de arte, usando el trabajo de Lam como punto de partida para conversaciones más amplias sobre cómo el arte puede participar en luchas por la justicia cultural y social.
+
+La ilustración futurista sugerida de una galería virtual representa simbólicamente estos esfuerzos de accesibilidad y educación global. Muestra obras de Lam accesibles a través de dispositivos digitales desde cualquier parte del mundo, simbolizando la democratización del acceso al arte y el conocimiento.
+
+En conclusión, el legado de Wifredo Lam no es solo histórico sino profundamente relevante para nuestro presente globalizado. Su visión de un arte que celebra la fusión cultural, que desafía las jerarquías coloniales y que opera fluidamente entre múltiples mundos ofrece un modelo inspirador para el arte del siglo XXI. Asegurando que su trabajo sea conocido, estudiado y apreciado, no solo honramos a un gran artista, sino que también nos equipamos mejor para entender y navegar nuestro propio mundo multicultural e interconectado.`
+  };
+
+  // Slide 1: Portada
+  const { slide: slide1 } = await html2pptx('slide01-portada.html', pptx);
+  slide1.addNotes(speakerNotes[1]);
+
+  // Slide 2: Vocabulario
+  const { slide: slide2 } = await html2pptx('slide02-vocabulario.html', pptx);
+  slide2.addNotes(speakerNotes[2]);
+
+  // Slide 3: Artwork blank
+  const { slide: slide3 } = await html2pptx('slide03-artwork-blank.html', pptx);
+  slide3.addNotes(speakerNotes[3]);
+
+  // Slide 4: Infancia
+  const { slide: slide4 } = await html2pptx('slide04-infancia.html', pptx);
+  slide4.addNotes(speakerNotes[4]);
+
+  // Slide 5: Guerra Civil
+  const { slide: slide5 } = await html2pptx('slide05-guerra-civil.html', pptx);
+  slide5.addNotes(speakerNotes[5]);
+
+  // Slide 6: París
+  const { slide: slide6 } = await html2pptx('slide06-paris.html', pptx);
+  slide6.addNotes(speakerNotes[6]);
+
+  // Slide 7: Surrealismo
+  const { slide: slide7 } = await html2pptx('slide07-surrealismo.html', pptx);
+  slide7.addNotes(speakerNotes[7]);
+
+  // Slide 8: Artwork blank
+  const { slide: slide8 } = await html2pptx('slide08-artwork-blank.html', pptx);
+  slide8.addNotes(speakerNotes[8]);
+
+  // Slide 9: Cuba
+  const { slide: slide9 } = await html2pptx('slide09-cuba.html', pptx);
+  slide9.addNotes(speakerNotes[9]);
+
+  // Slide 10: MoMA
+  const { slide: slide10 } = await html2pptx('slide10-moma.html', pptx);
+  slide10.addNotes(speakerNotes[10]);
+
+  // Slide 11: Legado
+  const { slide: slide11 } = await html2pptx('slide11-legado.html', pptx);
+  slide11.addNotes(speakerNotes[11]);
+
+  // Slide 12: Reconocimiento
+  const { slide: slide12 } = await html2pptx('slide12-reconocimiento.html', pptx);
+  slide12.addNotes(speakerNotes[12]);
+
+  // Slide 13: Artwork blank
+  const { slide: slide13 } = await html2pptx('slide13-artwork-blank.html', pptx);
+  slide13.addNotes(speakerNotes[13]);
+
+  // Slide 14: Desafíos
+  const { slide: slide14 } = await html2pptx('slide14-desafios.html', pptx);
+  slide14.addNotes(speakerNotes[14]);
+
+  // Slide 15: Futuro
+  const { slide: slide15 } = await html2pptx('slide15-futuro.html', pptx);
+  slide15.addNotes(speakerNotes[15]);
+
+  // Save presentation
+  await pptx.writeFile({ fileName: 'Wifredo_Lam_Retrospectiva_MoMA.pptx' });
+  console.log('Presentation created successfully: Wifredo_Lam_Retrospectiva_MoMA.pptx');
+
+  // Also save speaker notes to a separate text file
+  let notesText = '# NOTAS DEL PRESENTADOR - WIFREDO LAM RETROSPECTIVA MOMA\n\n';
+  notesText += '===============================================================\n\n';
+
+  for (let i = 1; i <= 15; i++) {
+    const slideNames = {
+      1: 'Portada',
+      2: 'Vocabulario Especializado',
+      3: 'Espacio para Obra de Arte #1',
+      4: 'Contexto Histórico: Infancia y Formación',
+      5: 'Contexto Histórico: La Guerra Civil Española',
+      6: 'Contexto Histórico: Exilio en París',
+      7: 'Contexto Histórico: Segunda Guerra Mundial y Surrealismo',
+      8: 'Espacio para Obra de Arte #2',
+      9: 'Regreso a Cuba: Reinvención Artística',
+      10: 'Situación Actual: La Retrospectiva en el MoMA',
+      11: 'Consecuencias: Legado Expandido',
+      12: 'Consecuencias: Reconocimiento Tardío',
+      13: 'Espacio para Obra de Arte #3',
+      14: 'Desafíos Futuros: Marginalización',
+      15: 'Desafíos Futuros: Promoción y Educación'
+    };
+
+    notesText += `DIAPOSITIVA ${i}: ${slideNames[i]}\n`;
+    notesText += '---------------------------------------------------------------\n\n';
+    notesText += speakerNotes[i];
+    notesText += '\n\n\n';
+  }
+
+  const fs = require('fs');
+  fs.writeFileSync('Notas_Presentador_Wifredo_Lam.txt', notesText, 'utf8');
+  console.log('Speaker notes saved: Notas_Presentador_Wifredo_Lam.txt');
+}
+
+createPresentation().catch(console.error);

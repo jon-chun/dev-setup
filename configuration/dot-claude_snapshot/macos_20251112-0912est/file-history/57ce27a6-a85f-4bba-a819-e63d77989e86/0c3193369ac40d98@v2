@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #2C2C2C;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 28pt;
+  font-weight: bold;
+}
+.subtitle {
+  margin: 5pt 0 0 0;
+  font-size: 16pt;
+  color: #7F8C8D;
+}
+.content {
+  margin-top: 100pt;
+  padding: 20pt 40pt;
+  display: flex;
+  gap: 30pt;
+  width: 100%;
+}
+.text-column {
+  flex: 0 0 320pt;
+}
+.chart-column {
+  flex: 1;
+}
+h3 {
+  color: #C0392B;
+  font-size: 18pt;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #2C2C2C;
+  font-size: 13pt;
+  line-height: 1.7;
+}
+.placeholder {
+  background: #E8E8E8;
+  border: 2pt dashed #7F8C8D;
+  border-radius: 8pt;
+  width: 100%;
+  height: 240pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>La última dictadura (1976–1983)</h1>
+  <p class="subtitle">Estructura del régimen</p>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h3>Concentración de poder</h3>
+    <ul>
+      <li>Junta Militar + Presidente de facto</li>
+      <li>Suspensión de garantías constitucionales</li>
+      <li>Disolución del Congreso</li>
+      <li>Censura total de medios</li>
+      <li>Intervención de sindicatos y universidades</li>
+      <li>Gobierno por decretos militares</li>
+    </ul>
+  </div>
+  <div class="chart-column">
+    <div id="structure-chart" class="placeholder"></div>
+  </div>
+</div>
+</body>
+</html>

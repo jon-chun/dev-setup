@@ -1,0 +1,146 @@
+[DEBUG] Watching for changes in setting files /Users/jonc/.claude/settings.json, /Users/jonc/code/sentimentarcs/.claude/settings.local.json...
+[DEBUG] [LSP MANAGER] initializeLspServerManager() called
+[DEBUG] [LSP MANAGER] Created manager instance, state=pending
+[DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+[DEBUG] [LSP SERVER MANAGER] initialize() called
+[DEBUG] [LSP SERVER MANAGER] Calling getAllLspServers()
+[DEBUG] update: Starting update check
+[DEBUG] update: Running diagnostic
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Loading plugin code-documentation from source: "./plugins/code-documentation"
+[DEBUG] Plugin code-documentation has no entry.skills defined
+[DEBUG] Loading plugin shell-scripting from source: "./plugins/shell-scripting"
+[DEBUG] Processing 3 skill paths for plugin shell-scripting
+[DEBUG] Checking skill path: ./skills/bash-defensive-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/shellcheck-configuration/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/bats-testing-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md (exists: true)
+[DEBUG] Found 3 valid skill paths for plugin shell-scripting, setting skillsPaths
+[DEBUG] Loading plugin python-development from source: "./plugins/python-development"
+[DEBUG] Processing 5 skill paths for plugin python-development
+[DEBUG] Checking skill path: ./skills/async-python-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-testing-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-packaging -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging (exists: true)
+[DEBUG] Checking skill path: ./skills/python-performance-optimization -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization (exists: true)
+[DEBUG] Checking skill path: ./skills/uv-package-manager -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager (exists: true)
+[DEBUG] Found 5 valid skill paths for plugin python-development, setting skillsPaths
+[DEBUG] Loading plugin developer-essentials from source: "./plugins/developer-essentials"
+[DEBUG] Processing 8 skill paths for plugin developer-essentials
+[DEBUG] Checking skill path: ./skills/git-advanced-workflows -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/git-advanced-workflows (exists: true)
+[DEBUG] Checking skill path: ./skills/sql-optimization-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/sql-optimization-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/error-handling-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/error-handling-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/code-review-excellence -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/code-review-excellence (exists: true)
+[DEBUG] Checking skill path: ./skills/e2e-testing-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/e2e-testing-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/auth-implementation-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/auth-implementation-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/debugging-strategies -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/debugging-strategies (exists: true)
+[DEBUG] Checking skill path: ./skills/monorepo-management -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/monorepo-management (exists: true)
+[DEBUG] Found 8 valid skill paths for plugin developer-essentials, setting skillsPaths
+[DEBUG] Loading plugin customer-sales-automation from source: "./plugins/customer-sales-automation"
+[DEBUG] Plugin customer-sales-automation has no entry.skills defined
+[DEBUG] Loading plugin debugging-toolkit from source: "./plugins/debugging-toolkit"
+[DEBUG] Plugin debugging-toolkit has no entry.skills defined
+[DEBUG] Loading plugin git-pr-workflows from source: "./plugins/git-pr-workflows"
+[DEBUG] Plugin git-pr-workflows has no entry.skills defined
+[DEBUG] Loading plugin unit-testing from source: "./plugins/unit-testing"
+[DEBUG] Plugin unit-testing has no entry.skills defined
+[DEBUG] Loading plugin tdd-workflows from source: "./plugins/tdd-workflows"
+[DEBUG] Plugin tdd-workflows has no entry.skills defined
+[DEBUG] Loading plugin code-review-ai from source: "./plugins/code-review-ai"
+[DEBUG] Plugin code-review-ai has no entry.skills defined
+[DEBUG] Loading plugin code-refactoring from source: "./plugins/code-refactoring"
+[DEBUG] Plugin code-refactoring has no entry.skills defined
+[DEBUG] Loading plugin error-debugging from source: "./plugins/error-debugging"
+[DEBUG] Plugin error-debugging has no entry.skills defined
+[DEBUG] Loading plugin team-collaboration from source: "./plugins/team-collaboration"
+[DEBUG] Plugin team-collaboration has no entry.skills defined
+[DEBUG] Loading plugin llm-application-dev from source: "./plugins/llm-application-dev"
+[DEBUG] Processing 4 skill paths for plugin llm-application-dev
+[DEBUG] Checking skill path: ./skills/langchain-architecture -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/langchain-architecture (exists: true)
+[DEBUG] Checking skill path: ./skills/llm-evaluation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/llm-evaluation (exists: true)
+[DEBUG] Checking skill path: ./skills/prompt-engineering-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/prompt-engineering-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/rag-implementation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/rag-implementation (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin llm-application-dev, setting skillsPaths
+[DEBUG] Loading plugin agent-orchestration from source: "./plugins/agent-orchestration"
+[DEBUG] Plugin agent-orchestration has no entry.skills defined
+[DEBUG] Loading plugin context-management from source: "./plugins/context-management"
+[DEBUG] Plugin context-management has no entry.skills defined
+[DEBUG] Loading plugin data-engineering from source: "./plugins/data-engineering"
+[DEBUG] Plugin data-engineering has no entry.skills defined
+[DEBUG] Loading plugin error-diagnostics from source: "./plugins/error-diagnostics"
+[DEBUG] Plugin error-diagnostics has no entry.skills defined
+[DEBUG] Loading plugin observability-monitoring from source: "./plugins/observability-monitoring"
+[DEBUG] Processing 4 skill paths for plugin observability-monitoring
+[DEBUG] Checking skill path: ./skills/distributed-tracing -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/distributed-tracing (exists: true)
+[DEBUG] Checking skill path: ./skills/grafana-dashboards -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/grafana-dashboards (exists: true)
+[DEBUG] Checking skill path: ./skills/prometheus-configuration -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/prometheus-configuration (exists: true)
+[DEBUG] Checking skill path: ./skills/slo-implementation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/slo-implementation (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin observability-monitoring, setting skillsPaths
+[DEBUG] Loading plugin application-performance from source: "./plugins/application-performance"
+[DEBUG] Plugin application-performance has no entry.skills defined
+[DEBUG] Loading plugin comprehensive-review from source: "./plugins/comprehensive-review"
+[DEBUG] Plugin comprehensive-review has no entry.skills defined
+[DEBUG] Loading plugin performance-testing-review from source: "./plugins/performance-testing-review"
+[DEBUG] Plugin performance-testing-review has no entry.skills defined
+[DEBUG] Loading plugin codebase-cleanup from source: "./plugins/codebase-cleanup"
+[DEBUG] Plugin codebase-cleanup has no entry.skills defined
+[DEBUG] Loading plugin database-design from source: "./plugins/database-design"
+[DEBUG] Processing 1 skill paths for plugin database-design
+[DEBUG] Checking skill path: ./skills/postgresql -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills/postgresql (exists: true)
+[DEBUG] Found 1 valid skill paths for plugin database-design, setting skillsPaths
+[DEBUG] Loading plugin security-scanning from source: "./plugins/security-scanning"
+[DEBUG] Processing 1 skill paths for plugin security-scanning
+[DEBUG] Checking skill path: ./skills/sast-configuration -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills/sast-configuration (exists: true)
+[DEBUG] Found 1 valid skill paths for plugin security-scanning, setting skillsPaths
+[DEBUG] Loading plugin seo-content-creation from source: "./plugins/seo-content-creation"
+[DEBUG] Plugin seo-content-creation has no entry.skills defined
+[DEBUG] Loading plugin business-analytics from source: "./plugins/business-analytics"
+[DEBUG] Plugin business-analytics has no entry.skills defined
+[DEBUG] Loading plugin seo-technical-optimization from source: "./plugins/seo-technical-optimization"
+[DEBUG] Plugin seo-technical-optimization has no entry.skills defined
+[DEBUG] Loading plugin seo-analysis-monitoring from source: "./plugins/seo-analysis-monitoring"
+[DEBUG] Plugin seo-analysis-monitoring has no entry.skills defined
+[DEBUG] Loading plugin documentation-generation from source: "./plugins/documentation-generation"
+[DEBUG] Plugin documentation-generation has no entry.skills defined
+[DEBUG] Found 32 plugins (32 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.67566.1762956305361
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 68217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.67566.1762956305361 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] update: Installation type: native
+[DEBUG] update: Config install method: native
+[DEBUG] update: Detected native installation, using native updater
+[DEBUG] Checking for native installer update to version 2.0.37
+[DEBUG] Version 2.0.37 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.37
+[DEBUG] Getting matching hook commands for SessionEnd with query: other
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "other" (0 before deduplication)
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete

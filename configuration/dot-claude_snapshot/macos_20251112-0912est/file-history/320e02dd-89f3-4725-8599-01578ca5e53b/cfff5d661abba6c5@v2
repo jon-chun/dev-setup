@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #5EA8A7;
+  padding: 12pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 26pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 47pt;
+  padding: 0 40pt 5pt 40pt;
+  width: 100%;
+}
+.vocab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4pt;
+}
+.vocab-item {
+  flex: 0 0 calc(50% - 2pt);
+  background: #ffffff;
+  padding: 4.5pt;
+  border-radius: 4pt;
+  border-left: 3pt solid #FE4447;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+.vocab-term {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #277884;
+  margin-bottom: 2pt;
+}
+.vocab-def {
+  font-size: 8pt;
+  color: #333333;
+  line-height: 1.2;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Vocabulario Especializado</h1>
+</div>
+<div class="content">
+  <div class="vocab-grid">
+    <div class="vocab-item">
+      <p class="vocab-term">Retrospectiva</p>
+      <p class="vocab-def">Exposición completa de la obra de un artista.</p>
+    </div>
+    <div class="vocab-item">
+      <p class="vocab-term">Surrealismo</p>
+      <p class="vocab-def">Explora el subconsciente y lo irracional.</p>
+    </div>
+    <div class="vocab-item">
+      <p class="vocab-term">Descolonización</p>
+      <p class="vocab-def">Liberación cultural de influencias coloniales.</p>
+    </div>
+    <div class="vocab-item">
+      <p class="vocab-term">Diáspora</p>
+      <p class="vocab-def">Dispersión de un pueblo fuera de su tierra.</p>
+    </div>
+    <div class="vocab-item">
+      <p class="vocab-term">Híbridas</p>
+      <p class="vocab-def">Figuras que mezclan humano, animal y vegetal.</p>
+    </div>
+    <div class="vocab-item">
+      <p class="vocab-term">Fascismo</p>
+      <p class="vocab-def">Ideología autoritaria de la Guerra Civil.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

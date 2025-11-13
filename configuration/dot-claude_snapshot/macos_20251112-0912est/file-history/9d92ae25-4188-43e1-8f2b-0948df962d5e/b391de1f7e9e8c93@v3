@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #40695B;
+  padding: 25pt 40pt;
+  border-bottom: 8pt solid #B165FB;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 30pt 40pt 40pt 40pt;
+  flex: 1;
+  display: flex;
+  gap: 25pt;
+}
+.principle {
+  flex: 1;
+  background: #F4F6F6;
+  padding: 18pt;
+  border-top: 6pt solid #B165FB;
+  border-radius: 4pt;
+  display: flex;
+  flex-direction: column;
+}
+.principle-title {
+  color: #181B24;
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0 0 10pt 0;
+}
+.principle-text {
+  color: #181B24;
+  font-size: 14pt;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Foundational Principles for AI Coding</h1>
+</div>
+<div class="content">
+  <div class="principle">
+    <p class="principle-title">System Over Tool</p>
+    <p class="principle-text">Focus on building robust, reusable systems (PIV Loop, custom commands) rather than relying on specific tools or models</p>
+  </div>
+  <div class="principle">
+    <p class="principle-title">Avoid Over-engineering</p>
+    <p class="principle-text">Prioritize simplicity and conciseness in planning to prevent errors and hallucinations</p>
+  </div>
+  <div class="principle">
+    <p class="principle-title">Delegate Code, Own Validation</p>
+    <p class="principle-text">Let AI handle implementation, but maintain full ownership of planning and validation phases</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx/scripts/html2pptx.js');
+const sharp = require('sharp');
+const fs = require('fs');
+
+async function createGradient() {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="562.5">
+    <defs>
+      <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#2C2C2C"/>
+        <stop offset="100%" style="stop-color:#4A90E2"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#g)"/>
+  </svg>`;
+
+  await sharp(Buffer.from(svg))
+    .png()
+    .toFile('workspace/assets/gradient-bg.png');
+}
+
+async function createPresentation() {
+  await createGradient();
+
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = 'Student Presentation';
+  pptx.title = 'Argentina: de la dictadura a la democracia';
+
+  // Slide 1: Title
+  const { slide: slide1 } = await html2pptx('workspace/slides/slide01.html', pptx);
+
+  // Slide 2: Vocabulary
+  const { slide: slide2 } = await html2pptx('workspace/slides/slide02.html', pptx);
+
+  // Slide 3: Latin America context with map chart
+  const { slide: slide3, placeholders: p3 } = await html2pptx('workspace/slides/slide03.html', pptx);
+  if (p3.length > 0) {
+    slide3.addText([
+      { text: 'MAPA: Dictaduras en América Latina\n\n', options: { fontSize: 16, bold: true, color: '2C2C2C' } },
+      { text: '● Brasil (1964-1985)\n', options: { fontSize: 13, color: 'C0392B' } },
+      { text: '● Chile (1973-1990)\n', options: { fontSize: 13, color: 'C0392B' } },
+      { text: '● Uruguay (1973-1985)\n', options: { fontSize: 13, color: 'C0392B' } },
+      { text: '● Argentina (1976-1983)\n', options: { fontSize: 13, color: 'C0392B' } },
+      { text: '● Paraguay (1954-1989)', options: { fontSize: 13, color: 'C0392B' } }
+    ], {
+      ...p3[0],
+      align: 'left',
+      valign: 'top'
+    });
+  }
+
+  // Slide 4: Operation Condor
+  const { slide: slide4 } = await html2pptx('workspace/slides/slide04.html', pptx);
+
+  // Slide 5: History of coups with timeline chart
+  const { slide: slide5, placeholders: p5 } = await html2pptx('workspace/slides/slide05.html', pptx);
+  if (p5.length > 0) {
+    const timelineData = [
+      { name: 'Democracia', labels: ['1930','1943','1955','1962','1966','1976','1983'],
+        values: [0, 1, 0, 1, 0, 0, 1] },
+      { name: 'Dictadura', labels: ['1930','1943','1955','1962','1966','1976','1983'],
+        values: [1, 0, 1, 0, 1, 1, 0] }
+    ];
+
+    slide5.addChart(pptx.charts.BAR, timelineData, {
+      ...p5[0],
+      barDir: 'col',
+      showTitle: true,
+      title: 'Alternancia Democracia-Dictadura',
+      showLegend: true,
+      legendPos: 'b',
+      showCatAxisTitle: true,
+      catAxisTitle: 'Año',
+      showValAxisTitle: false,
+      chartColors: ['4A90E2', 'C0392B'],
+      valAxisMaxVal: 1,
+      valAxisMinVal: 0
+    });
+  }
+
+  // Slide 6: Crisis and radicalization
+  const { slide: slide6 } = await html2pptx('workspace/slides/slide06.html', pptx);
+
+  // Slide 7: March 24, 1976 coup
+  const { slide: slide7 } = await html2pptx('workspace/slides/slide07.html', pptx);
+
+  // Slide 8: Dictatorship structure with org chart
+  const { slide: slide8, placeholders: p8 } = await html2pptx('workspace/slides/slide08.html', pptx);
+  if (p8.length > 0) {
+    slide8.addText([
+      { text: 'ESTRUCTURA DEL RÉGIMEN\n\n', options: { fontSize: 18, bold: true, color: '2C2C2C' } },
+      { text: 'Junta Militar\n', options: { fontSize: 16, bold: true, color: 'C0392B' } },
+      { text: '↓\n', options: { fontSize: 20, color: '7F8C8D' } },
+      { text: 'Presidente de facto\n', options: { fontSize: 14, bold: true, color: '4A90E2' } },
+      { text: '↓\n', options: { fontSize: 20, color: '7F8C8D' } },
+      { text: 'Fuerzas de seguridad\nServicios de inteligencia\nCentros clandestinos',
+        options: { fontSize: 12, color: '2C2C2C' } }
+    ], {
+      ...p8[0],
+      align: 'center',
+      valign: 'middle'
+    });
+  }
+
+  // Slide 9: State terrorism
+  const { slide: slide9 } = await html2pptx('workspace/slides/slide09.html', pptx);
+
+  // Slide 10: Economic project with chart
+  const { slide: slide10, placeholders: p10 } = await html2pptx('workspace/slides/slide10.html', pptx);
+  if (p10.length > 0) {
+    slide10.addChart(pptx.charts.LINE, [
+      { name: 'Deuda Externa (relativo)', labels: ['1976','1977','1978','1979','1980','1981','1982','1983'],
+        values: [8, 10, 13, 20, 27, 35, 43, 45] }
+    ], {
+      ...p10[0],
+      lineSize: 4,
+      showTitle: true,
+      title: 'Crecimiento de la Deuda Externa',
+      showLegend: false,
+      showCatAxisTitle: true,
+      catAxisTitle: 'Año',
+      showValAxisTitle: true,
+      valAxisTitle: 'Índice (base 1976=8)',
+      chartColors: ['C0392B'],
+      valAxisMinVal: 0
+    });
+  }
+
+  // Slide 11: Democratic transition
+  const { slide: slide11 } = await html2pptx('workspace/slides/slide11.html', pptx);
+
+  // Slide 12: Memory and justice
+  const { slide: slide12 } = await html2pptx('workspace/slides/slide12.html', pptx);
+
+  // Slide 13: Current problems - economy with poverty chart
+  const { slide: slide13, placeholders: p13 } = await html2pptx('workspace/slides/slide13.html', pptx);
+  if (p13.length > 0) {
+    slide13.addChart(pptx.charts.LINE, [
+      { name: 'Tasa de Pobreza (%)',
+        labels: ['2015','2016','2017','2018','2019','2020','2021','2022','2023'],
+        values: [29, 30, 25, 32, 35, 42, 37, 39, 40] }
+    ], {
+      ...p13[0],
+      lineSize: 4,
+      showTitle: true,
+      title: 'Evolución de la Pobreza en Argentina',
+      showLegend: false,
+      showCatAxisTitle: true,
+      catAxisTitle: 'Año',
+      showValAxisTitle: true,
+      valAxisTitle: 'Porcentaje (%)',
+      chartColors: ['C0392B'],
+      valAxisMinVal: 20,
+      valAxisMaxVal: 45
+    });
+  }
+
+  // Slide 14: Current problems - politics
+  const { slide: slide14 } = await html2pptx('workspace/slides/slide14.html', pptx);
+
+  // Slide 15: Challenges and future
+  const { slide: slide15 } = await html2pptx('workspace/slides/slide15.html', pptx);
+
+  // Save presentation
+  await pptx.writeFile({ fileName: 'Argentina_Dictadura_Democracia.pptx' });
+  console.log('✓ Presentation created: Argentina_Dictadura_Democracia.pptx');
+}
+
+createPresentation().catch(console.error);

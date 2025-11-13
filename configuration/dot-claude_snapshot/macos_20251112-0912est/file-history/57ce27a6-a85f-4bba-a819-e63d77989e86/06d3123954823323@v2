@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #C0392B;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 32pt;
+  font-weight: bold;
+}
+.content {
+  margin-top: 80pt;
+  padding: 15pt 40pt 20pt 40pt;
+  width: 100%;
+}
+.intro {
+  color: #2C2C2C;
+  font-size: 14pt;
+  margin: 0 0 20pt 0;
+  line-height: 1.6;
+}
+.intro b {
+  color: #C0392B;
+}
+.chart-area {
+  width: 100%;
+  height: 240pt;
+}
+.placeholder {
+  background: #E8E8E8;
+  border: 2pt dashed #7F8C8D;
+  border-radius: 8pt;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Historia de los golpes en Argentina (1930–1976)</h1>
+</div>
+<div class="content">
+  <p class="intro">Argentina vivió <b>7 golpes de Estado</b> en el siglo XX (1930, 1943, 1955, 1962, 1966, 1976, 1981), alternando entre democracia y dictadura en un círculo de inestabilidad política.</p>
+  <div class="chart-area">
+    <div id="timeline-chart" class="placeholder"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "env": {
+    // This is the CRITICAL change: it redirects all Claude Code API calls to your local proxy server.
+    "ANTHROPIC_BASE_URL": "http://localhost:8082", 
+    
+    // The ANTHROPIC_AUTH_TOKEN is now unnecessary for the PROXY, 
+    // as the proxy uses keys from its .env (OPENAI_API_KEY, GEMINI_API_KEY, etc.) 
+    // for the backend models. It can be safely removed or kept but will be ignored 
+    // by the proxy unless PREFERRED_PROVIDER=anthropic.
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_ANTHROPIC_TOKEN_PLACEHOLDER",
+    
+    // The proxy typically handles the model mapping, so these client-side model settings 
+    // are often redundant or confusing. The proxy's .env configuration (BIG_MODEL, SMALL_MODEL) 
+    // determines the actual model used. They can be removed for clarity.
+    // However, if the client sends a request for a specific model (like 'claude-sonnet-4-5-20250929') 
+    // and that model name is not 'haiku' or 'sonnet', the proxy might pass it through 
+    // directly if PREFERRED_PROVIDER=anthropic or map to a fallback.
+    // For simplicity, we can set them to the standard proxy mapping targets (haiku/sonnet).
+    "ANTHROPIC_MODEL": "claude-sonnet",
+    "ANTHROPIC_SMALL_FAST_MODEL": "claude-haiku",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet", // The proxy will treat 'opus' as 'sonnet' (BIG_MODEL) 
+
+    // Keeping the API timeout setting is generally fine.
+    "API_TIMEOUT_MS": "3000000"
+  },
+  // Keeping this setting as it's a client preference.
+  "alwaysThinkingEnabled": true
+}

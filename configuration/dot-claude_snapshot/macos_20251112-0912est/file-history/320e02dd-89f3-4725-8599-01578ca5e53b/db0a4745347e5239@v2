@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #5EA8A7;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.text-column {
+  flex: 1;
+}
+.image-column {
+  flex: 0 0 300pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.image-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 18pt;
+  color: #277884;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 12pt 0;
+}
+.highlight-box {
+  background: #FE4447;
+  color: #ffffff;
+  padding: 10pt;
+  border-radius: 6pt;
+  margin-top: 10pt;
+}
+.highlight-box p {
+  margin: 0;
+  font-size: 14pt;
+  font-weight: bold;
+  color: #ffffff;
+}
+ul {
+  margin: 10pt 0;
+  padding-left: 20pt;
+}
+li {
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 8pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Regreso a Cuba: Reinvención Artística (1941)</h1>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h2>Reconexión con las Raíces</h2>
+    <p>De vuelta en Cuba en 1941, Lam se reconectó con raíces afrocaribeñas, influido por la etnógrafa Lydia Cabrera.</p>
+    <h2>Obra Maestra: "La Jungla" (1943)</h2>
+    <ul>
+      <li>Lo humano se mezcla con lo vegetal y animal</li>
+      <li>Usó papel kraft y óleo diluido por escasez de materiales</li>
+      <li>Figuras híbridas en un paisaje denso</li>
+    </ul>
+    <div class="highlight-box">
+      <p>"Un acto de descolonización"</p>
+    </div>
+  </div>
+  <div class="image-column">
+    <p class="image-note"><b>Imagen sugerida:</b><br>Reproducción de "La Jungla" (1943), una gran pintura con figuras híbridas para mostrar la fusión caribeña-surrealista</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #1C2833;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  text-align: center;
+  padding: 30pt 40pt;
+  max-width: 600pt;
+}
+h1 {
+  color: #5EA8A7;
+  font-size: 38pt;
+  font-weight: bold;
+  margin: 0 0 15pt 0;
+  line-height: 1.2;
+}
+.tagline {
+  color: #FE4447;
+  font-size: 18pt;
+  margin: 0 0 20pt 0;
+  font-weight: 600;
+  font-style: italic;
+}
+p {
+  color: #F4F6F6;
+  font-size: 14pt;
+  margin: 0 0 12pt 0;
+  line-height: 1.5;
+}
+ul {
+  color: #AAB7B8;
+  font-size: 13pt;
+  margin: 15pt auto;
+  padding-left: 20pt;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 500pt;
+}
+.question {
+  color: #5EA8A7;
+  font-size: 16pt;
+  font-weight: bold;
+  margin-top: 20pt;
+  font-style: italic;
+  line-height: 1.4;
+}
+.accent-bar {
+  width: 120pt;
+  height: 4pt;
+  background: #5EA8A7;
+  margin: 18pt auto;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>The Helix Center's Defining Moment</h1>
+  <p class="tagline">Where wisdom meets the machine</p>
+
+  <div class="accent-bar"></div>
+
+  <ul>
+    <li><b>Vision:</b> Human Algorithm, four-roundtable arc</li>
+    <li><b>Execution:</b> Rigorous curation, engineered format, broadcast-quality production</li>
+    <li><b>Legacy:</b> Videos, transcripts, instructor packs, academic adoption</li>
+  </ul>
+
+  <p class="question">Will we shape the conversation about AI and human flourishing—or watch others define it for us?</p>
+</div>
+</body>
+</html>

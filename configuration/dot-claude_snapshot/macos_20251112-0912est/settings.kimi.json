@@ -1,0 +1,14 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic","ANTHROPIC_AUTH_TOKEN": "<MOONSHOT_API_KEY>",
+    "ANTHROPIC_MODEL": "kimi-k2-0905-preview",
+    "ANTHROPIC_SMALL_FAST_MODEL": "kimi-k2-turbo-preview","ANTHROPIC_DEFAULT_OPUS_MODEL": "kimi-k2-0905-preview","ANTHROPIC_DEFAULT_SONNET_MODEL": "kimi-k2-0905-preview","ANTHROPIC_DEFAULT_HAIKU_MODEL": "kimi-k2-turbo-preview"
+  },
+  "enabledPlugins": {
+    "playwright-skill@playwright-skill": true,
+    "document-skills@anthropic-agent-skills": true
+  },
+  "alwaysThinkingEnabled": true
+}
+
+

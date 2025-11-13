@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #181B24; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #181B24;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12pt;
+  background: #B165FB;
+}
+.content {
+  text-align: center;
+  margin: 0 60pt;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 52pt;
+  font-weight: bold;
+  margin: 0 0 20pt 0;
+  line-height: 1.2;
+}
+.subtitle {
+  color: #FFFFFF;
+  font-size: 24pt;
+  margin: 20pt 0;
+}
+.highlight {
+  color: #B165FB;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<div class="content">
+  <h1>Fullstack RAG Agent<br>for YouTube Content</h1>
+  <p class="subtitle">Building a <span class="highlight">Production-Ready AI Coach</span><br>Using the PIV Loop Methodology</p>
+</div>
+</body>
+</html>

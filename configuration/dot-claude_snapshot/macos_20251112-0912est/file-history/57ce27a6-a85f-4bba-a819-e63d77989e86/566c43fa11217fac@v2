@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #2C2C2C;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.content {
+  padding: 40pt;
+  width: 100%;
+}
+h1 {
+  color: #F4F6F6;
+  font-size: 32pt;
+  margin: 0 0 25pt 0;
+  font-weight: bold;
+}
+.title-border {
+  border-left: 8pt solid #C0392B;
+  padding-left: 20pt;
+}
+.main-content {
+  display: flex;
+  gap: 40pt;
+}
+.text-section {
+  flex: 1;
+}
+h3 {
+  color: #4A90E2;
+  font-size: 18pt;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #F4F6F6;
+  font-size: 13pt;
+  line-height: 1.8;
+}
+.quote-box {
+  background: rgba(74, 144, 226, 0.1);
+  border-left: 4pt solid #4A90E2;
+  padding: 15pt;
+  margin-top: 20pt;
+}
+.quote-box p {
+  color: #F4F6F6;
+  font-size: 12pt;
+  font-style: italic;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <div class="title-border">
+    <h1>Operación Cóndor y el Estado burocrático-autoritario</h1>
+  </div>
+  <div class="main-content">
+    <div class="text-section">
+      <h3>Coordinación represiva regional</h3>
+      <ul>
+        <li><b>Operación Cóndor:</b> Red de cooperación entre dictaduras</li>
+        <li>Intercambio de inteligencia y persecución transfronteriza</li>
+        <li>Objetivo: "neutralizar subversivos" en toda la región</li>
+      </ul>
+    </div>
+    <div class="text-section">
+      <h3>Estado burocrático-autoritario (O'Donnell)</h3>
+      <ul>
+        <li>Combinación de represión política y tecnócratas</li>
+        <li>Exclusión de mayorías del sistema político</li>
+        <li>Reformas económicas de libre mercado</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quote-box">
+    <p>"Las dictaduras del Cono Sur compartían una ideología anticomunista y un proyecto de 'reorganización' autoritaria de sus sociedades."</p>
+  </div>
+</div>
+</body>
+</html>

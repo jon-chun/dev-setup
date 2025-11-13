@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #B165FB;
+  padding: 25pt 40pt;
+  border-bottom: 8pt solid #40695B;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 30pt 40pt;
+  flex: 1;
+}
+.subtitle {
+  color: #181B24;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 0 0 15pt 0;
+}
+ul {
+  margin: 0;
+  padding-left: 20pt;
+}
+li {
+  color: #181B24;
+  font-size: 15pt;
+  margin: 8pt 0;
+  line-height: 1.3;
+}
+.highlight {
+  color: #B165FB;
+  font-weight: bold;
+}
+.success-box {
+  background: #E8F5E9;
+  padding: 15pt;
+  margin-top: 15pt;
+  border-left: 6pt solid #40695B;
+}
+.success-text {
+  color: #181B24;
+  font-size: 14pt;
+  margin: 0;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>PIV Loop 2: AI Agent & API</h1>
+</div>
+<div class="content">
+  <p class="subtitle">Agent Tool Definition</p>
+  <ul>
+    <li><span class="highlight">rag_search_tool:</span> Semantic search across transcript_chunks using PGVector</li>
+    <li><span class="highlight">get_full_transcript_tool:</span> Retrieves complete transcript when chunks lack context</li>
+    <li><span class="highlight">Cited Sources:</span> Generate video URLs with timestamps (e.g., youtube.com/watch?v=...&t=XXmYYs)</li>
+  </ul>
+  <div class="success-box">
+    <p class="success-text">Success: Agent answered "What is Archon?" with relevant chunks and functional citation links with accurate timestamps, validating the complete RAG pipeline</p>
+  </div>
+</div>
+</body>
+</html>

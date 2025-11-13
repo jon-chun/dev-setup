@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #4A90E2;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 28pt;
+  font-weight: bold;
+}
+.subtitle {
+  margin: 5pt 0 0 0;
+  font-size: 16pt;
+  color: #F4F6F6;
+  opacity: 0.9;
+}
+.content {
+  margin-top: 100pt;
+  padding: 20pt 40pt;
+  width: 100%;
+}
+.grid {
+  display: flex;
+  gap: 20pt;
+}
+.card {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 20pt;
+  border-radius: 8pt;
+  box-shadow: 0 2pt 8pt rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  color: #C0392B;
+  font-size: 18pt;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+.card ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #2C2C2C;
+  font-size: 12pt;
+  line-height: 1.7;
+}
+.highlight {
+  background: #4A90E2;
+  color: #F4F6F6;
+  padding: 12pt;
+  border-radius: 6pt;
+  margin-top: 15pt;
+}
+.highlight p {
+  margin: 0;
+  font-size: 12pt;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Problemas actuales</h1>
+  <p class="subtitle">Política, polarización y memoria</p>
+</div>
+<div class="content">
+  <div class="grid">
+    <div class="card">
+      <h3>Polarización política</h3>
+      <ul>
+        <li>Fuerte división entre coaliciones</li>
+        <li>Desconfianza en instituciones</li>
+        <li>Crisis del Congreso y Poder Judicial</li>
+        <li>Uso instrumental de la justicia</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Debates sobre la memoria</h3>
+      <ul>
+        <li>Políticas de sitios de memoria continúan</li>
+        <li>Juicios en curso desde los años 2000</li>
+        <li>Discursos negacionistas emergentes</li>
+        <li>Organismos de DD.HH. muy activos</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">
+    <p>Tensión entre memoria histórica y nuevas generaciones: ¿cómo enseñar este pasado?</p>
+  </div>
+</div>
+</body>
+</html>

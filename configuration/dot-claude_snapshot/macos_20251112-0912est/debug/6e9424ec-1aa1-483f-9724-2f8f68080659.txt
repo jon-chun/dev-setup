@@ -1,0 +1,755 @@
+[DEBUG] Watching for changes in setting files /Users/jonc/.claude/settings.json, /Users/jonc/code/sentimentarcs/.claude/settings.local.json...
+[DEBUG] [LSP MANAGER] initializeLspServerManager() called
+[DEBUG] [LSP MANAGER] Created manager instance, state=pending
+[DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+[DEBUG] [LSP SERVER MANAGER] initialize() called
+[DEBUG] [LSP SERVER MANAGER] Calling getAllLspServers()
+[DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'localSettings': ["Bash(python tests/test_regression_harness.py)","Bash(python tests/test_regression_harness.py --help)"]
+[DEBUG] Loading plugin example-skills from source: "./"
+[DEBUG] Processing 10 skill paths for plugin example-skills
+[DEBUG] Checking skill path: ./skill-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator (exists: true)
+[DEBUG] Checking skill path: ./mcp-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder (exists: true)
+[DEBUG] Checking skill path: ./canvas-design -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design (exists: true)
+[DEBUG] Checking skill path: ./algorithmic-art -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art (exists: true)
+[DEBUG] Checking skill path: ./internal-comms -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms (exists: true)
+[DEBUG] Checking skill path: ./webapp-testing -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing (exists: true)
+[DEBUG] Checking skill path: ./artifacts-builder -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder (exists: true)
+[DEBUG] Checking skill path: ./slack-gif-creator -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator (exists: true)
+[DEBUG] Checking skill path: ./theme-factory -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory (exists: true)
+[DEBUG] Checking skill path: ./brand-guidelines -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines (exists: true)
+[DEBUG] Found 10 valid skill paths for plugin example-skills, setting skillsPaths
+[DEBUG] Loading plugin document-skills from source: "./"
+[DEBUG] Processing 4 skill paths for plugin document-skills
+[DEBUG] Checking skill path: ./document-skills/xlsx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/docx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pptx -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx (exists: true)
+[DEBUG] Checking skill path: ./document-skills/pdf -> /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+[DEBUG] Loading plugin code-documentation from source: "./plugins/code-documentation"
+[DEBUG] Plugin code-documentation has no entry.skills defined
+[DEBUG] Loading plugin shell-scripting from source: "./plugins/shell-scripting"
+[DEBUG] Processing 3 skill paths for plugin shell-scripting
+[DEBUG] Checking skill path: ./skills/bash-defensive-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/shellcheck-configuration/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md (exists: true)
+[DEBUG] Checking skill path: ./skills/bats-testing-patterns/SKILL.md -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md (exists: true)
+[DEBUG] Found 3 valid skill paths for plugin shell-scripting, setting skillsPaths
+[DEBUG] Loading plugin python-development from source: "./plugins/python-development"
+[DEBUG] Processing 5 skill paths for plugin python-development
+[DEBUG] Checking skill path: ./skills/async-python-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-testing-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/python-packaging -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging (exists: true)
+[DEBUG] Checking skill path: ./skills/python-performance-optimization -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization (exists: true)
+[DEBUG] Checking skill path: ./skills/uv-package-manager -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager (exists: true)
+[DEBUG] Found 5 valid skill paths for plugin python-development, setting skillsPaths
+[DEBUG] Loading plugin developer-essentials from source: "./plugins/developer-essentials"
+[DEBUG] Processing 8 skill paths for plugin developer-essentials
+[DEBUG] Checking skill path: ./skills/git-advanced-workflows -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/git-advanced-workflows (exists: true)
+[DEBUG] Checking skill path: ./skills/sql-optimization-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/sql-optimization-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/error-handling-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/error-handling-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/code-review-excellence -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/code-review-excellence (exists: true)
+[DEBUG] Checking skill path: ./skills/e2e-testing-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/e2e-testing-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/auth-implementation-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/auth-implementation-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/debugging-strategies -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/debugging-strategies (exists: true)
+[DEBUG] Checking skill path: ./skills/monorepo-management -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/monorepo-management (exists: true)
+[DEBUG] Found 8 valid skill paths for plugin developer-essentials, setting skillsPaths
+[DEBUG] Loading plugin customer-sales-automation from source: "./plugins/customer-sales-automation"
+[DEBUG] Plugin customer-sales-automation has no entry.skills defined
+[DEBUG] Loading plugin debugging-toolkit from source: "./plugins/debugging-toolkit"
+[DEBUG] Plugin debugging-toolkit has no entry.skills defined
+[DEBUG] Loading plugin git-pr-workflows from source: "./plugins/git-pr-workflows"
+[DEBUG] Plugin git-pr-workflows has no entry.skills defined
+[DEBUG] Loading plugin unit-testing from source: "./plugins/unit-testing"
+[DEBUG] Plugin unit-testing has no entry.skills defined
+[DEBUG] Loading plugin tdd-workflows from source: "./plugins/tdd-workflows"
+[DEBUG] Plugin tdd-workflows has no entry.skills defined
+[DEBUG] Loading plugin code-review-ai from source: "./plugins/code-review-ai"
+[DEBUG] Plugin code-review-ai has no entry.skills defined
+[DEBUG] Loading plugin code-refactoring from source: "./plugins/code-refactoring"
+[DEBUG] Plugin code-refactoring has no entry.skills defined
+[DEBUG] Loading plugin error-debugging from source: "./plugins/error-debugging"
+[DEBUG] Plugin error-debugging has no entry.skills defined
+[DEBUG] Loading plugin team-collaboration from source: "./plugins/team-collaboration"
+[DEBUG] Plugin team-collaboration has no entry.skills defined
+[DEBUG] Loading plugin llm-application-dev from source: "./plugins/llm-application-dev"
+[DEBUG] Processing 4 skill paths for plugin llm-application-dev
+[DEBUG] Checking skill path: ./skills/langchain-architecture -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/langchain-architecture (exists: true)
+[DEBUG] Checking skill path: ./skills/llm-evaluation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/llm-evaluation (exists: true)
+[DEBUG] Checking skill path: ./skills/prompt-engineering-patterns -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/prompt-engineering-patterns (exists: true)
+[DEBUG] Checking skill path: ./skills/rag-implementation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/rag-implementation (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin llm-application-dev, setting skillsPaths
+[DEBUG] Loading plugin agent-orchestration from source: "./plugins/agent-orchestration"
+[DEBUG] Plugin agent-orchestration has no entry.skills defined
+[DEBUG] Loading plugin context-management from source: "./plugins/context-management"
+[DEBUG] Plugin context-management has no entry.skills defined
+[DEBUG] Loading plugin data-engineering from source: "./plugins/data-engineering"
+[DEBUG] Plugin data-engineering has no entry.skills defined
+[DEBUG] Loading plugin error-diagnostics from source: "./plugins/error-diagnostics"
+[DEBUG] Plugin error-diagnostics has no entry.skills defined
+[DEBUG] Loading plugin observability-monitoring from source: "./plugins/observability-monitoring"
+[DEBUG] Processing 4 skill paths for plugin observability-monitoring
+[DEBUG] Checking skill path: ./skills/distributed-tracing -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/distributed-tracing (exists: true)
+[DEBUG] Checking skill path: ./skills/grafana-dashboards -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/grafana-dashboards (exists: true)
+[DEBUG] Checking skill path: ./skills/prometheus-configuration -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/prometheus-configuration (exists: true)
+[DEBUG] Checking skill path: ./skills/slo-implementation -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/slo-implementation (exists: true)
+[DEBUG] Found 4 valid skill paths for plugin observability-monitoring, setting skillsPaths
+[DEBUG] Loading plugin application-performance from source: "./plugins/application-performance"
+[DEBUG] Plugin application-performance has no entry.skills defined
+[DEBUG] Loading plugin comprehensive-review from source: "./plugins/comprehensive-review"
+[DEBUG] Plugin comprehensive-review has no entry.skills defined
+[DEBUG] Loading plugin performance-testing-review from source: "./plugins/performance-testing-review"
+[DEBUG] Plugin performance-testing-review has no entry.skills defined
+[DEBUG] Loading plugin codebase-cleanup from source: "./plugins/codebase-cleanup"
+[DEBUG] Plugin codebase-cleanup has no entry.skills defined
+[DEBUG] Loading plugin database-design from source: "./plugins/database-design"
+[DEBUG] Processing 1 skill paths for plugin database-design
+[DEBUG] Checking skill path: ./skills/postgresql -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills/postgresql (exists: true)
+[DEBUG] Found 1 valid skill paths for plugin database-design, setting skillsPaths
+[DEBUG] Loading plugin security-scanning from source: "./plugins/security-scanning"
+[DEBUG] Processing 1 skill paths for plugin security-scanning
+[DEBUG] Checking skill path: ./skills/sast-configuration -> /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills/sast-configuration (exists: true)
+[DEBUG] Found 1 valid skill paths for plugin security-scanning, setting skillsPaths
+[DEBUG] Loading plugin seo-content-creation from source: "./plugins/seo-content-creation"
+[DEBUG] Plugin seo-content-creation has no entry.skills defined
+[DEBUG] Loading plugin business-analytics from source: "./plugins/business-analytics"
+[DEBUG] Plugin business-analytics has no entry.skills defined
+[DEBUG] Loading plugin seo-technical-optimization from source: "./plugins/seo-technical-optimization"
+[DEBUG] Plugin seo-technical-optimization has no entry.skills defined
+[DEBUG] Loading plugin seo-analysis-monitoring from source: "./plugins/seo-analysis-monitoring"
+[DEBUG] Plugin seo-analysis-monitoring has no entry.skills defined
+[DEBUG] Loading plugin documentation-generation from source: "./plugins/documentation-generation"
+[DEBUG] Plugin documentation-generation has no entry.skills defined
+[DEBUG] Found 32 plugins (32 enabled, 0 disabled)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/jonc/.claude/skills, project=/Users/jonc/code/sentimentarcs/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] getPluginSkills: Processing 32 enabled plugins
+[DEBUG] Checking plugin example-skills: skillsPath=none, skillsPaths=10 paths
+[DEBUG] Attempting to load skills from plugin example-skills skillsPaths: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator for plugin example-skills
+[DEBUG] Registered 0 hooks from 32 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/skill-creator
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder for plugin example-skills
+[DEBUG] Loaded 2 commands from plugin code-documentation default directory
+[DEBUG] Plugin code-documentation has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/doc-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/commands/code-explain.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/mcp-builder
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design for plugin example-skills
+[DEBUG] Loaded 1 commands from plugin python-development default directory
+[DEBUG] Plugin python-development has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/commands/python-scaffold.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/canvas-design
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art for plugin example-skills
+[DEBUG] Loaded 1 commands from plugin debugging-toolkit default directory
+[DEBUG] Plugin debugging-toolkit has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit/commands/smart-debug.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit/commands/smart-debug.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin debugging-toolkit custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit/commands/smart-debug.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/algorithmic-art
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms for plugin example-skills
+[DEBUG] Loaded 3 commands from plugin git-pr-workflows default directory
+[DEBUG] Plugin git-pr-workflows has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/pr-enhance.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/onboard.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/git-workflow.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/pr-enhance.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin git-pr-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/pr-enhance.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/onboard.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin git-pr-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/onboard.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/git-workflow.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin git-pr-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/commands/git-workflow.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/internal-comms
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing for plugin example-skills
+[DEBUG] Loaded 1 commands from plugin unit-testing default directory
+[DEBUG] Plugin unit-testing has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing/commands/test-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing/commands/test-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin unit-testing custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing/commands/test-generate.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/webapp-testing
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder for plugin example-skills
+[DEBUG] Loaded 4 commands from plugin tdd-workflows default directory
+[DEBUG] Plugin tdd-workflows has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-cycle.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-red.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-green.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-refactor.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-cycle.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-cycle.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-red.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-red.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-green.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-green.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-refactor.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/commands/tdd-refactor.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/artifacts-builder
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator for plugin example-skills
+[DEBUG] Loaded 1 commands from plugin code-review-ai default directory
+[DEBUG] Plugin code-review-ai has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-review-ai/commands/ai-review.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-review-ai/commands/ai-review.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-review-ai custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-review-ai/commands/ai-review.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/slack-gif-creator
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory for plugin example-skills
+[DEBUG] Loaded 3 commands from plugin code-refactoring default directory
+[DEBUG] Plugin code-refactoring has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/refactor-clean.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/tech-debt.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/context-restore.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/refactor-clean.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-refactoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/refactor-clean.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/tech-debt.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-refactoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/tech-debt.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/context-restore.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin code-refactoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/commands/context-restore.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/theme-factory
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines for plugin example-skills
+[DEBUG] Loaded 3 commands from plugin error-debugging default directory
+[DEBUG] Plugin error-debugging has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-analysis.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-trace.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/multi-agent-review.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-analysis.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-debugging custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-analysis.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-trace.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-debugging custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/error-trace.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/multi-agent-review.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-debugging custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/commands/multi-agent-review.md
+[DEBUG] Loaded 1 skills from plugin example-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/brand-guidelines
+[DEBUG] Checking plugin document-skills: skillsPath=none, skillsPaths=4 paths
+[DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx, /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx for plugin document-skills
+[DEBUG] Loaded 2 commands from plugin team-collaboration default directory
+[DEBUG] Plugin team-collaboration has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/issue.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/standup-notes.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/issue.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin team-collaboration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/issue.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/standup-notes.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin team-collaboration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/commands/standup-notes.md
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/xlsx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx for plugin document-skills
+[DEBUG] Loaded 3 commands from plugin llm-application-dev default directory
+[DEBUG] Plugin llm-application-dev has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/langchain-agent.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/ai-assistant.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/prompt-optimize.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/langchain-agent.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin llm-application-dev custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/langchain-agent.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/ai-assistant.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin llm-application-dev custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/ai-assistant.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/prompt-optimize.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin llm-application-dev custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/commands/prompt-optimize.md
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/docx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx for plugin document-skills
+[DEBUG] Loaded 2 commands from plugin agent-orchestration default directory
+[DEBUG] Plugin agent-orchestration has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/multi-agent-optimize.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/improve-agent.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/multi-agent-optimize.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin agent-orchestration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/multi-agent-optimize.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/improve-agent.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin agent-orchestration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/commands/improve-agent.md
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pptx
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf for plugin document-skills
+[DEBUG] Loaded 2 commands from plugin context-management default directory
+[DEBUG] Plugin context-management has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-save.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-restore.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-save.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin context-management custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-save.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-restore.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin context-management custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/commands/context-restore.md
+[DEBUG] Loaded 1 skills from plugin document-skills custom path: /Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/document-skills/pdf
+[DEBUG] Checking plugin code-documentation: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin shell-scripting: skillsPath=exists, skillsPaths=3 paths
+[DEBUG] Attempting to load skills from plugin shell-scripting default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills
+[DEBUG] Loaded 2 commands from plugin data-engineering default directory
+[DEBUG] Plugin data-engineering has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-driven-feature.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-pipeline.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-driven-feature.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin data-engineering custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-driven-feature.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-pipeline.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin data-engineering custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/commands/data-pipeline.md
+[DEBUG] Loaded 3 skills from plugin shell-scripting default directory
+[DEBUG] Attempting to load skills from plugin shell-scripting skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md for plugin shell-scripting
+[ERROR] Failed to load skills from directory /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md: Error: ENOTDIR: not a directory, scandir '/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md'
+[DEBUG] Loaded 3 commands from plugin error-diagnostics default directory
+[DEBUG] Plugin error-diagnostics has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-trace.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-analysis.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/smart-debug.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-trace.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-diagnostics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-trace.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-analysis.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-diagnostics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/error-analysis.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/smart-debug.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin error-diagnostics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/commands/smart-debug.md
+[DEBUG] Loaded 0 skills from plugin shell-scripting custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md for plugin shell-scripting
+[ERROR] Failed to load skills from directory /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md: Error: ENOTDIR: not a directory, scandir '/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md'
+[DEBUG] Loaded 2 commands from plugin observability-monitoring default directory
+[DEBUG] Plugin observability-monitoring has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/monitor-setup.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/slo-implement.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/monitor-setup.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/monitor-setup.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/slo-implement.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/commands/slo-implement.md
+[DEBUG] Loaded 0 skills from plugin shell-scripting custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md for plugin shell-scripting
+[ERROR] Failed to load skills from directory /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md: Error: ENOTDIR: not a directory, scandir '/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md'
+[DEBUG] Loaded 1 commands from plugin application-performance default directory
+[DEBUG] Plugin application-performance has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/commands/performance-optimization.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/commands/performance-optimization.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin application-performance custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/commands/performance-optimization.md
+[DEBUG] Loaded 0 skills from plugin shell-scripting custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md
+[DEBUG] Checking plugin python-development: skillsPath=exists, skillsPaths=5 paths
+[DEBUG] Attempting to load skills from plugin python-development default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills
+[DEBUG] Loaded 2 commands from plugin comprehensive-review default directory
+[DEBUG] Plugin comprehensive-review has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/full-review.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/pr-enhance.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/full-review.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin comprehensive-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/full-review.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/pr-enhance.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin comprehensive-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/commands/pr-enhance.md
+[DEBUG] Loaded 5 skills from plugin python-development default directory
+[DEBUG] Attempting to load skills from plugin python-development skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns for plugin python-development
+[DEBUG] Loaded 2 commands from plugin performance-testing-review default directory
+[DEBUG] Plugin performance-testing-review has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/ai-review.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/multi-agent-review.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/ai-review.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin performance-testing-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/ai-review.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/multi-agent-review.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin performance-testing-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/commands/multi-agent-review.md
+[DEBUG] Loaded 1 skills from plugin python-development custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/async-python-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns for plugin python-development
+[DEBUG] Loaded 3 commands from plugin codebase-cleanup default directory
+[DEBUG] Plugin codebase-cleanup has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/deps-audit.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/tech-debt.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/refactor-clean.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/deps-audit.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin codebase-cleanup custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/deps-audit.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/tech-debt.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin codebase-cleanup custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/tech-debt.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/refactor-clean.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin codebase-cleanup custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/commands/refactor-clean.md
+[DEBUG] Loaded 1 skills from plugin python-development custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-testing-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging for plugin python-development
+[DEBUG] Loaded 3 commands from plugin security-scanning default directory
+[DEBUG] Plugin security-scanning has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-hardening.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-sast.md, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-dependencies.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-hardening.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin security-scanning custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-hardening.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-sast.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin security-scanning custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-sast.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-dependencies.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin security-scanning custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/commands/security-dependencies.md
+[DEBUG] Loaded 1 skills from plugin python-development custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-packaging
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization for plugin python-development
+[DEBUG] Loaded 1 commands from plugin documentation-generation default directory
+[DEBUG] Plugin documentation-generation has commandsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/commands/doc-generate.md
+[DEBUG] Checking commandPath /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/commands/doc-generate.md - isDirectory: false, isFile: true
+[DEBUG] Loaded command from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/commands/doc-generate.md
+[DEBUG] Total plugin commands loaded: 94
+[DEBUG] Loaded 1 skills from plugin python-development custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/python-performance-optimization
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager for plugin python-development
+[DEBUG] Loaded 1 skills from plugin python-development custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/skills/uv-package-manager
+[DEBUG] Checking plugin developer-essentials: skillsPath=exists, skillsPaths=8 paths
+[DEBUG] Attempting to load skills from plugin developer-essentials default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills
+[DEBUG] Loaded 8 skills from plugin developer-essentials default directory
+[DEBUG] Attempting to load skills from plugin developer-essentials skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/git-advanced-workflows, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/sql-optimization-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/error-handling-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/code-review-excellence, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/e2e-testing-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/auth-implementation-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/debugging-strategies, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/monorepo-management
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/git-advanced-workflows for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/git-advanced-workflows
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/sql-optimization-patterns for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/sql-optimization-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/error-handling-patterns for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/error-handling-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/code-review-excellence for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/code-review-excellence
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/e2e-testing-patterns for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/e2e-testing-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/auth-implementation-patterns for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/auth-implementation-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/debugging-strategies for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/debugging-strategies
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/monorepo-management for plugin developer-essentials
+[DEBUG] Loaded 1 skills from plugin developer-essentials custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials/skills/monorepo-management
+[DEBUG] Checking plugin customer-sales-automation: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin debugging-toolkit: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin git-pr-workflows: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin unit-testing: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin tdd-workflows: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin code-review-ai: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin code-refactoring: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin error-debugging: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin team-collaboration: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin llm-application-dev: skillsPath=exists, skillsPaths=4 paths
+[DEBUG] Attempting to load skills from plugin llm-application-dev default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills
+[DEBUG] Loaded 4 skills from plugin llm-application-dev default directory
+[DEBUG] Attempting to load skills from plugin llm-application-dev skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/langchain-architecture, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/llm-evaluation, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/prompt-engineering-patterns, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/rag-implementation
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/langchain-architecture for plugin llm-application-dev
+[DEBUG] Loaded 1 skills from plugin llm-application-dev custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/langchain-architecture
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/llm-evaluation for plugin llm-application-dev
+[DEBUG] Loaded 1 skills from plugin llm-application-dev custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/llm-evaluation
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/prompt-engineering-patterns for plugin llm-application-dev
+[DEBUG] Loaded 1 skills from plugin llm-application-dev custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/prompt-engineering-patterns
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/rag-implementation for plugin llm-application-dev
+[DEBUG] Loaded 1 skills from plugin llm-application-dev custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/skills/rag-implementation
+[DEBUG] Checking plugin agent-orchestration: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin context-management: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin data-engineering: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin error-diagnostics: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin observability-monitoring: skillsPath=exists, skillsPaths=4 paths
+[DEBUG] Attempting to load skills from plugin observability-monitoring default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills
+[DEBUG] Loaded 4 skills from plugin observability-monitoring default directory
+[DEBUG] Attempting to load skills from plugin observability-monitoring skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/distributed-tracing, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/grafana-dashboards, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/prometheus-configuration, /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/slo-implementation
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/distributed-tracing for plugin observability-monitoring
+[DEBUG] Loaded 1 skills from plugin observability-monitoring custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/distributed-tracing
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/grafana-dashboards for plugin observability-monitoring
+[DEBUG] Loaded 1 skills from plugin observability-monitoring custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/grafana-dashboards
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/prometheus-configuration for plugin observability-monitoring
+[DEBUG] Loaded 1 skills from plugin observability-monitoring custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/prometheus-configuration
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/slo-implementation for plugin observability-monitoring
+[DEBUG] Loaded 1 skills from plugin observability-monitoring custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/skills/slo-implementation
+[DEBUG] Checking plugin application-performance: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin comprehensive-review: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin performance-testing-review: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin codebase-cleanup: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin database-design: skillsPath=exists, skillsPaths=1 paths
+[DEBUG] Attempting to load skills from plugin database-design default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills
+[DEBUG] Loaded 1 skills from plugin database-design default directory
+[DEBUG] Attempting to load skills from plugin database-design skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills/postgresql
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills/postgresql for plugin database-design
+[DEBUG] Loaded 1 skills from plugin database-design custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/skills/postgresql
+[DEBUG] Checking plugin security-scanning: skillsPath=exists, skillsPaths=1 paths
+[DEBUG] Attempting to load skills from plugin security-scanning default skillsPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills
+[DEBUG] Loaded 1 skills from plugin security-scanning default directory
+[DEBUG] Attempting to load skills from plugin security-scanning skillsPaths: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills/sast-configuration
+[DEBUG] Loading from skillPath: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills/sast-configuration for plugin security-scanning
+[DEBUG] Loaded 1 skills from plugin security-scanning custom path: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/skills/sast-configuration
+[DEBUG] Checking plugin seo-content-creation: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin business-analytics: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin seo-technical-optimization: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin seo-analysis-monitoring: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Checking plugin documentation-generation: skillsPath=none, skillsPaths=0 paths
+[DEBUG] Total plugin skills loaded: 63
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 63 plugin skills
+[DEBUG] Could not acquire lock on current version: Error: Lock file is already being held
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/jonc/.zshrc
+[DEBUG] Snapshots directory: /Users/jonc/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/jonc/.claude/shell-snapshots/snapshot-zsh-1762954831672-1c9xer.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/jonc/.claude/todos/6e9424ec-1aa1-483f-9724-2f8f68080659-agent-6e9424ec-1aa1-483f-9724-2f8f68080659.json.tmp.59639.1762954831673
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/jonc/.claude/todos/6e9424ec-1aa1-483f-9724-2f8f68080659-agent-6e9424ec-1aa1-483f-9724-2f8f68080659.json.tmp.59639.1762954831673 to /Users/jonc/.claude/todos/6e9424ec-1aa1-483f-9724-2f8f68080659-agent-6e9424ec-1aa1-483f-9724-2f8f68080659.json
+[DEBUG] File /Users/jonc/.claude/todos/6e9424ec-1aa1-483f-9724-2f8f68080659-agent-6e9424ec-1aa1-483f-9724-2f8f68080659.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831678
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67385 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831678 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Loaded 3 agents from plugin code-documentation default directory
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/docs-architect.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/tutorial-engineer.md
+[DEBUG] Loaded agent from plugin code-documentation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin shell-scripting default directory
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/bash-pro.md
+[DEBUG] Loaded agent from plugin shell-scripting custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting/agents/posix-shell-pro.md
+[DEBUG] Loaded 3 agents from plugin python-development default directory
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/python-pro.md
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/django-pro.md
+[DEBUG] Loaded agent from plugin python-development custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development/agents/fastapi-pro.md
+[DEBUG] Loaded 2 agents from plugin customer-sales-automation default directory
+[DEBUG] Loaded agent from plugin customer-sales-automation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/customer-sales-automation/agents/customer-support.md
+[DEBUG] Loaded agent from plugin customer-sales-automation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/customer-sales-automation/agents/sales-automator.md
+[DEBUG] Loaded 2 agents from plugin debugging-toolkit default directory
+[DEBUG] Loaded agent from plugin debugging-toolkit custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit/agents/debugger.md
+[DEBUG] Loaded agent from plugin debugging-toolkit custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit/agents/dx-optimizer.md
+[DEBUG] Loaded 1 agents from plugin git-pr-workflows default directory
+[DEBUG] Loaded agent from plugin git-pr-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin unit-testing default directory
+[DEBUG] Loaded agent from plugin unit-testing custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing/agents/test-automator.md
+[DEBUG] Loaded agent from plugin unit-testing custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing/agents/debugger.md
+[DEBUG] Loaded 2 agents from plugin tdd-workflows default directory
+[DEBUG] Loaded agent from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/agents/tdd-orchestrator.md
+[DEBUG] Loaded agent from plugin tdd-workflows custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows/agents/code-reviewer.md
+[DEBUG] Loaded 1 agents from plugin code-review-ai default directory
+[DEBUG] Loaded agent from plugin code-review-ai custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-review-ai/agents/architect-review.md
+[DEBUG] Loaded 2 agents from plugin code-refactoring default directory
+[DEBUG] Loaded agent from plugin code-refactoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/agents/legacy-modernizer.md
+[DEBUG] Loaded agent from plugin code-refactoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin error-debugging default directory
+[DEBUG] Loaded agent from plugin error-debugging custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/agents/debugger.md
+[DEBUG] Loaded agent from plugin error-debugging custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging/agents/error-detective.md
+[DEBUG] Loaded 1 agents from plugin team-collaboration default directory
+[DEBUG] Loaded agent from plugin team-collaboration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration/agents/dx-optimizer.md
+[DEBUG] Loaded 2 agents from plugin llm-application-dev default directory
+[DEBUG] Loaded agent from plugin llm-application-dev custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/agents/ai-engineer.md
+[DEBUG] Loaded agent from plugin llm-application-dev custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev/agents/prompt-engineer.md
+[DEBUG] Loaded 1 agents from plugin agent-orchestration default directory
+[DEBUG] Loaded agent from plugin agent-orchestration custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration/agents/context-manager.md
+[DEBUG] Loaded 1 agents from plugin context-management default directory
+[DEBUG] Loaded agent from plugin context-management custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management/agents/context-manager.md
+[DEBUG] Loaded 2 agents from plugin data-engineering default directory
+[DEBUG] Loaded agent from plugin data-engineering custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/agents/data-engineer.md
+[DEBUG] Loaded agent from plugin data-engineering custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering/agents/backend-architect.md
+[DEBUG] Loaded 2 agents from plugin error-diagnostics default directory
+[DEBUG] Loaded agent from plugin error-diagnostics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/agents/debugger.md
+[DEBUG] Loaded agent from plugin error-diagnostics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics/agents/error-detective.md
+[DEBUG] Loaded 4 agents from plugin observability-monitoring default directory
+[DEBUG] Loaded agent from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/agents/observability-engineer.md
+[DEBUG] Loaded agent from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/agents/performance-engineer.md
+[DEBUG] Loaded agent from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/agents/database-optimizer.md
+[DEBUG] Loaded agent from plugin observability-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring/agents/network-engineer.md
+[DEBUG] Loaded 3 agents from plugin application-performance default directory
+[DEBUG] Loaded agent from plugin application-performance custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/agents/performance-engineer.md
+[DEBUG] Loaded agent from plugin application-performance custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/agents/frontend-developer.md
+[DEBUG] Loaded agent from plugin application-performance custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance/agents/observability-engineer.md
+[DEBUG] Loaded 3 agents from plugin comprehensive-review default directory
+[DEBUG] Loaded agent from plugin comprehensive-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/agents/code-reviewer.md
+[DEBUG] Loaded agent from plugin comprehensive-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/agents/architect-review.md
+[DEBUG] Loaded agent from plugin comprehensive-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review/agents/security-auditor.md
+[DEBUG] Loaded 2 agents from plugin performance-testing-review default directory
+[DEBUG] Loaded agent from plugin performance-testing-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/agents/performance-engineer.md
+[DEBUG] Loaded agent from plugin performance-testing-review custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review/agents/test-automator.md
+[DEBUG] Loaded 2 agents from plugin codebase-cleanup default directory
+[DEBUG] Loaded agent from plugin codebase-cleanup custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/agents/test-automator.md
+[DEBUG] Loaded agent from plugin codebase-cleanup custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup/agents/code-reviewer.md
+[DEBUG] Loaded 2 agents from plugin database-design default directory
+[DEBUG] Loaded agent from plugin database-design custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/agents/database-architect.md
+[DEBUG] Loaded agent from plugin database-design custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design/agents/sql-pro.md
+[DEBUG] Loaded 1 agents from plugin security-scanning default directory
+[DEBUG] Loaded agent from plugin security-scanning custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning/agents/security-auditor.md
+[DEBUG] Loaded 3 agents from plugin seo-content-creation default directory
+[DEBUG] Loaded agent from plugin seo-content-creation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-content-creation/agents/seo-content-writer.md
+[DEBUG] Loaded agent from plugin seo-content-creation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-content-creation/agents/seo-content-planner.md
+[DEBUG] Loaded agent from plugin seo-content-creation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-content-creation/agents/seo-content-auditor.md
+[DEBUG] Loaded 1 agents from plugin business-analytics default directory
+[DEBUG] Loaded agent from plugin business-analytics custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/business-analytics/agents/business-analyst.md
+[DEBUG] Loaded 4 agents from plugin seo-technical-optimization default directory
+[DEBUG] Loaded agent from plugin seo-technical-optimization custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-technical-optimization/agents/seo-meta-optimizer.md
+[DEBUG] Loaded agent from plugin seo-technical-optimization custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-technical-optimization/agents/seo-keyword-strategist.md
+[DEBUG] Loaded agent from plugin seo-technical-optimization custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-technical-optimization/agents/seo-structure-architect.md
+[DEBUG] Loaded agent from plugin seo-technical-optimization custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-technical-optimization/agents/seo-snippet-hunter.md
+[DEBUG] Loaded 3 agents from plugin seo-analysis-monitoring default directory
+[DEBUG] Loaded agent from plugin seo-analysis-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-analysis-monitoring/agents/seo-content-refresher.md
+[DEBUG] Loaded agent from plugin seo-analysis-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-analysis-monitoring/agents/seo-cannibalization-detector.md
+[DEBUG] Loaded agent from plugin seo-analysis-monitoring custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-analysis-monitoring/agents/seo-authority-builder.md
+[DEBUG] Loaded 5 agents from plugin documentation-generation default directory
+[DEBUG] Loaded agent from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/agents/docs-architect.md
+[DEBUG] Loaded agent from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/agents/api-documenter.md
+[DEBUG] Loaded agent from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/agents/mermaid-expert.md
+[DEBUG] Loaded agent from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/agents/tutorial-engineer.md
+[DEBUG] Loaded agent from plugin documentation-generation custom file: /Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation/agents/reference-builder.md
+[DEBUG] Total plugin agents loaded: 128
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831719
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67385 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831719 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831758
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67280 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831758 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831759
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67280 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831759 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831760
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67280 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831760 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Found 32 enabled plugins
+[DEBUG] Schema version mismatch (current: 0, expected: 1), syncing installed_plugins.json
+[DEBUG] Loaded 32 installed plugins from /Users/jonc/.claude/plugins/installed_plugins.json (schema version 1)
+[DEBUG] Plugin example-skills@anthropic-agent-skills already in installed_plugins.json, skipping
+[DEBUG] Plugin document-skills@anthropic-agent-skills already in installed_plugins.json, skipping
+[DEBUG] Plugin code-documentation@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin shell-scripting@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin python-development@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin developer-essentials@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin customer-sales-automation@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin debugging-toolkit@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin git-pr-workflows@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin unit-testing@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin tdd-workflows@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin code-review-ai@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin code-refactoring@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin error-debugging@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin team-collaboration@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin llm-application-dev@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin agent-orchestration@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin context-management@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin data-engineering@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin error-diagnostics@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin observability-monitoring@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin application-performance@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin comprehensive-review@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin performance-testing-review@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin codebase-cleanup@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin database-design@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin security-scanning@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin seo-content-creation@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin business-analytics@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin seo-technical-optimization@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin seo-analysis-monitoring@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Plugin documentation-generation@claude-code-workflows already in installed_plugins.json, skipping
+[DEBUG] Saved 32 installed plugins to /Users/jonc/.claude/plugins/installed_plugins.json (schema version 1)
+[DEBUG] Updated installed_plugins.json to schema version 1 (0 plugins added, 32 skipped)
+[DEBUG] Found 32 installed plugins
+[DEBUG] Loaded plugins - Enabled: 32, Disabled: 0, Commands: 94, Agents: 128, Errors: 0
+[DEBUG] Found 0 missing plugins (not installed):
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831805
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67280 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831805 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831807
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67280 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831807 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954831809
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67385 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954831809 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] Checking for native installer update to version 2.0.37
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BTh9emKT8mDnSxjnd"}
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/jonc/.local/share/claude/versions/2.0.37)
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BUABFEMMNCbNSUwPE"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BUABFEMMNCbNSUwPE"}
+    at generate (/$bunfs/root/claude:228:83183)
+    at makeRequest (/$bunfs/root/claude:670:5356)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Shell snapshot created successfully (262885 bytes)
+[ERROR] Error streaming, falling back to non-streaming mode: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BTgACREFLf1rdPttk"}
+[DEBUG] Skill prompt: showing "example-skills:skill-creator" (userFacingName="skill-creator")
+[DEBUG] Skill prompt: showing "example-skills:mcp-builder" (userFacingName="mcp-builder")
+[DEBUG] Skill prompt: showing "example-skills:canvas-design" (userFacingName="canvas-design")
+[DEBUG] Skill prompt: showing "example-skills:algorithmic-art" (userFacingName="algorithmic-art")
+[DEBUG] Skill prompt: showing "example-skills:internal-comms" (userFacingName="internal-comms")
+[DEBUG] Skill prompt: showing "example-skills:webapp-testing" (userFacingName="webapp-testing")
+[DEBUG] Skill prompt: showing "example-skills:artifacts-builder" (userFacingName="artifacts-builder")
+[DEBUG] Skill prompt: showing "example-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+[DEBUG] Skill prompt: showing "example-skills:theme-factory" (userFacingName="theme-factory")
+[DEBUG] Skill prompt: showing "example-skills:brand-guidelines" (userFacingName="brand-guidelines")
+[DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+[DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+[DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+[DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+[DEBUG] Skill prompt: showing "shell-scripting:bats-testing-patterns" (userFacingName="bats-testing-patterns")
+[DEBUG] Skill prompt: showing "shell-scripting:bash-defensive-patterns" (userFacingName="bash-defensive-patterns")
+[DEBUG] Skill prompt: showing "shell-scripting:shellcheck-configuration" (userFacingName="shellcheck-configuration")
+[DEBUG] Skill prompt: showing "python-development:python-testing-patterns" (userFacingName="python-testing-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-packaging" (userFacingName="python-packaging")
+[DEBUG] Skill prompt: showing "python-development:uv-package-manager" (userFacingName="uv-package-manager")
+[DEBUG] Skill prompt: showing "python-development:async-python-patterns" (userFacingName="async-python-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-performance-optimization" (userFacingName="python-performance-optimization")
+[DEBUG] Skill prompt: showing "python-development:async-python-patterns" (userFacingName="async-python-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-testing-patterns" (userFacingName="python-testing-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-packaging" (userFacingName="python-packaging")
+[DEBUG] Skill prompt: showing "python-development:python-performance-optimization" (userFacingName="python-performance-optimization")
+[DEBUG] Skill prompt: showing "python-development:uv-package-manager" (userFacingName="uv-package-manager")
+[DEBUG] Skill prompt: showing "developer-essentials:auth-implementation-patterns" (userFacingName="auth-implementation-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:monorepo-management" (userFacingName="monorepo-management")
+[DEBUG] Skill prompt: showing "developer-essentials:error-handling-patterns" (userFacingName="error-handling-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:debugging-strategies" (userFacingName="debugging-strategies")
+[DEBUG] Skill prompt: showing "developer-essentials:code-review-excellence" (userFacingName="code-review-excellence")
+[DEBUG] Skill prompt: showing "developer-essentials:sql-optimization-patterns" (userFacingName="sql-optimization-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:e2e-testing-patterns" (userFacingName="e2e-testing-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:git-advanced-workflows" (userFacingName="git-advanced-workflows")
+[DEBUG] Skill prompt: showing "developer-essentials:git-advanced-workflows" (userFacingName="git-advanced-workflows")
+[DEBUG] Skills and commands included in Skill tool: skill-creator, mcp-builder, canvas-design, algorithmic-art, internal-comms, webapp-testing, artifacts-builder, slack-gif-creator, theme-factory, brand-guidelines, xlsx, docx, pptx, pdf, bats-testing-patterns, bash-defensive-patterns, shellcheck-configuration, python-testing-patterns, python-packaging, uv-package-manager, async-python-patterns, python-performance-optimization, async-python-patterns, python-testing-patterns, python-packaging, python-performance-optimization, uv-package-manager, auth-implementation-patterns, monorepo-management, error-handling-patterns, debugging-strategies, code-review-excellence, sql-optimization-patterns, e2e-testing-patterns, git-advanced-workflows
+[DEBUG] Skill prompt: showing "example-skills:skill-creator" (userFacingName="skill-creator")
+[DEBUG] Skill prompt: showing "example-skills:mcp-builder" (userFacingName="mcp-builder")
+[DEBUG] Skill prompt: showing "example-skills:canvas-design" (userFacingName="canvas-design")
+[DEBUG] Skill prompt: showing "example-skills:algorithmic-art" (userFacingName="algorithmic-art")
+[DEBUG] Skill prompt: showing "example-skills:internal-comms" (userFacingName="internal-comms")
+[DEBUG] Skill prompt: showing "example-skills:webapp-testing" (userFacingName="webapp-testing")
+[DEBUG] Skill prompt: showing "example-skills:artifacts-builder" (userFacingName="artifacts-builder")
+[DEBUG] Skill prompt: showing "example-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+[DEBUG] Skill prompt: showing "example-skills:theme-factory" (userFacingName="theme-factory")
+[DEBUG] Skill prompt: showing "example-skills:brand-guidelines" (userFacingName="brand-guidelines")
+[DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+[DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+[DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+[DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+[DEBUG] Skill prompt: showing "shell-scripting:bats-testing-patterns" (userFacingName="bats-testing-patterns")
+[DEBUG] Skill prompt: showing "shell-scripting:bash-defensive-patterns" (userFacingName="bash-defensive-patterns")
+[DEBUG] Skill prompt: showing "shell-scripting:shellcheck-configuration" (userFacingName="shellcheck-configuration")
+[DEBUG] Skill prompt: showing "python-development:python-testing-patterns" (userFacingName="python-testing-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-packaging" (userFacingName="python-packaging")
+[DEBUG] Skill prompt: showing "python-development:uv-package-manager" (userFacingName="uv-package-manager")
+[DEBUG] Skill prompt: showing "python-development:async-python-patterns" (userFacingName="async-python-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-performance-optimization" (userFacingName="python-performance-optimization")
+[DEBUG] Skill prompt: showing "python-development:async-python-patterns" (userFacingName="async-python-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-testing-patterns" (userFacingName="python-testing-patterns")
+[DEBUG] Skill prompt: showing "python-development:python-packaging" (userFacingName="python-packaging")
+[DEBUG] Skill prompt: showing "python-development:python-performance-optimization" (userFacingName="python-performance-optimization")
+[DEBUG] Skill prompt: showing "python-development:uv-package-manager" (userFacingName="uv-package-manager")
+[DEBUG] Skill prompt: showing "developer-essentials:auth-implementation-patterns" (userFacingName="auth-implementation-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:monorepo-management" (userFacingName="monorepo-management")
+[DEBUG] Skill prompt: showing "developer-essentials:error-handling-patterns" (userFacingName="error-handling-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:debugging-strategies" (userFacingName="debugging-strategies")
+[DEBUG] Skill prompt: showing "developer-essentials:code-review-excellence" (userFacingName="code-review-excellence")
+[DEBUG] Skill prompt: showing "developer-essentials:sql-optimization-patterns" (userFacingName="sql-optimization-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:e2e-testing-patterns" (userFacingName="e2e-testing-patterns")
+[DEBUG] Skill prompt: showing "developer-essentials:git-advanced-workflows" (userFacingName="git-advanced-workflows")
+[DEBUG] Slash commands included in SlashCommand tool: /security-scanning:security-sast, /security-scanning:security-sast
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 1,
+  "rejected_count": 0
+}
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] Telemetry flushed successfully
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954832285
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67385 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954832285 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[ERROR] Error in non-streaming fallback: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BV31m5DvNHiqN2Yyh"}
+[ERROR] Error: Error: 404 {"type":"error","error":{"type":"not_found_error","message":"model: claude-haiku-4-5-20251015"},"request_id":"req_011CV46BV31m5DvNHiqN2Yyh"}
+    at generate (/$bunfs/root/claude:228:83183)
+    at makeRequest (/$bunfs/root/claude:670:5356)
+    at processTicksAndRejections (native:7:39)
+    at spawnSync (unknown)
+    at spawnSync (node:child_process:226:22)
+    at bTT (/$bunfs/root/claude:94:1304)
+    at p$ (/$bunfs/root/claude:94:3610)
+    at delete (/$bunfs/root/claude:1592:214)
+    at delete (/$bunfs/root/claude:2172:17167)
+    at BAA (/$bunfs/root/claude:2224:1602)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954832305
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 66973 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954832305 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionEnd with query: logout
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "logout" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/jonc/.claude/shell-snapshots/snapshot-zsh-1762954831672-1c9xer.sh
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] Metrics export failed: No API key available
+[ERROR] Error: Error: {"message":"PeriodicExportingMetricReader: metrics export failed (error Error: No API key available)","originalLine":"2172","originalColumn":"134578","line":"2172","column":"134578","sourceURL":"/$bunfs/root/claude","stack":"Error: PeriodicExportingMetricReader: metrics export failed (error Error: No API key available)\n    at _doRun (/$bunfs/root/claude:2172:134578)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2213:34693)
+    at <anonymous> (/$bunfs/root/claude:2172:43240)
+    at fq_ (/$bunfs/root/claude:2172:43784)
+    at _runOnce (/$bunfs/root/claude:2172:134043)
+    at async onForceFlush (/$bunfs/root/claude:2172:134816)
+    at async onShutdown (/$bunfs/root/claude:2172:134943)
+    at async shutdown (/$bunfs/root/claude:2172:132416)
+    at async shutdown (/$bunfs/root/claude:2185:8645)
+    at async shutdown (/$bunfs/root/claude:2185:12921)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /Users/jonc/.claude.json.tmp.59639.1762954832525
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 67353 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/jonc/.claude.json.tmp.59639.1762954832525 to /Users/jonc/.claude.json
+[DEBUG] File /Users/jonc/.claude.json written atomically

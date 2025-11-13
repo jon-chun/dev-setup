@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "plugins": {
+    "example-skills@anthropic-agent-skills": {
+      "version": "unknown",
+      "installedAt": "2025-11-05T13:54:55.064Z",
+      "lastUpdated": "2025-11-05T13:54:55.064Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/",
+      "gitCommitSha": "c74d647e56e6daa12029b6acb11a821348ad044b",
+      "isLocal": true
+    },
+    "document-skills@anthropic-agent-skills": {
+      "version": "unknown",
+      "installedAt": "2025-11-05T13:54:55.064Z",
+      "lastUpdated": "2025-11-05T13:54:55.064Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/anthropic-agent-skills/",
+      "gitCommitSha": "c74d647e56e6daa12029b6acb11a821348ad044b",
+      "isLocal": true
+    },
+    "code-documentation@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-08T23:13:01.029Z",
+      "lastUpdated": "2025-11-08T23:13:01.029Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-documentation",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "shell-scripting@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-08T23:13:01.029Z",
+      "lastUpdated": "2025-11-08T23:13:01.029Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/shell-scripting",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "python-development@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-08T23:13:01.029Z",
+      "lastUpdated": "2025-11-08T23:13:01.029Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/python-development",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "developer-essentials@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/developer-essentials",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "customer-sales-automation@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/customer-sales-automation",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "debugging-toolkit@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/debugging-toolkit",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "git-pr-workflows@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/git-pr-workflows",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "unit-testing@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/unit-testing",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "tdd-workflows@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/tdd-workflows",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "code-review-ai@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-review-ai",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "code-refactoring@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/code-refactoring",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "error-debugging@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-debugging",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "team-collaboration@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/team-collaboration",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "llm-application-dev@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/llm-application-dev",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "agent-orchestration@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/agent-orchestration",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "context-management@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/context-management",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "data-engineering@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/data-engineering",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "error-diagnostics@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/error-diagnostics",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "observability-monitoring@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/observability-monitoring",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "application-performance@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/application-performance",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "comprehensive-review@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/comprehensive-review",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "performance-testing-review@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/performance-testing-review",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "codebase-cleanup@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/codebase-cleanup",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "database-design@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/database-design",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "security-scanning@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/security-scanning",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "seo-content-creation@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-content-creation",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "business-analytics@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/business-analytics",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "seo-technical-optimization@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-technical-optimization",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "seo-analysis-monitoring@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/seo-analysis-monitoring",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    },
+    "documentation-generation@claude-code-workflows": {
+      "version": "unknown",
+      "installedAt": "2025-11-09T14:39:02.430Z",
+      "lastUpdated": "2025-11-09T14:39:02.430Z",
+      "installPath": "/Users/jonc/.claude/plugins/marketplaces/claude-code-workflows/plugins/documentation-generation",
+      "gitCommitSha": "75811421044c96883ec6fdca2aa7c18c92373831",
+      "isLocal": true
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #B165FB;
+  padding: 25pt 40pt;
+  border-bottom: 8pt solid #40695B;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 30pt 40pt;
+  flex: 1;
+}
+.section {
+  margin-bottom: 20pt;
+}
+.section-title {
+  color: #181B24;
+  font-size: 20pt;
+  font-weight: bold;
+  margin-bottom: 10pt;
+}
+.item {
+  color: #181B24;
+  font-size: 16pt;
+  margin: 5pt 0;
+  padding-left: 15pt;
+}
+.highlight {
+  color: #B165FB;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Project Goal & Architecture</h1>
+</div>
+<div class="content">
+  <div class="section">
+    <p class="section-title">Objective</p>
+    <p class="item">Build a personal AI coach that answers technical questions using YouTube video transcripts</p>
+  </div>
+  <div class="section">
+    <p class="section-title">Technology Stack</p>
+    <ul>
+      <li><span class="highlight">Agent Framework:</span> Pydantic AI (Python)</li>
+      <li><span class="highlight">Database & Auth:</span> Supabase (PGVector + Auth)</li>
+      <li><span class="highlight">Data Ingestion:</span> Super Data API</li>
+      <li><span class="highlight">Chunking:</span> Dockling (Hybrid Chunking)</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

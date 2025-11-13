@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #4A90E2;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 32pt;
+  font-weight: bold;
+}
+.content {
+  margin-top: 80pt;
+  padding: 20pt 40pt;
+  display: flex;
+  gap: 30pt;
+  width: 100%;
+}
+.text-column {
+  flex: 0 0 330pt;
+}
+.chart-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  color: #C0392B;
+  font-size: 20pt;
+  margin: 0 0 15pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 18pt;
+  color: #2C2C2C;
+  font-size: 13pt;
+  line-height: 1.7;
+}
+li {
+  margin-bottom: 8pt;
+}
+.placeholder {
+  background: #E8E8E8;
+  border: 2pt dashed #7F8C8D;
+  border-radius: 8pt;
+  width: 100%;
+  height: 240pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>América Latina en la Guerra Fría</h1>
+</div>
+<div class="content">
+  <div class="text-column">
+    <h3>Contexto regional</h3>
+    <ul>
+      <li>Confrontación EE.UU. vs. URSS (1947-1991)</li>
+      <li>Doctrina de Seguridad Nacional: "enemigo interno"</li>
+      <li>Oleada de dictaduras militares en el Cono Sur</li>
+      <li>Brasil (1964), Chile (1973), Uruguay (1973), Argentina (1976)</li>
+    </ul>
+  </div>
+  <div class="chart-column">
+    <div id="map-chart" class="placeholder"></div>
+  </div>
+</div>
+</body>
+</html>

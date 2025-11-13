@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #277884;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.text-column {
+  flex: 1;
+}
+.image-placeholder {
+  flex: 0 0 280pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.image-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+.highlight {
+  background: #FFF3CD;
+  padding: 12pt;
+  border-left: 4pt solid #FE4447;
+  border-radius: 4pt;
+  margin-top: 12pt;
+}
+.highlight p {
+  margin: 0;
+  font-weight: bold;
+  color: #277884;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Contexto Histórico: Infancia y Formación</h1>
+</div>
+<div class="content">
+  <div class="text-column">
+    <p>Wifredo Lam nació en 1902 en Sagua la Grande, Cuba, de padre chino y madre de ascendencia africana y española. Creció en un ambiente multicultural que influyó profundamente en su arte, combinando tradiciones afrocaribeñas con influencias europeas.</p>
+    <p>A los 21 años, recibió una beca para estudiar en la Academia de Bellas Artes de San Fernando en Madrid, donde comenzó su trayectoria como artista transnacional.</p>
+    <div class="highlight">
+      <p>Origen multicultural = visión artística única</p>
+    </div>
+  </div>
+  <div class="image-placeholder">
+    <p class="image-note"><b>Imagen sugerida:</b><br>Mapa del mundo destacando Cuba, España y Europa, con flechas mostrando la migración de Lam desde su nacimiento hasta su llegada a Madrid en 1923</p>
+  </div>
+</div>
+</body>
+</html>

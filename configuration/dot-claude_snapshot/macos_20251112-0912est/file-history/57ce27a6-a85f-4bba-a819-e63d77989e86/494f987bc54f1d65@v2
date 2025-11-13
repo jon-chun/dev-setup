@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  background: #2C2C2C;
+  color: #F4F6F6;
+  padding: 20pt 40pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 28pt;
+  font-weight: bold;
+}
+.content {
+  margin-top: 80pt;
+  padding: 15pt 40pt 20pt 40pt;
+  width: 100%;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10pt;
+}
+.event {
+  display: flex;
+  align-items: center;
+  gap: 12pt;
+  background: #FFFFFF;
+  padding: 10pt;
+  border-radius: 6pt;
+  border-left: 5pt solid #4A90E2;
+}
+.event.highlight {
+  border-left-color: #C0392B;
+}
+.year {
+  color: #4A90E2;
+  font-size: 20pt;
+  font-weight: bold;
+  min-width: 75pt;
+}
+.event.highlight .year {
+  color: #C0392B;
+}
+.description {
+  flex: 1;
+}
+.description h3 {
+  color: #2C2C2C;
+  font-size: 14pt;
+  margin: 0 0 4pt 0;
+  font-weight: bold;
+}
+.description p {
+  color: #2C2C2C;
+  font-size: 11pt;
+  margin: 0;
+  line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Memoria, justicia y límites de la transición</h1>
+</div>
+<div class="content">
+  <div class="timeline">
+    <div class="event highlight">
+      <p class="year">1983</p>
+      <div class="description">
+        <h3>CONADEP y "Nunca Más"</h3>
+        <p>Investigación oficial documenta miles de desapariciones</p>
+      </div>
+    </div>
+    <div class="event highlight">
+      <p class="year">1985</p>
+      <div class="description">
+        <h3>Juicio a las Juntas</h3>
+        <p>Hito mundial: civiles juzgan a ex dictadores</p>
+      </div>
+    </div>
+    <div class="event highlight">
+      <p class="year">2000s</p>
+      <div class="description">
+        <h3>Reapertura de juicios</h3>
+        <p>Anulación de leyes de impunidad (1986-87), procesos continúan hasta hoy</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

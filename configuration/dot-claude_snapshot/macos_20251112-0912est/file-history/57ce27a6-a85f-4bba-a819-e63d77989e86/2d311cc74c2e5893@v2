@@ -1,0 +1,100 @@
+# Argentina: de la dictadura a la democracia
+## Presentación sobre memoria, justicia y desafíos actuales
+
+### Archivos disponibles para descarga
+
+#### 1. **PowerPoint final** (RECOMENDADO) ✅
+- **Archivo**: `Argentina_Dictadura_Democracia.pptx` (352 KB)
+- Formato nativo de PowerPoint con 15 diapositivas
+- Incluye gráficos interactivos y diseño profesional
+- Compatible con PowerPoint, Keynote, Google Slides
+
+#### 2. **HTML interactivo** (Respaldo)
+- **Archivo**: `presentation_standalone.html`
+- Versión HTML que se puede abrir en cualquier navegador
+- Contiene todas las 15 diapositivas
+- Útil si el archivo .pptx no se puede abrir
+
+#### 3. **Diapositivas individuales HTML**
+- **Carpeta**: `workspace/slides/`
+- 15 archivos HTML individuales (slide01.html - slide15.html)
+- Cada diapositiva se puede ver/editar por separado
+
+---
+
+### Contenido de la presentación (15 diapositivas)
+
+1. **Título y objetivos** - Introducción al tema
+2. **Vocabulario clave** - Términos esenciales
+3. **América Latina en la Guerra Fría** - Contexto regional + mapa
+4. **Operación Cóndor** - Coordinación represiva
+5. **Historia de los golpes (1930-1976)** - Línea de tiempo
+6. **Crisis y radicalización (60s-70s)** - Contexto previo
+7. **Golpe del 24 de marzo de 1976** - El evento clave
+8. **Estructura del régimen** - Organigrama
+9. **Terrorismo de Estado** - Guerra Sucia y 30.000 desaparecidos
+10. **Proyecto económico y Malvinas** - Crisis final + gráfico
+11. **Transición democrática (1983)** - Retorno a democracia
+12. **Memoria y justicia** - CONADEP, Juicio a las Juntas
+13. **Problemas actuales: economía** - Pobreza y desigualdad + gráfico
+14. **Problemas actuales: política** - Polarización y memoria
+15. **Desafíos futuros** - "Nunca Más" como proyecto
+
+---
+
+### Diseño visual
+
+**Paleta de colores "Memorial & Democracia":**
+- 🔵 Argentine Blue (#4A90E2) - Democracia, esperanza
+- 🔴 Memorial Red (#C0392B) - Sacrificio, lucha
+- ⚫ Deep Charcoal (#2C2C2C) - Seriedad, texto principal
+- ⚪ Off White (#F4F6F6) - Fondos limpios
+- ⚪ Warm Gray (#7F8C8D) - Contexto histórico
+
+**Características del diseño:**
+- Layouts diversos: full-bleed, two-column, centrados
+- Tipografía con jerarquía clara (Arial)
+- Gráficos y visualizaciones de datos integrados
+- Diseño respetuoso al tema histórico y memorial
+
+---
+
+### Gráficos incluidos
+
+- **Slide 3**: Mapa textual de dictaduras latinoamericanas
+- **Slide 5**: Timeline de alternancia democracia-dictadura
+- **Slide 8**: Organigrama de estructura del régimen
+- **Slide 10**: Gráfico de crecimiento de deuda externa
+- **Slide 13**: Evolución de la pobreza 2015-2023
+
+---
+
+### Cómo usar
+
+1. **Para presentar**: Abrir `Argentina_Dictadura_Democracia.pptx` en PowerPoint
+2. **Backup HTML**: Abrir `presentation_standalone.html` en Chrome/Firefox/Safari
+3. **Para editar**: Modificar archivos en `workspace/slides/` y regenerar con `create_presentation.js`
+
+---
+
+### Notas técnicas
+
+- Dimensiones: 16:9 (720pt × 405pt)
+- Software usado: html2pptx + PptxGenJS
+- Validación: Todos los slides validados sin overflow
+- Total de diapositivas: 15
+
+---
+
+### Fuentes consultadas
+
+Basado en el documento `presentation_dictaduras-argentina_speaker-notes_ES.md` que incluye referencias a:
+- Encyclopedia Britannica
+- Wikipedia (artículos sobre Guerra Sucia, CONADEP, golpes en Argentina)
+- Holocaust Museum Houston
+- Sciences Po
+- Human Rights Watch
+- Freedom House
+- HISTORY
+- The Guardian
+- Otros organismos académicos y de derechos humanos

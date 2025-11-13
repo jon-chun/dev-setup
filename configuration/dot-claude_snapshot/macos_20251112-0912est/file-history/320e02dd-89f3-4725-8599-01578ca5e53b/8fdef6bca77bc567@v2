@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FAF7F2;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #277884;
+  padding: 20pt 40pt;
+}
+h1 {
+  color: #ffffff;
+  font-size: 26pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  margin-top: 75pt;
+  padding: 0 40pt 50pt 40pt;
+  display: flex;
+  gap: 30pt;
+}
+.image-column {
+  flex: 0 0 300pt;
+  background: #E8E8E8;
+  border-radius: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20pt;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+.image-note {
+  font-size: 11pt;
+  color: #666666;
+  line-height: 1.5;
+}
+.text-column {
+  flex: 1;
+}
+h2 {
+  font-size: 18pt;
+  color: #FE4447;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+}
+p {
+  font-size: 13pt;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 15pt 0;
+}
+.quote {
+  background: #FFF3CD;
+  padding: 15pt;
+  border-left: 5pt solid #FE4447;
+  border-radius: 4pt;
+  margin-top: 15pt;
+  font-style: italic;
+}
+.quote p {
+  margin: 0;
+  color: #277884;
+  font-size: 14pt;
+}
+.timeline {
+  font-size: 11pt;
+  color: #666666;
+  margin-top: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Contexto Histórico: Segunda Guerra Mundial</h1>
+</div>
+<div class="content">
+  <div class="image-column">
+    <p class="image-note"><b>Imagen sugerida:</b><br>Ilustración de figuras surrealistas híbridas (humanos-animales) inspiradas en el estilo de Lam durante su período en Marsella</p>
+  </div>
+  <div class="text-column">
+    <h2>1940: Escape a Marsella</h2>
+    <p>Invasión alemana: Lam escapó a Marsella, se unió a André Breton y al movimiento surrealista.</p>
+    <div class="quote">
+      <p>"Para liberarse de preocupaciones y temores"</p>
+    </div>
+    <h2>1941: Regreso Forzado</h2>
+    <p>Le negaron entrada a EE.UU. y México por vínculos izquierdistas. Regresó a Cuba tras casi dos décadas en diáspora.</p>
+    <p class="timeline"><b>Timeline:</b> 1923 Madrid → 1939 París → 1940 Marsella → 1941 Cuba</p>
+  </div>
+</div>
+</body>
+</html>

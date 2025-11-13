@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #40695B;
+  padding: 25pt 40pt;
+  border-bottom: 8pt solid #B165FB;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 30pt 40pt;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20pt;
+}
+.section-title {
+  color: #181B24;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 0;
+}
+.db-schema {
+  display: flex;
+  gap: 20pt;
+}
+.table-box {
+  flex: 1;
+  background: #F4F6F6;
+  padding: 15pt;
+  border-top: 4pt solid #B165FB;
+  border-radius: 4pt;
+}
+.table-name {
+  color: #181B24;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0 0 8pt 0;
+}
+.table-field {
+  color: #181B24;
+  font-size: 13pt;
+  margin: 3pt 0;
+  line-height: 1.3;
+}
+.lesson {
+  background: #FFF5E1;
+  padding: 15pt;
+  border-left: 6pt solid #FF6B6B;
+}
+.lesson-text {
+  color: #181B24;
+  font-size: 14pt;
+  margin: 0;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>PIV Loop 1: RAG Pipeline</h1>
+</div>
+<div class="content">
+  <div>
+    <p class="section-title">Database Schema Design</p>
+  </div>
+  <div class="db-schema">
+    <div class="table-box">
+      <p class="table-name">channels</p>
+      <p class="table-field">channel_id</p>
+      <p class="table-field">last_processed_date</p>
+    </div>
+    <div class="table-box">
+      <p class="table-name">videos</p>
+      <p class="table-field">video_id</p>
+      <p class="table-field">title, url</p>
+      <p class="table-field">published_at</p>
+    </div>
+    <div class="table-box">
+      <p class="table-name">transcript_chunks</p>
+      <p class="table-field">chunk_text</p>
+      <p class="table-field">start_time, end_time</p>
+      <p class="table-field">embedding</p>
+    </div>
+  </div>
+  <div class="lesson">
+    <p class="lesson-text">Key Learning: Over-engineering (2,000+ line plan) caused hallucinations. Critical Dockling library was omitted. Iteration and refinement were required.</p>
+  </div>
+</div>
+</body>
+</html>
